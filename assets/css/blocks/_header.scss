@@ -1,4 +1,66 @@
 .header {
-    border-bottom: 1px solid black;
-    padding: 20px;
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  @include media('>=desktop') {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .btn-menu{
+    background-color: transparent;
+    float: right;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    &:before, &:after{
+      content: '';
+      height: 4px;
+      width: 36px;
+      background-color: $color-white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: transform .5s, margin-top .5s;
+      transform: translate(-50%, -50%);
+      margin-top: -8px;
+    }
+    &:after{
+      transform: translate(-50%, -50%);
+      margin-top: 8px;
+    }
+  }
+  &.opened{
+    .btn-menu{
+      &:before, &:after{
+        margin-top: 0;
+        transform: translate(-50%,- 50%) rotate(45deg);
+      }
+      &:after{
+        transform: translate(-50%,- 50%) rotate(-45deg);
+      }
+    }
+  }
+  nav{
+    text-transform: uppercase;
+    font: 72px/102px $font-main;
+    ul{
+      margin-bottom: 0;
+    }
+    li{
+      list-style: none;
+    }
+    a{
+      color: $color-white;
+    }
+  }
+  .logo{
+    width: 180px;
+    height: 55px;
+    float: left;
+
+  }
 }

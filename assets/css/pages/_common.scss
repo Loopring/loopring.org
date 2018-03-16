@@ -1,27 +1,15 @@
-
 .main {
   padding: 20px;
 }
-
 .wrapper {
-  position: relative;
+  min-height: 100%;
   overflow: hidden;
-  width: 100%;
-  @include flex(column);
-  flex-shrink: 0;
-  flex-grow: 1;
-  min-height: 100vh;
-  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%;
 }
 
-.header,
-.footer {
-  flex-shrink: 0;
-}
-
-.page-wrap {
-  flex-shrink: 0;
-  flex-grow: 1;
-  overflow: hidden;
-}
 

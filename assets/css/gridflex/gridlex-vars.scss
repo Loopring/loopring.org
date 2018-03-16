@@ -1,0 +1,18 @@
+//************************
+//    VARIABLES
+//************************
+$gutter-global-mob:10px;
+$gutter-global:30px;
+
+$gl-gridName: grid !default;
+$gl-colName: col !default;
+$gl-attributeName: class !default;
+$gl-gutter: $gutter-global-mob !default; // Total left + right
+$gl-gutter-vertical: $gutter-global-mob !default;
+$gl-mq-width: 'min-width' !default;
+$gl-mq-list: (
+        lg: 1600px,
+        md: 1200px,
+        sm: 768px,
+        xs: 320px
+) !default;

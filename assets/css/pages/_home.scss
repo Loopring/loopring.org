@@ -1,0 +1,135 @@
+.intro-wrapper{
+  background: #1C71FF;
+  overflow: hidden;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background: #1C60FF;
+  }
+}
+.intro{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  .left-ovh{
+    width: 40%;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .triangle{
+    position: absolute;
+    background: #fff;
+    left: 0;
+    bottom: -115%;
+    height: 100%;
+    transform: skewY(15deg) translateY(-50%);
+    width: 60vw;
+    z-index: -3;
+    &.right{
+      left: auto;
+      right: 0;
+      transform: skewY(-15deg) translateY(-50%);
+    }
+  }
+  .parall{
+    width: 220px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #1C71FF;
+      animation: scale 6s linear infinite;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      animation: pulse 6s linear infinite;
+      z-index: -4;
+    }
+    &.flip{
+      &:after{
+        transform: skewY(-15deg);
+        animation: scaleflip 6s linear infinite;
+        background: #1C60FF;
+      }
+      &:before{
+        transform: skewY(-15deg);
+        animation: pulseflip 6s linear infinite;
+      }
+    }
+    &.two{
+      top: 30%;
+      left: 70%;
+      width: 320px;
+      height: 300px;
+      &:before, &:after{
+        animation-delay: -2s;
+      }
+    }
+    &.three{
+      top: 40%;
+      left: 50%;
+      width: 170px;
+      height: 150px;
+      &:before, &:after{
+        animation-delay: -4s;
+      }
+    }
+  }
+}
+@keyframes pulse {
+  0%, 100%{
+    box-shadow: 40px -20px 40px 15px rgba(0,0,0,0.25);
+    transform: skewY(15deg) scale(1);
+  }
+  50%{
+    box-shadow: 30px -15px 30px 10px rgba(0,0,0,0.25);
+    transform: skewY(15deg) scale(0.95);
+  }
+}
+@keyframes pulseflip {
+  0%, 100%{
+    box-shadow: -40px -20px 40px 15px rgba(0,0,0,0.25);
+    transform: skewY(-15deg) scale(1);
+  }
+  50%{
+    box-shadow: -30px -15px 30px 10px rgba(0,0,0,0.25);
+    transform: skewY(-15deg) scale(0.95);
+  }
+}
+@keyframes scale {
+  0%, 100%{
+    transform: skewY(15deg) scale(1);
+  }
+  50%{
+    transform: skewY(15deg) scale(0.98);
+  }
+}
+@keyframes scaleflip {
+  0%, 100%{
+    transform: skewY(-15deg) scale(1);
+  }
+  50%{
+    transform: skewY(-15deg) scale(0.98);
+  }
+}

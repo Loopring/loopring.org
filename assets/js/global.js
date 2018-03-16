@@ -1,14 +1,15 @@
 
 import binder from "./libs/binder";
-import { staticFunctions, constants, commonFunction, anotherCommonFunction, navFunction } from "./modules/module";
+import { constants, afteLoads, btnDecorate, headerActivities} from "./modules/global";
+import {introWrapper} from "./modules/introWrapper";
 
 let args = [
     {
-        "html": [constants, staticFunctions],
-        "body": [commonFunction, anotherCommonFunction],
-        ".header": navFunction
+        "html": [constants, afteLoads],
+        ".btn": [btnDecorate],
+        ".intro-wrapper": [introWrapper],
+        ".header": [headerActivities]
     },
-    // true
 ];
 
 binder(...args);
