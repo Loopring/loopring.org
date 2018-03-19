@@ -12,6 +12,24 @@ export function btnDecorate() {
 }
 export function headerActivities() {
     $('.btn-menu').on('click', function () {
-        $(this).closest('.header').toggleClass('opened')
+        let $this = $(this);
+        $this.closest('.header').toggleClass('opened');
+        $this.toggleClass('active');
+        $this.closest('.header').find('nav').fadeToggle();
+        $('body').toggleClass('ovh');
+    });
+    $('.lang-box').on('click', function (e) {
+        if (!$(e.target).closest('.btn-close').length) {
+            $(this).find('.drop-down').fadeIn();
+        }
+    });
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.lang-box').length) {
+            $('.drop-down').fadeOut();
+        }
+    });
+    $('.btn-close').on('click', function () {
+        $(this).closest('.drop-down').fadeOut();
     })
+
 }

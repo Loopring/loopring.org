@@ -25,74 +25,81 @@
     left: 0;
     top: 0;
   }
-  .triangle{
-    position: absolute;
-    background: #fff;
-    left: 0;
-    bottom: -115%;
-    height: 100%;
-    transform: skewY(15deg) translateY(-50%);
-    width: 60vw;
-    z-index: -3;
-    &.right{
-      left: auto;
-      right: 0;
-      transform: skewY(-15deg) translateY(-50%);
-    }
+  .triangle, .parall{
+    display: none;
   }
-  .parall{
-    width: 220px;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    &:after{
-      content: '';
+  @include media('>=desktop') {
+    .triangle{
+      display: block;
       position: absolute;
-      top: 0;
+      background: #fff;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: #1C71FF;
-      animation: scale 6s linear infinite;
+      bottom: -115%;
+      height: 100%;
+      transform: skewY(15deg) translateY(-50%);
+      width: 60vw;
+      z-index: -3;
+      &.right{
+        left: auto;
+        right: 0;
+        transform: skewY(-15deg) translateY(-50%);
+      }
     }
-    &:before{
-      content: '';
+    .parall{
+      display: block;
+      width: 220px;
+      height: 200px;
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      animation: pulse 6s linear infinite;
-      z-index: -4;
-    }
-    &.flip{
+      top: 50%;
+      left: 20%;
       &:after{
-        transform: skewY(-15deg);
-        animation: scaleflip 6s linear infinite;
-        background: #1C60FF;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #1C71FF;
+        animation: scale 6s linear infinite;
       }
       &:before{
-        transform: skewY(-15deg);
-        animation: pulseflip 6s linear infinite;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        animation: pulse 6s linear infinite;
+        z-index: -4;
       }
-    }
-    &.two{
-      top: 30%;
-      left: 70%;
-      width: 320px;
-      height: 300px;
-      &:before, &:after{
-        animation-delay: -2s;
+      &.flip{
+        &:after{
+          transform: skewY(-15deg);
+          animation: scaleflip 6s linear infinite;
+          background: #1C60FF;
+        }
+        &:before{
+          transform: skewY(-15deg);
+          animation: pulseflip 6s linear infinite;
+        }
       }
-    }
-    &.three{
-      top: 40%;
-      left: 50%;
-      width: 170px;
-      height: 150px;
-      &:before, &:after{
-        animation-delay: -4s;
+      &.two{
+        top: 30%;
+        left: 70%;
+        width: 320px;
+        height: 300px;
+        &:before, &:after{
+          animation-delay: -2s;
+        }
+      }
+      &.three{
+        top: 40%;
+        left: 50%;
+        width: 170px;
+        height: 150px;
+        &:before, &:after{
+          animation-delay: -4s;
+        }
       }
     }
   }
