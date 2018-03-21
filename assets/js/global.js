@@ -1,14 +1,17 @@
 
 import binder from "./libs/binder";
-import { constants, afteLoads, btnDecorate, headerActivities} from "./modules/global";
-import {introWrapper} from "./modules/introWrapper";
+import "./libs/slick";
+import { constants, afteLoads, btnDecorate, headerActivities} from "./modules/globals";
+import {introWrapper, introVideo} from "./modules/introWrapper";
+import {mobileSlider, mobileSliderResize} from "./modules/homeAnimations";
 
 let args = [
     {
         "html": [constants, afteLoads],
         ".btn": [btnDecorate],
-        ".intro-wrapper": [introWrapper],
-        ".header": [headerActivities]
+        ".intro-wrapper": [introWrapper, introVideo],
+        ".header": [headerActivities],
+        ".long-animations": [mobileSlider, mobileSliderResize]
     },
 ];
 

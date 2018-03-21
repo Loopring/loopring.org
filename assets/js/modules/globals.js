@@ -18,10 +18,9 @@ export function headerActivities() {
         $this.closest('.header').find('nav').fadeToggle();
         $('body').toggleClass('ovh');
     });
-    $('.lang-box').on('click', function (e) {
-        if (!$(e.target).closest('.btn-close').length) {
-            $(this).find('.drop-down').fadeIn();
-        }
+    $('.text-holder-desktop, .text-holder-mobile').on('click', function (e) {
+        $(this).siblings('.drop-down').fadeToggle();
+        $(this).parent().toggleClass('active');
     });
     $(document).on('click', function (e) {
         if (!$(e.target).closest('.lang-box').length) {

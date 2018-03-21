@@ -17,13 +17,17 @@
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
   @include media('>=tablet') {
-    padding: 40px;
+    padding: 40px 40px 0;
   }
   @include media('>=desktop') {
     padding-left: 55px;
     padding-right: 30px;
     display: block;
-    overflow: hidden;
+    overflow: visible;
+  }
+  @include media('>=large') {
+    padding-right: 45px;
+    padding-left: 70px;
   }
   .btn-menu{
     background-color: transparent;
@@ -147,22 +151,32 @@
       @include media('>=desktop') {
         font: 14px/64px $font-main;
         float: left;
+        margin-bottom: 0;
       }
-
-    }
-    li{
-      list-style: none;
-      @include media('>=desktop') {
-        float: left;
-        margin:0 25px 0 0;
+      @include media('>=large') {
+        font-size: 16px;
+      }
+      li{
+        list-style: none;
+        @include media('>=desktop') {
+          float: left;
+          margin:0 25px 0 0;
+        }
+        a{
+          color: $color-white;
+          text-decoration: none;
+          display: inline-block;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+        &.active a, .active {
+          text-decoration: underline;
+        }
       }
     }
-    a{
-      color: $color-white;
-      text-decoration: none;
-      display: inline-block;
 
-    }
+
     .btn{
       width: 100%;
       display: block;
@@ -171,6 +185,9 @@
         width: auto;
         display: inline-block;
         margin: 5px 0 0 0;
+      }
+      @include media('>=large') {
+        font-size: 16px;
       }
     }
   }
@@ -184,7 +201,7 @@
     @include media('>=desktop') {
       float: left;
       margin-top: 6px;
-      padding: 5px 25px;
+      padding: 0;
       font: 16px/42px $font-title;
     }
     &:after, &:before{
@@ -198,7 +215,7 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -3px;
+      margin-top: -3px;transition: opacity .5s;
       @include media('>=desktop') {
         opacity: .7;
         width: 11px;
@@ -207,6 +224,7 @@
         border-color: $color-white;
         margin-top: -4px;
         transform: translateY(-50%) rotate(-45deg);
+        transition: transform .5s, margin-top .5s, opacity .5s;
       }
     }
     &:after{
@@ -231,14 +249,17 @@
       display: none;
       @include media('>=desktop') {
         display: block;
+        padding: 5px 25px;
+        position: relative;
+        z-index: 2;
+        opacity: .7;
+        transition: opacity .5s;
       }
     }
     .btn-close{
       width: 25px;
       height: 25px;
       float: right;
-      overflow: hidden;
-      text-indent: -9999px;
       position: relative;
       &:after, &:before{
         content: '';
@@ -253,6 +274,9 @@
       &:after{
         transform: translate(-50%, -50%) rotate(-45deg);
       }
+      @include media('>=desktop') {
+        display: none;
+      }
     }
     .drop-down{
       display: none;
@@ -264,6 +288,14 @@
       padding: 10px 10px 30px 25px;
       width: 210px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.24);
+      @include media('>=desktop') {
+        bottom: auto;
+        top: 100%;
+        width: auto;
+        padding: 0 15px;
+        background-color: transparent;
+        box-shadow: none;
+      }
       &:after{
         width: 0;
         height: 0;
@@ -275,9 +307,19 @@
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
+        @include media('>=desktop') {
+          display: none;
+        }
       }
       a{
         color: $color-purple;
+        @include media('>=desktop') {
+          color: rgba(255,255,255,0.7);
+          &:hover{
+            text-decoration: none;
+            color: $color-white;
+          }
+        }
       }
       ul{
         margin-bottom: 0;
@@ -291,9 +333,37 @@
         width: 50%;
         list-style: none;
         font: 12px/33px $font-title;
+        @include media('>=desktop') {
+          width: 100%;
+          font: 16px/32px $font-title;
+        }
       }
-      .active a, .active{
+      .current-lang a, .current-lang{
         color: $color-blue;
+        @include media('>=desktop') {
+          display: none;
+        }
+      }
+      .short{
+        display: none;
+        @include media('>=desktop') {
+          display: inline;
+        }
+      }
+      .full{
+        @include media('>=desktop') {
+          display: none;
+        }
+      }
+    }
+    &.active{
+      .text-holder-desktop{
+        opacity: 1;
+      }
+      &:before{
+        transform: translateY(-50%) rotate3d(1, 0.4, 0, 180deg);
+        margin-top: 3px;
+        opacity: 1;
       }
     }
   }

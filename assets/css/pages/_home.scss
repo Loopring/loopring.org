@@ -1,57 +1,58 @@
+//intro section
 .intro-wrapper{
   background: #1C71FF;
   overflow: hidden;
+  position: relative;
   &:after{
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
-    width: 60%;
+    width: 58.8%;
     background: #1C60FF;
   }
 }
 .intro{
   width: 100%;
-  height: 100vh;
+  height: calc(100vh + 255px);
   position: relative;
   z-index: 2;
   overflow: hidden;
   .left-ovh{
-    width: 40%;
+    width: 41.2%;
     overflow: hidden;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
   }
-  .triangle, .parall{
+  .parall{
     display: none;
   }
-  @include media('>=desktop') {
-    .triangle{
-      display: block;
-      position: absolute;
-      background: #fff;
-      left: 0;
-      bottom: -115%;
-      height: 100%;
-      transform: skewY(15deg) translateY(-50%);
-      width: 60vw;
-      z-index: -3;
-      &.right{
-        left: auto;
-        right: 0;
-        transform: skewY(-15deg) translateY(-50%);
-      }
+  .triangle{
+    position: absolute;
+    background: #fff;
+    left: 0;
+    bottom: -115%;
+    height: 100%;
+    transform: skewY(17.7deg) translateY(-50%);
+    width: 60vw;
+    z-index: -3;
+    &.right{
+      left: auto;
+      right: 0;
+      transform: skewY(-17.7deg) translateY(-50%);
     }
+  }
+  @include media('>=desktop') {
     .parall{
       display: block;
-      width: 220px;
-      height: 200px;
+      width: 140px;
+      height: 128px;
       position: absolute;
-      top: 50%;
-      left: 20%;
+      top: 57%;
+      left: 22%;
       &:after{
         content: '';
         position: absolute;
@@ -74,69 +75,368 @@
       }
       &.flip{
         &:after{
-          transform: skewY(-15deg);
+          transform: skewY(-17.7deg);
           animation: scaleflip 6s linear infinite;
           background: #1C60FF;
         }
         &:before{
-          transform: skewY(-15deg);
+          transform: skewY(-17.7deg);
           animation: pulseflip 6s linear infinite;
         }
       }
       &.two{
-        top: 30%;
-        left: 70%;
-        width: 320px;
-        height: 300px;
+        top: 51%;
+        left: 78%;
+        width: 183px;
+        height: 150px;
+        &:before, &:after{
+          animation-delay: -1s;
+        }
+      }
+      &.three{
+        top: 44%;
+        left: 51%;
+        width: 163px;
+        height: 141px;
         &:before, &:after{
           animation-delay: -2s;
         }
       }
-      &.three{
-        top: 40%;
-        left: 50%;
-        width: 170px;
-        height: 150px;
+      &.four{
+        top: 11%;
+        left: 80%;
+        width: 110px;
+        height: 90px;
+        &:before, &:after{
+          animation-delay: -3s;
+        }
+      }
+      &.five{
+        top: 14%;
+        left: -3%;
+        width: 110px;
+        height: 95px;
         &:before, &:after{
           animation-delay: -4s;
         }
       }
     }
   }
+  .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-120%);
+    color: $color-white;
+    z-index: 6;
+    font: 13px/18px $font-main;
+    @include media('>=tablet'){
+      font: 20px/46px $font-main;
+    }
+    .btn-watch{
+      text-transform: uppercase;
+      color: $color-white;
+      font: 12px/23px $font-title;
+      @include media('>=tablet'){
+        font: 16px/46px $font-title;
+      }
+      .ico{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 23px;
+        width: 20px;
+        margin-right: 5px;
+        @include media('>=tablet'){
+          height: 46px;
+          width: 40px;
+          margin-right: 15px;
+        }
+        .svg-bg{
+          fill: rgba(140,198,255,0.3);
+          stroke: $color-white;
+          transition: fill .5s, stroke .5s;
+        }
+        .svg-arrow{
+          fill: $color-white;
+          transition: fill .5s;
+        }
+      }
+      &:hover{
+        text-decoration: none;
+        color: $color-mint;
+        .svg-bg{
+          fill: rgba(140,198,255,0);
+          stroke: $color-mint;
+        }
+        .svg-arrow{
+          fill: $color-mint;
+        }
+      }
+    }
+  }
 }
+//todo shadow from zero
 @keyframes pulse {
   0%, 100%{
-    box-shadow: 40px -20px 40px 15px rgba(0,0,0,0.25);
-    transform: skewY(15deg) scale(1);
+    box-shadow: 45px -45px 40px rgba(65,0,163,0.25);
+    transform: skewY(17.7deg) scale(1);
   }
   50%{
-    box-shadow: 30px -15px 30px 10px rgba(0,0,0,0.25);
-    transform: skewY(15deg) scale(0.95);
+    box-shadow: 25px -25px 20px rgba(65,0,163,0.25);
+    transform: skewY(17.7deg) scale(0.95);
   }
 }
 @keyframes pulseflip {
   0%, 100%{
-    box-shadow: -40px -20px 40px 15px rgba(0,0,0,0.25);
-    transform: skewY(-15deg) scale(1);
+    box-shadow: -45px -45px 40px rgba(65,0,163,0.25);
+    transform: skewY(-17.7deg) scale(1);
   }
   50%{
-    box-shadow: -30px -15px 30px 10px rgba(0,0,0,0.25);
-    transform: skewY(-15deg) scale(0.95);
+    box-shadow: -25px -25px 20px rgba(65,0,163,0.25);
+    transform: skewY(-17.7deg) scale(0.95);
   }
 }
 @keyframes scale {
   0%, 100%{
-    transform: skewY(15deg) scale(1);
+    transform: skewY(17.7deg) scale(1);
   }
   50%{
-    transform: skewY(15deg) scale(0.98);
+    transform: skewY(17.7deg) scale(0.98);
   }
 }
 @keyframes scaleflip {
   0%, 100%{
-    transform: skewY(-15deg) scale(1);
+    transform: skewY(-17.7deg) scale(1);
   }
   50%{
-    transform: skewY(-15deg) scale(0.98);
+    transform: skewY(-17.7deg) scale(0.98);
   }
 }
+//end intro section
+
+//two-col-block section
+.two-col-block{
+  max-width: 1070px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  h2{
+    color: $color-blue;
+    text-transform: uppercase;
+  }
+  @include media('>=tablet'){
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+  }
+  >*{
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  &.flip{
+    flex-direction: row-reverse;
+  }
+  .description{
+    font: 13px/18px $font-main;
+    @include media('>=tablet'){
+      font: 16px/28px $font-main;
+      padding:0 30px 0 60px;
+      blockquote{
+        margin-left: -30px;
+      }
+    }
+  }
+  .ico-list{
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: 0;
+    text-align: center;
+    @include media('>=tablet'){
+      padding:0 30px;
+    }
+    li{
+      list-style: none;
+      width: 170px;
+      max-width: calc(50% - 30px);
+      display: inline-block;
+      vertical-align: top;
+      font: 16px/22px $font-title;
+      color: $color-blue;
+      text-transform: uppercase;
+      margin:0 15px 30px;
+      //todo center or left?
+      img{
+        display: block;
+        margin: 0 auto 20px;
+      }
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+//end two-col-block section
+
+//skew-block section
+.skew-block{
+  position: relative;
+  padding: 40px 10px;
+  margin-bottom: 50px;
+  color: $color-white;
+  text-align: center;
+  overflow: hidden;
+  @include media('>=tablet') {
+    padding: 80px 20px 150px;
+    margin-bottom: 110px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-blue;
+    transform: translateY(-4vw) skewY(-4deg);
+  }
+  .holder{
+    position: relative;
+    z-index: 2;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn{
+    @include media('>=tablet') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+//end skew-block section
+//icons-list-holder section
+.icons-list-holder{
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+  padding: 15px;
+  h2{
+    color: $color-blue;
+    max-width: 700px;
+  }
+  ul{
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: center;
+  }
+  li{
+    padding: 0 15px 30px;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    font: 12px/17px $font-main;
+    text-align: left;
+    @include media(">=xphone") {
+      width: 33%;
+    }
+    @include media(">=tablet") {
+      font: 14px/24px $font-main;
+    }
+  }
+  img{
+    margin-bottom: 10px;
+    max-width: 32px;
+    @include media(">=tablet") {
+      margin-bottom: 20px;
+      max-width: 60px;
+    }
+  }
+}
+//end icons-list-holder section
+
+//long-animations section
+.long-animations{
+  h2{
+    color: $color-blue;
+  }
+}
+//end long-animations section
+
+
+.steps{
+  font: 12px/17px $font-main;
+  @include media(">=xtablet") {
+    font: 14px/24px $font-main;
+
+  }
+  .slick-dots{
+    margin:0 0 40px;
+    padding-left: 40px;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: 0;
+    li{
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 9px;
+    }
+    button{
+      border-radius: 50%;
+      font-size: 0;
+      line-height: 0;
+      letter-spacing: 0;
+      padding: 0;
+      width: 7px;
+      height: 7px;
+      opacity: .5;
+      border: none;
+      background-color: $color-blue;
+      position: relative;
+      margin: 0;
+      &:after{
+        content: '';
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        left: -4px;
+        bottom: -4px;
+      }
+      &:hover{
+        background-color: $color-blue;
+        opacity: 1;
+      }
+    }
+    .slick-active{
+      button{
+        opacity: 1;
+      }
+    }
+  }
+  .slick-slide{
+    margin-bottom: 10px;
+    overflow: hidden;
+
+  }
+  li{
+    list-style: none;
+    overflow: hidden;
+  }
+  img{
+    margin-bottom: 20px;
+  }
+  .num{
+    float: left;
+    font: 59px/60px $font-title;
+    color: $color-blue;
+    margin-right: 10px;
+  }
+}
+
+
+
+

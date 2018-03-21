@@ -27,7 +27,9 @@ $breakpoints: (xphone: 480px, tablet: 768px, xtablet: 1024px, desktop: 1200px, l
 html {
   min-height: 100%;
 }
-
+*{
+  outline: none;
+}
 body {
   background: $color-white;
   color: $color-gray;
@@ -43,6 +45,16 @@ body {
 .ovh{
   overflow: hidden;
 }
+.container{
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media(">=large") {
+    max-width: 1380px;
+  }
+}
 .clearfix-after{
   &:after{
     content: '';
@@ -52,6 +64,10 @@ body {
 }
 p {
   margin-bottom: $main-margin;
+}
+
+img{
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,7 +87,8 @@ h1 {
 
 h2 {
   margin-bottom: #{22px * $headings-lh};
-  font-size: 50px;
+  font-size: 36px;
+  line-height: 37px;
   @include media('>=desktop'){
     font-size: 60px;
     line-height: 64px;
@@ -118,6 +135,7 @@ a {
   text-decoration: none;
   color: $color-black;
   outline: none;
+  transition: color .5s;
   &:hover {
     text-decoration: underline;
   }
@@ -266,9 +284,9 @@ button {
   text-decoration: none;
   white-space: nowrap;
   background: $color-blue;
-  cursor: pointer;
   transition: background .5s, color .5s;
   position: relative;
+  text-transform: uppercase;
   .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
     content: '';
     position: absolute;
@@ -345,8 +363,40 @@ label {
   vertical-align: middle;
 }
 
+.load blockquote{
+  &:before{
+    opacity: 1;
+  }
+  &:after{
+    height: 100%;
+  }
+}
 blockquote {
   margin: 0 0 $main-margin;
+  position: relative;
+  padding: 15px 25px;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $color-mint;
+    width: 1px;
+    height: 0;
+    transition: height .5s;
+    opacity: 0.5;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 3px;
+    height: 3px;
+    background-color: $color-mint;
+    transition: opacity .5s .5s;
+    opacity: 0;
+  }
   p {
     margin: 0;
   }
