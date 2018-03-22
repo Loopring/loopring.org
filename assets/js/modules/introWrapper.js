@@ -2,8 +2,8 @@ export function introWrapper() {
     $(document).on("mousemove", function (e) {
         function mouseFollow(deltaX, deltaY) {
             return {
-                'margin-top': (((e.pageY - $(window).scrollTop()) - $(window).innerHeight()/2) / deltaY).toFixed(1) +'px',
-                'margin-left': ((e.pageX - $(window).innerWidth()/2) / deltaX ).toFixed(1)+'px'
+                'margin-top': -(((e.pageY - $(window).scrollTop()) - $(window).innerHeight()/2) / deltaY).toFixed(1) +'px',
+                'margin-left': -((e.pageX - $(window).innerWidth()/2) / deltaX ).toFixed(1)+'px'
             }
         }
         if($(window).width() >= 1024){
@@ -30,7 +30,7 @@ export function introVideo() {
     };
     let popup = $('.popup-video');
     let player = popup.find('iframe')[0];
-    $('.btn-watch').on('click', function (e) {
+    $('.intro-wrapper .btn-watch').on('click', function (e) {
         e.preventDefault();
         popup.fadeIn();
         $('body').addClass('ovh');

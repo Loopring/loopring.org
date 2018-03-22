@@ -1,4 +1,58 @@
 .footer {
-    border-top: 1px solid black;
-    padding: 20px;
+  padding: 20px;
+  overflow: hidden;
+  font: 12px/17px $font-main;
+  @include media('>=tablet') {
+    font: 14px/26px $font-main;
+    padding: 20px 48px 67px;
+
+  }
+  .copy{
+    text-align: center;
+    @include media('>=tablet') {
+      float: left;
+    }
+  }
+  .social {
+    margin-bottom: 20px;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: 0;
+    @include media('>=tablet') {
+      float: right;
+    }
+    li {
+      width: 25%;
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 25px;
+      @include media('>=tablet') {
+        width: auto;
+        max-width: 24px;
+        max-height: 21px;
+        margin-left: 25px;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.no-touch{
+    .footer .social li{
+        &:hover{
+          animation: swing .5s linear 1;
+        }
+    }
+}
+@keyframes swing {
+  0%, 100%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(5deg);
+  }
+  75%{
+    transform: rotate(-5deg);
+  }
 }

@@ -15,7 +15,8 @@ $success-color: #00a800;
 
 $main-fz: 16px;
 $main-lh: 1.5;
-$font-main: 'Helvetica', sans-serif;
+$font-main: 'Helvetica Neue LT W01_55 Roman';
+$font-medium: 'Helvetica Neue LT W01_65 Md';
 $font-title: 'Times', sans-serif;
 
 $headings-lh: 1.2;
@@ -304,6 +305,7 @@ button {
   &:focus {
     text-decoration: none;
     background: $color-mint;
+    transition-delay: .8s;
   }
   &.white {
     background-color: $color-white;
@@ -341,6 +343,47 @@ button {
     &:hover,
     &:focus {
       background: darken($success-color, 10%);
+    }
+  }
+}
+.btn-watch{
+  text-transform: uppercase;
+  color: $color-white;
+  font: 12px/23px $font-title;
+  @include media('>=tablet'){
+    font: 16px/46px $font-title;
+  }
+  .ico{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 23px;
+    width: 20px;
+    margin-right: 5px;
+    @include media('>=tablet'){
+      height: 46px;
+      width: 40px;
+      margin-right: 15px;
+    }
+    .svg-bg{
+      fill: rgba(140,198,255,0.3);
+      stroke: $color-white;
+      transition: fill .5s, stroke .5s;
+    }
+    .svg-arrow{
+      fill: $color-white;
+      transition: fill .5s;
+    }
+  }
+  &:hover{
+    text-decoration: none;
+    color: $color-mint;
+    .svg-bg{
+      fill: rgba(140,198,255,0);
+      stroke: $color-mint;
+    }
+    .svg-arrow{
+      fill: $color-mint;
     }
   }
 }
