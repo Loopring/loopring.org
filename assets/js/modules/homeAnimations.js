@@ -1,24 +1,27 @@
 export function mobileSlider() {
-    var slider = $('.steps');
+    $('.steps').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        arrows: false,
+        adaptiveHeight: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: "unslick"
+            }
+        ]
+    });
+
+
     if($(window).innerWidth() < 1024){
-        if(!$('.steps.slick-initialized').length){
-            slider.slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                arrows: false,
-                adaptiveHeight: true,
-            });
-        }
         $('.steps img').each(function () {
             let $this = $(this);
             $this.attr('src', $this.attr('data-src'))
         })
     }else{
-        if($('.steps.slick-initialized').length){
-            slider.slick('unslick');
-        }
         //todo this on scroll
         $('.steps img').each(function () {
             let $this = $(this);
@@ -72,14 +75,36 @@ export function videoSlider() {
     })
 }
 export function mobileSliderResize() {
+    let flagPng = true;
+    let flagGif = true;
     let flag = true;
     window.addEventListener("resize", () => {
         if(flag){
             flag = false;
-            this.mobileSlider();
+
             setTimeout(() => {
                 flag = true;
             }, 1000);
+        }
+        if($(window).innerWidth() < 1024){
+            if(flagPng){
+                $('.steps img').each(function () {
+                    let $this = $(this);
+                    $this.attr('src', $this.attr('data-src'))
+                });
+                flagPng = false;
+                flagGif = true;
+            }
+        }else{
+            //todo this on scroll
+            if(flagGif){
+                $('.steps img').each(function () {
+                    let $this = $(this);
+                    $this.attr('src', $this.attr('data-gif-src'))
+                });
+                flagPng = true;
+                flagGif = false;
+            }
         }
     });
 }
@@ -88,12 +113,27 @@ export function historySlider() {
     let historySlider = $('.history-slider');
     navSlider.slick({
         focusOnSelect: true,
-        asNavFor: '.history-slider'
-    })
+        asNavFor: '.history-slider',
+        slidesToShow: 1,
+        infinite: false,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
     historySlider.slick({
         asNavFor: '.history-slider-nav',
         slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: false,
         fade: true
     })
 }

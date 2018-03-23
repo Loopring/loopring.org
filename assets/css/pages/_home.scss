@@ -253,6 +253,9 @@
   text-align: center;
   overflow: hidden;
   font:12px/17px $font-main;
+  h2{
+    text-transform: uppercase;
+  }
   @include media('>=tablet') {
     padding: 80px 20px 150px;
     margin-bottom: 110px;
@@ -342,7 +345,6 @@
         max-width: 245px;
       }
     }
-
     li{
 
     }
@@ -352,6 +354,7 @@
 
 //long-animations section
 .long-animations{
+  text-align: center;
   h2{
     color: $color-blue;
   }
@@ -414,6 +417,7 @@
     overflow: hidden;
   }
   .text{
+    text-align: left;
     @include media(">=xtablet") {
       position: absolute;
       padding: 0 15px;
@@ -646,7 +650,131 @@
 
 
 .history-slider-holder{
+  max-width: 1070px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  h2{
+    text-align: center;
+    color: $color-blue;
+    text-transform: uppercase;
+  }
+  .history-slider-nav{
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    @include media(">=tablet") {
+      margin-bottom: 75px;
+    }
+    .slick-track:before{
+      content: '';
+      bottom: 9px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-blue;
+      opacity: .3;
+      @include media(">=tablet") {
+        bottom: 18px;
+      }
+    }
 
+    time{
+      font: 12px/26px $font-medium;
+      color: rgba(128, 144, 184, 0.5);
+      display: block;
+      margin-bottom: 10px;
+      @include media(">=tablet") {
+        font-size: 14px;
+        line-height: 36px;
+      }
+    }
+    .point{
+      max-width: 16px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 3;
+      @include media(">=tablet") {
+        max-width: 31px;
+      }
+      svg{
+        background-color: $color-white;
+        display: block;
+      }
+      .out{
+        opacity: .3;
+        transition: opacity .3s;
+      }
+      .in{
+        opacity: .5;
+        transition: opacity .3s;
+      }
+    }
+    .slick-slide{
+      position: relative;
+      &:before{
+        content: '';
+        bottom: 9px;
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        background-color: $color-blue;
+        @include media(">=tablet") {
+          bottom: 18px;
+        }
+        right: 100vw;
+        transition: right .5s .5s;
+      }
+    }
+    .slick-current{
+      &:before{
+        right: 50%;
+        transition: right .5s 0s;
+      }
+      time{
+        font: 15px/26px $font-title;
+        text-transform: uppercase;
+        color: $color-blue;
+        @include media(">=tablet") {
+          font: 30px/36px $font-title;
+        }
+      }
+      .out{
+        opacity: 1;
+      }
+      .in{
+        opacity: 1;
+      }
+    }
+  }
+  .history-slider{
+    .slick-arrow{
+      border: none;
+      overflow: hidden;
+      text-indent: -9999px;
+      width: 30px;
+      height: 30px;
+      top: 20px;
+      position: absolute;
+      z-index: 5;
+      @include media(">=tablet") {
+        width: 60px;
+        height: 60px;
+      }
+        &.slick-prev{
+        left: 0;
+        background: url('#{$path-images}/ico-arrow-left.svg') 0 0/contain no-repeat;
+      }
+      &.slick-next{
+        right: 0;
+        background: url('#{$path-images}/ico-arrow-right.svg') 0 0/contain no-repeat;
+      }
+    }
+
+  }
 }
 
 

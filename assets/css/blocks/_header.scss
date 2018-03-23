@@ -7,7 +7,6 @@
   z-index: 6;
   max-height: 100vh;
   min-height: 0;
-  overflow: auto;
   background-color: transparent;
   transition: background-color .5s, min-height .7s;
   display: -ms-grid;
@@ -23,7 +22,6 @@
     padding-left: 55px;
     padding-right: 30px;
     display: block;
-    overflow: visible;
   }
   @include media('>=large') {
     padding-right: 45px;
@@ -82,7 +80,9 @@
   &.opened{
     background-color: $color-blue;
     min-height: 100vh;
-
+    @include media('<desktop') {
+      overflow: auto;
+    }
   }
   .logo-holder{
     &:after{
