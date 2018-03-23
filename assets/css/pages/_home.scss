@@ -216,6 +216,7 @@
     text-align: center;
     @include media('>=tablet'){
       padding:0 30px;
+      text-align: left;
     }
     li{
       list-style: none;
@@ -228,6 +229,9 @@
       text-transform: uppercase;
       margin:0 15px 30px;
       //todo center or left?
+      @include media('>=tablet'){
+        text-align: center;
+      }
       img{
         display: block;
         margin: 0 auto 20px;
@@ -539,9 +543,17 @@
       width: calc(100vw - 35px);
       margin: 0 5px;
       position: relative;
+      transform: scale(0.93);
+      transition: transform .3s;
+      &.slick-active{
+        transform: scale(1);
+        .text-holder{
+          opacity: 1;
+        }
+      }
       @include media('>=tablet'){
-        width: calc(100vw - 320px);
-        margin: 0 35px;
+        width: calc(100vw - 340px);
+        margin: 0 30px;
       }
     }
   }
@@ -611,6 +623,8 @@
       left: 20px;
       font: 12px/13px $font-main;
       color: $color-white;
+      opacity: 0;
+      transition: opacity .3s .3s;
       h2{
         font-size: 24px;
         line-height: 28px;
@@ -629,6 +643,12 @@
   }
 }
 //end video section
+
+
+.history-slider-holder{
+
+}
+
 
 //partners-logos section
 .partners-logos{

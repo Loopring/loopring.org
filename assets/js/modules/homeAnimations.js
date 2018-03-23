@@ -83,3 +83,17 @@ export function mobileSliderResize() {
         }
     });
 }
+export function historySlider() {
+    let navSlider = $('.history-slider-nav');
+    let historySlider = $('.history-slider');
+    navSlider.slick({
+        focusOnSelect: true,
+        asNavFor: '.history-slider'
+    })
+    historySlider.slick({
+        asNavFor: '.history-slider-nav',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true
+    })
+}
