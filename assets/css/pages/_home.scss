@@ -12,6 +12,9 @@
     width: 58.8%;
     background: #1C60FF;
   }
+  @include media('>=desktop') {
+    margin-bottom: -137px;
+  }
 }
 .intro{
   width: 100%;
@@ -124,18 +127,23 @@
   }
   .intro-text{
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 54.65%;
+    left: 11.7%;
     transform: translateY(-120%);
     color: $color-white;
     z-index: 6;
     font: 13px/18px $font-main;
+    h2{
+      text-transform: uppercase;
+
+      letter-spacing: -1px;
+      word-spacing: 3px;
+    }
     @include media('>=tablet'){
       font: 20px/46px $font-main;
     }
   }
 }
-//todo shadow from zero
 @keyframes pulse {
   0%, 100%{
     box-shadow: 45px -45px 40px rgba(65,0,163,0.25);
@@ -176,12 +184,14 @@
 
 //two-col-block section
 .two-col-block{
-  max-width: 1070px;
+  max-width: 1095px;
   padding-left: 5px;
   padding-right: 5px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
   h2{
     color: $color-blue;
     text-transform: uppercase;
@@ -189,7 +199,7 @@
   @include media('>=tablet'){
     display: flex;
     flex-direction: row;
-
+    margin-bottom:62px;
     padding: 0;
   }
   >*{
@@ -203,7 +213,7 @@
     font: 13px/18px $font-main;
     @include media('>=tablet'){
       font: 16px/28px $font-main;
-      padding:0 30px 0 60px;
+      padding: 13px 30px 0 60px;
       blockquote{
         margin-left: -30px;
       }
@@ -215,7 +225,7 @@
     letter-spacing: 0;
     text-align: center;
     @include media('>=tablet'){
-      padding:0 30px;
+      padding: 0 25px 0 120px;
       text-align: left;
     }
     li{
@@ -231,10 +241,11 @@
       //todo center or left?
       @include media('>=tablet'){
         text-align: center;
+        margin-bottom: 44px;
       }
       img{
         display: block;
-        margin: 0 auto 20px;
+        margin: 0 auto 24px;
       }
       p{
         margin-bottom: 0;
@@ -253,11 +264,14 @@
   text-align: center;
   overflow: hidden;
   font:12px/17px $font-main;
-  h2{
+  h2, h3{
     text-transform: uppercase;
+    @include media('>=desktop') {
+      margin-bottom: 11px;
+    }
   }
   @include media('>=tablet') {
-    padding: 80px 20px 150px;
+    padding: 103px 20px 150px;
     margin-bottom: 110px;
     font:18px/28px $font-main;
   }
@@ -283,10 +297,16 @@
     margin-left: auto;
     margin-right: auto;
   }
+  p{
+    @include media('>=desktop') {
+      margin-bottom: 34px;
+    }
+  }
   .btn{
     @include media('>=tablet') {
       padding-left: 50px;
       padding-right: 50px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -297,10 +317,22 @@
   line-height: 0;
   letter-spacing: 0;
   padding: 15px;
+  @include media('>=desktop') {
+    //padding-bottom: 143px;
+    padding-bottom: 70px;
+  }
+  .container{
+    @include media('>=xtablet') {
+      max-width: 1013px;
+    }
+  }
   h2{
     color: $color-blue;
     max-width: 700px;
     text-transform: uppercase;
+    @include media('>=desktop') {
+      margin-bottom: 98px;
+    }
   }
   ul{
     margin-left: -15px;
@@ -325,7 +357,7 @@
     margin-bottom: 10px;
     max-width: 32px;
     @include media(">=tablet") {
-      margin-bottom: 20px;
+      margin-bottom: 39px;
       max-width: 60px;
     }
   }
@@ -341,7 +373,7 @@
       margin-right: auto;
       display: block;
       @include media(">=tablet") {
-        margin-bottom: 20px;
+        margin-bottom: 38px;
         max-width: 245px;
       }
     }
@@ -355,6 +387,9 @@
 //long-animations section
 .long-animations{
   text-align: center;
+  @include media('>=desktop') {
+    margin-bottom: 108px;
+  }
   h2{
     color: $color-blue;
   }
@@ -535,12 +570,15 @@
 .video-block{
   margin-bottom: 50px;
   @include media('>=tablet'){
-    margin-bottom: 150px;
+    margin-bottom: 156px;
   }
   >h2{
     text-align: center;
     color: $color-blue;
     text-transform: uppercase;
+    @include media('>=tablet'){
+      margin-bottom: 75px;
+    }
   }
   .video-slider{
     .slick-slide{
@@ -556,8 +594,8 @@
         }
       }
       @include media('>=tablet'){
-        width: calc(100vw - 340px);
-        margin: 0 30px;
+        width: calc(100vw - 310px);
+        margin: 0 15px;
       }
     }
   }
@@ -565,7 +603,8 @@
     width: 100%;
     .box{
       position: relative;
-      padding-top: 56.25%;
+      //padding-top: 56.25%;
+      padding-top: 51%;
       height: 0;
     }
     iframe{
@@ -648,23 +687,29 @@
 }
 //end video section
 
-
 .history-slider-holder{
   max-width: 1070px;
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
+  @include media(">=desktop") {
+    margin-bottom: 67px;
+  }
   h2{
     text-align: center;
     color: $color-blue;
     text-transform: uppercase;
+    margin-bottom: 60px;
+    @include media(">=tablet") {
+      margin-bottom: 75px;
+    }
   }
   .history-slider-nav{
     position: relative;
     text-align: center;
     margin-bottom: 40px;
     @include media(">=tablet") {
-      margin-bottom: 75px;
+      margin-bottom: 87px;
     }
     .slick-track:before{
       content: '';
@@ -686,6 +731,8 @@
       color: rgba(128, 144, 184, 0.5);
       display: block;
       margin-bottom: 10px;
+      transition: color .5s, font .3s;
+      white-space: nowrap;
       @include media(">=tablet") {
         font-size: 14px;
         line-height: 36px;
@@ -751,6 +798,41 @@
     }
   }
   .history-slider{
+    font: 12px/17px $font-main;
+    text-align: center;
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media(">=tablet") {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .for-big{
+      display: none;
+      @include media(">=tablet") {
+        display: inline;
+      }
+    }
+    h2{
+      margin-bottom: 0;
+    }
+    h3{
+      color: $color-blue;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    .sub-title{
+      font: 12px/13px $font-title;
+      color: $color-gray;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      @include media(">=tablet") {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 35px;
+      }
+    }
+
     .slick-arrow{
       border: none;
       overflow: hidden;
@@ -764,7 +846,7 @@
         width: 60px;
         height: 60px;
       }
-        &.slick-prev{
+      &.slick-prev{
         left: 0;
         background: url('#{$path-images}/ico-arrow-left.svg') 0 0/contain no-repeat;
       }
@@ -783,6 +865,7 @@
   padding:20px;
   @include media(">=desktop") {
     padding: 50px;
+    margin-bottom: 98px;
   }
   ul{
     margin-bottom: 0;

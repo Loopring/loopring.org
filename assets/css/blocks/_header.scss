@@ -20,7 +20,7 @@
   }
   @include media('>=desktop') {
     padding-left: 55px;
-    padding-right: 30px;
+    padding-right: 58px;
     display: block;
   }
   @include media('>=large') {
@@ -144,14 +144,16 @@
     }
     .menu{
       margin-bottom: 30px;
-      font: 36px/51px $font-main;
+      font: 36px/51px $font-title-bold;
       @include media('>=tablet') {
         //font: 72px/102px $font-main;
       }
       @include media('>=desktop') {
-        font: 14px/64px $font-main;
+        font: 14px/64px $font-title-bold;
         float: left;
         margin-bottom: 0;
+        letter-spacing: 3.8px;
+        word-spacing: 1px;
       }
       @include media('>=large') {
         font-size: 16px;
@@ -160,7 +162,7 @@
         list-style: none;
         @include media('>=desktop') {
           float: left;
-          margin:0 25px 0 0;
+          margin:0 28px 0 0;
         }
         a{
           color: $color-white;
@@ -182,7 +184,8 @@
         float: left;
         width: auto;
         display: inline-block;
-        margin: 5px 0 0 0;
+        margin: 5px 0 0 -2px;
+        min-width: 182px;
       }
       @include media('>=large') {
         font-size: 16px;
@@ -199,7 +202,7 @@
     @include media('>=desktop') {
       float: left;
       margin-top: 6px;
-      padding: 0;
+      padding: 0 1px;
       font: 16px/42px $font-title;
     }
     &:after, &:before{
