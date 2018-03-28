@@ -146,7 +146,7 @@
 }
 @keyframes pulse {
   0%, 100%{
-    box-shadow: 45px -45px 40px rgba(65,0,163,0.25);
+    box-shadow: 25px -25px 20px rgba(65,0,163,0.25);
     transform: skewY(17.7deg) scale(1);
   }
   50%{
@@ -156,7 +156,7 @@
 }
 @keyframes pulseflip {
   0%, 100%{
-    box-shadow: -45px -45px 40px rgba(65,0,163,0.25);
+    box-shadow: -25px -25px 20px rgba(65,0,163,0.25);
     transform: skewY(-17.7deg) scale(1);
   }
   50%{
@@ -192,6 +192,11 @@
   overflow: hidden;
   position: relative;
   z-index: 2;
+  .animate-block{
+    @include media('>=xtablet'){
+      min-width: 483px;
+    }
+  }
   h2{
     color: $color-blue;
     text-transform: uppercase;
@@ -246,6 +251,7 @@
       img{
         display: block;
         margin: 0 auto 24px;
+
       }
       p{
         margin-bottom: 0;
@@ -375,6 +381,9 @@
       @include media(">=tablet") {
         margin-bottom: 38px;
         max-width: 245px;
+      }
+      @include media(">=xtablet") {
+        min-height: 190px;
       }
     }
     li{

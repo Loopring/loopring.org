@@ -14,18 +14,10 @@ export function mobileSlider() {
             }
         ]
     });
-
-
-    if($(window).innerWidth() < 1024){
-        $('.steps img').each(function () {
+    if ($(window).innerWidth() < 1024) {
+        $('img[data-gif-src$="gif"]').each(function () {
             let $this = $(this);
             $this.attr('src', $this.attr('data-src'))
-        })
-    }else{
-        //todo this on scroll
-        $('.steps img').each(function () {
-            let $this = $(this);
-            $this.attr('src', $this.attr('data-gif-src'))
         })
     }
 }
@@ -51,13 +43,13 @@ export function videoSlider() {
 
     });
     //stop onLeave slider
-    videoSlider.on('beforeChange', function(event, slick, currentSlide){
+    videoSlider.on('beforeChange', function (event, slick, currentSlide) {
         let current = $('.video-slider .slick-slide:not(.slick-cloned)').eq(currentSlide);
         current.find('iframe')[0].contentWindow.postMessage(JSON.stringify(commandPause), "*");
         current.find('.video-placeholder').fadeIn();
     });
     //play after load slider
-    videoSlider.on('afterChange', function(event, slick, currentSlide){
+    videoSlider.on('afterChange', function (event, slick, currentSlide) {
         let current = $('.video-slider .slick-slide:not(.slick-cloned)').eq(currentSlide);
         current.find('iframe')[0].contentWindow.postMessage(JSON.stringify(commandPlay), "*");
         current.find('.video-placeholder').fadeOut();
@@ -75,36 +67,21 @@ export function videoSlider() {
     })
 }
 export function mobileSliderResize() {
-    let flagPng = true;
-    let flagGif = true;
-    let flag = true;
+    // let flag = true;
     window.addEventListener("resize", () => {
-        if(flag){
-            flag = false;
-
-            setTimeout(() => {
-                flag = true;
-            }, 1000);
-        }
-        if($(window).innerWidth() < 1024){
-            if(flagPng){
-                $('.steps img').each(function () {
-                    let $this = $(this);
-                    $this.attr('src', $this.attr('data-src'))
-                });
-                flagPng = false;
-                flagGif = true;
-            }
-        }else{
-            //todo this on scroll
-            if(flagGif){
-                $('.steps img').each(function () {
-                    let $this = $(this);
-                    $this.attr('src', $this.attr('data-gif-src'))
-                });
-                flagPng = true;
-                flagGif = false;
-            }
+        // if (flag) {
+        //     flag = false;
+        //     setTimeout(() => {
+        //         flag = true;
+        //     }, 1000);
+        // }
+        if ($(window).innerWidth() < 1024) {
+            $('img[data-gif-src$="gif"]').each(function () {
+                let $this = $(this);
+                $this.attr('src', $this.attr('data-src'))
+            });
+        } else {
+            this.scrollAnimations();
         }
     });
 }
@@ -136,4 +113,37 @@ export function historySlider() {
         infinite: false,
         fade: true
     })
+}
+
+
+export function scrollAnimations() {
+    let gifs = $('img[data-gif-src$="gif"]');
+    gifs.attr('data-flag', 1);
+    function scrollLoad() {
+        if ($(window).innerWidth() >= 1024) {
+
+            //for gif
+            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.6;
+            gifs.each(function () {
+                let $this = $(this);
+                if ($this.offset().top <= scrollTop && $this.attr('data-flag') == 1) {
+                    $this.attr('src', $this.attr('data-gif-src'));
+                    $this.attr('data-flag', 0)
+                }
+            });
+
+            //for others
+
+
+
+
+
+        }
+    }
+    window.addEventListener("scroll", () => {
+        scrollLoad()
+    });
+    window.addEventListener("load", () => {
+        scrollLoad()
+    });
 }
