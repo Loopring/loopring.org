@@ -123,7 +123,7 @@ export function scrollAnimations() {
         if ($(window).innerWidth() >= 1024) {
 
             //for gif
-            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.6;
+            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.5;
             gifs.each(function () {
                 let $this = $(this);
                 if ($this.offset().top <= scrollTop && $this.attr('data-flag') == 1) {
