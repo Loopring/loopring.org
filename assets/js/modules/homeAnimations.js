@@ -118,12 +118,14 @@ export function historySlider() {
 
 export function scrollAnimations() {
     let gifs = $('img[data-gif-src$="gif"]');
+    let animateMe = $('.animateMe');
     gifs.attr('data-flag', 1);
+    animateMe.attr('data-flag', 1);
     function scrollLoad() {
         if ($(window).innerWidth() >= 1024) {
 
             //for gif
-            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.5;
+            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.7;
             gifs.each(function () {
                 let $this = $(this);
                 if ($this.offset().top <= scrollTop && $this.attr('data-flag') == 1) {
@@ -133,9 +135,13 @@ export function scrollAnimations() {
             });
 
             //for others
-
-
-
+            animateMe.each(function () {
+                let $this = $(this);
+                if ($this.offset().top <= scrollTop && $this.attr('data-flag') == 1) {
+                    $this.addClass('animate');
+                    $this.attr('data-flag', 0)
+                }
+            });
 
 
         }

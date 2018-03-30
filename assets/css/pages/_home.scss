@@ -496,8 +496,8 @@
     &:nth-child(1){
       @include media(">=xtablet") {
         img{
-          width: 890px;
-          height: 433px;
+          //width: 890px;
+          //height: 433px;
         }
       }
       .text{
@@ -512,10 +512,10 @@
     &:nth-child(2){
       @include media(">=xtablet") {
         img{
-          width: 890px;
-          height: 433px;
+          //width: 890px;
+          //height: 433px;
         }
-        transform: translate(56px, -225px);
+        transform: translate(214px, -296px);
       }
       .text{
         @include media(">=xtablet") {
@@ -536,10 +536,10 @@
     &:nth-child(3){
       @include media(">=xtablet") {
         img{
-          width: 890px;
-          height: 497px;
+          //width: 890px;
+          //height: 497px;
         }
-        transform: translate(-17px, -359px);
+        transform: translate(-39px, -511px);
       }
       .text{
         @include media(">=xtablet") {
@@ -553,8 +553,8 @@
     &:nth-child(4){
       @include media(">=xtablet") {
         img{
-          width: 890px;
-          height: 433px;
+          //width: 890px;
+          //height: 433px;
         }
         transform: translate(87px, -635px);
       }

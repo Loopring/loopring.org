@@ -3,11 +3,15 @@
 @import "blocks/fonts";
 @import "libs/include-media";
 @import "libs/styleguide";
+@import "blocks/preloader";
 @import "libs/slick";
 //@import "gridflex/gridlex";
 
 @import "blocks/header";
 @import "blocks/footer";
+@import "blocks/popup";
+@import "blocks/p404";
+@import "blocks/homeAnimations";
 //@import "blocks/any-stand-alone-block";
 
 @import "pages/common";
@@ -26,127 +30,5 @@
     opacity: 0.5;
     pointer-events: none;
     display: none;
-  }
-}
-
-.popup-video{
-  position: fixed;
-  z-index: 555;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  padding: 5px;
-  display: none;
-  overflow: auto;
-  .holder{
-    max-width: 768px;
-    padding-top: 30px;
-    @include media('>=xtablet'){
-      padding-top: 0;
-    }
-    @include media('>=large'){
-      max-width: 1100px;
-    }
-    width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .box{
-    position: relative;
-    padding-top: 56.25%;
-    height: 0;
-  }
-  .btn.close{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    padding: 0;
-    z-index: 5;
-    right: 0;
-    top: 0;
-    background-color: transparent;
-    cursor: pointer;
-    @include media('>=xtablet'){
-      right: -50px;
-    }
-    @include media('>=desktop'){
-      width: 52px;
-      height: 52px;
-      right: -83px;
-    }
-    &:after, &:before{
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 2px;
-      height: 20px;
-      transform: translate(-50%, -50%) rotate(45deg);
-      background-color: $color-white;
-    }
-    &:after{
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-  }
-  iframe{
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-.p404{
-  background-repeat: no-repeat;
-  background-position: 50% 30%;
-  background-size: 100% auto;
-  padding: 10px;
-  @include media('>=desktop') {
-    background-position: 50% 0;
-  }
-  .page-wrap{
-    min-height: 430px;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .btn{
-      margin-bottom: 0;
-    }
-  }
-  h1{
-    color: $color-blue;
-    @include media('>=desktop') {
-      font-size: 120px;
-      line-height: 128px;
-    }
-  }
-  .header{
-    position: static;
-    @include media('>=tablet') {
-      position: absolute;
-    }
-    @include media('>=large') {
-      padding-top: 50px;
-    }
-    .logo{
-      float: none;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      @include media('>=large') {
-        width: 180px;
-        height: 55px;
-      }
-    }
   }
 }

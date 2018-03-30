@@ -1,0 +1,106 @@
+.animateMe{
+  @include media(">=xtablet") {
+    &.header,  &.two-col-block, &.icons-list-holder, &.long-animations, &.partners-logos{
+      li, .lang-box, .btn, .logo-holder{
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform .5s, opacity .5s;
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i/4}s;
+          }
+        }
+      }
+      &.animate{
+        li, .lang-box, .btn, .logo-holder{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+    &.two-col-block {
+      .description, .animate-block{
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform .5s, opacity .5s;
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i/4}s;
+          }
+        }
+      }
+      &.animate{
+        .description, .animate-block{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+    &.skew-block{
+      .holder *{
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform .5s, opacity .5s;
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i/4}s;
+          }
+        }
+      }
+      &.animate{
+        .holder *{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+    &.icons-list-holder, &.long-animations{
+      h2, h3{
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform .5s, opacity .5s;
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i/4}s;
+          }
+        }
+      }
+      &.animate{
+        h2, h3{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+    &.long-animations{
+      .slick-slide,  li{
+        opacity: 0;
+        transition: opacity .5s;
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i/4}s;
+          }
+        }
+      }
+      &.animate{
+        .slick-slide,  li{
+          opacity: 1;
+        }
+      }
+    }
+    &.history-slider-holder, &.video-block{
+      opacity: 0;
+      transform: translateY(100%);
+      transition: transform .5s, opacity .5s;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{$i/4}s;
+        }
+      }
+      &.animate{
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}

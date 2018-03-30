@@ -4,7 +4,11 @@ export const constants = {
 }
 export function afteLoads() {
     window.addEventListener("load", () => {
-        this.body.addClass('load')
+        this.body.addClass('load');
+        $('.preloader').removeClass('loading');
+        setTimeout(function () {
+            $('.preloader-wrapper').fadeOut(600)
+        }, 500)
     });
 }
 export function btnDecorate() {
@@ -25,10 +29,12 @@ export function headerActivities() {
     $(document).on('click', function (e) {
         if (!$(e.target).closest('.lang-box').length) {
             $('.drop-down').fadeOut();
+            $('.lang-box').removeClass('active')
         }
     });
     $('.btn-close').on('click', function () {
         $(this).closest('.drop-down').fadeOut();
+        $('.lang-box').removeClass('active')
     })
 
 }
