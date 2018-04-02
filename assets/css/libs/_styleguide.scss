@@ -289,6 +289,7 @@ button {
   transition: background .5s, color .5s;
   position: relative;
   text-transform: uppercase;
+
   .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
     content: '';
     position: absolute;
@@ -419,6 +420,10 @@ blockquote {
   margin: 0 0 $main-margin;
   position: relative;
   padding: 15px 25px;
+  @include media('>=tablet'){
+    margin-bottom: 39px;
+    padding-right: 60px;
+  }
   &:after{
     content: '';
     position: absolute;

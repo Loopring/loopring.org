@@ -195,16 +195,22 @@
   .animate-block{
     @include media('>=xtablet'){
       min-width: 483px;
+      margin-bottom: 33px;
+      img{
+        opacity: 0;
+        transition: .8s;
+      }
     }
   }
   h2{
     color: $color-blue;
     text-transform: uppercase;
+    margin-bottom: 10px;
   }
   @include media('>=tablet'){
     display: flex;
     flex-direction: row;
-    margin-bottom:62px;
+    margin-bottom:67px;
     padding: 0;
   }
   >*{
@@ -273,11 +279,11 @@
   h2, h3{
     text-transform: uppercase;
     @include media('>=desktop') {
-      margin-bottom: 11px;
+      margin-bottom: 50px;
     }
   }
   @include media('>=tablet') {
-    padding: 103px 20px 150px;
+    padding: 89px 20px 142px;
     margin-bottom: 110px;
     font:18px/28px $font-main;
   }
@@ -312,7 +318,8 @@
     @include media('>=tablet') {
       padding-left: 50px;
       padding-right: 50px;
-      margin-bottom: 12px;
+      margin-bottom: 0;
+      min-width: 198px;
     }
   }
 }
@@ -325,7 +332,7 @@
   padding: 15px;
   @include media('>=desktop') {
     //padding-bottom: 143px;
-    padding-bottom: 70px;
+    padding-bottom: 54px;
   }
   .container{
     @include media('>=xtablet') {
@@ -337,7 +344,7 @@
     max-width: 700px;
     text-transform: uppercase;
     @include media('>=desktop') {
-      margin-bottom: 98px;
+      margin-bottom: 65px;
     }
   }
   ul{
@@ -361,10 +368,16 @@
   }
   img{
     margin-bottom: 10px;
-    max-width: 32px;
+    max-width: 15px;
     @include media(">=tablet") {
-      margin-bottom: 39px;
+      margin-bottom: 17px;
       max-width: 60px;
+    }
+    img[data-gif-src$="gif"]{
+      @include media(">=xtablet") {
+        opacity: 0;
+        transition: .8s;
+      }
     }
   }
   &.centered{
@@ -384,6 +397,8 @@
       }
       @include media(">=xtablet") {
         min-height: 190px;
+        opacity: 0;
+        transition: opacity .5s;
       }
     }
     li{
@@ -398,9 +413,25 @@
   text-align: center;
   @include media('>=desktop') {
     margin-bottom: 108px;
+    padding-top: 38px;
   }
   h2{
     color: $color-blue;
+    text-transform: uppercase;
+    max-width: 55%;
+    text-align: left;
+    margin-bottom: 30px;
+    @include media('>=desktop') {
+      margin-bottom: 100px;
+    }
+  }
+  .container{
+    max-width: 1020px;
+  }
+  .btn{
+    @include media('>=tablet'){
+      min-width: 198px;
+    }
   }
 }
 //end long-animations section
@@ -410,7 +441,7 @@
   font: 12px/17px $font-main;
   @include media(">=xtablet") {
     font: 14px/24px $font-main;
-
+    margin-bottom: 224px;
   }
   .slick-dots{
     margin:0 0 40px;
@@ -465,6 +496,9 @@
     @include media(">=xtablet") {
       position: absolute;
       padding: 0 15px;
+      opacity: 0;
+      transition: opacity 1s 1s, margin-top 1s 1s;
+      margin-top: 100px;
       &:after{
         content: '';
         position: absolute;
@@ -489,21 +523,38 @@
       overflow: hidden;
     }
   }
+  img[data-flag$="0"] + .text{
+    @include media(">=xtablet") {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
   li{
     list-style: none;
     overflow: hidden;
     position: relative;
+    @include media(">=xtablet") {
+      overflow: visible;
+      img{
+        max-width: none;
+        display: block;
+        opacity: 0;
+        transition: opacity 1s ;
+      }
+    }
     &:nth-child(1){
       @include media(">=xtablet") {
+        z-index: 4;
         img{
-          //width: 890px;
-          //height: 433px;
+          width: 500px;
+          height: 290px;
+          margin-left: 123px;
         }
       }
       .text{
         @include media(">=xtablet") {
-          right: 0;
-          top: 50%;
+          right: 6px;
+          top: 60%;
           transform: translateY(-50%);
           width: 325px;
         }
@@ -511,57 +562,72 @@
     }
     &:nth-child(2){
       @include media(">=xtablet") {
+        z-index: 3;
+        margin-top: -209px;
         img{
-          //width: 890px;
-          //height: 433px;
+          width: 863px;
+          height: 464px;
+          margin-left: 190px;
+          transition-delay: .9s;
         }
-        transform: translate(214px, -296px);
       }
       .text{
         @include media(">=xtablet") {
-          left: 0;
-          top: 50%;
+          left: -11px;
+          top: 89%;
           transform: translateY(-50%);
           width: 325px;
           &:after{
             left: 100%;
-            width: 188px;
+            width: 333px;
           }
           &:before{
-            left: calc(100% + 188px);
+            left: calc(100% + 333px);
           }
         }
       }
     }
     &:nth-child(3){
       @include media(">=xtablet") {
+        z-index: 2;
+        margin-top: -263px;
         img{
-          //width: 890px;
-          //height: 497px;
+          width: 860px;
+          height: 529px;
+          margin-left: 21px;
+          transition-delay: 1s;
         }
-        transform: translate(-39px, -511px);
       }
       .text{
         @include media(">=xtablet") {
-          right: 0;
-          top: 50%;
+          right: -28px;
+          top: 79%;
           transform: translateY(-50%);
           width: 360px;
+          &:after{
+            width: 200px;
+          }
+          &:before{
+            left: calc(100% + 200px);
+          }
         }
       }
     }
     &:nth-child(4){
       @include media(">=xtablet") {
+        margin-top: -275px;
+        z-index: 1;
         img{
-          //width: 890px;
-          //height: 433px;
+          width: 470px;
+          height: 388px;
+          margin-left: 140px;
+          transition-delay: 1.5s;
         }
-        transform: translate(87px, -635px);
       }
       .text{
         @include media(">=xtablet") {
-          left: 0;
-          top: 50%;
+          left: -10px;
+          top: 91%;
           transform: translateY(-50%);
           width: 360px;
           &:after{

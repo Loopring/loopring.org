@@ -129,8 +129,10 @@ export function scrollAnimations() {
             gifs.each(function () {
                 let $this = $(this);
                 if ($this.offset().top <= scrollTop && $this.attr('data-flag') == 1) {
-                    $this.attr('src', $this.attr('data-gif-src'));
-                    $this.attr('data-flag', 0)
+                    $this.attr({
+                        'src': $this.attr('data-gif-src'),
+                        'data-flag': 0
+                    }).css('opacity', 1);
                 }
             });
 
