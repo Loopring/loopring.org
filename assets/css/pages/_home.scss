@@ -287,6 +287,9 @@
     margin-bottom: 110px;
     font:18px/28px $font-main;
   }
+  @include media('>=xlarge') {
+    padding: 189px 20px 242px;
+  }
   &:after{
     content: '';
     position: absolute;
@@ -621,7 +624,7 @@
           width: 470px;
           height: 388px;
           margin-left: 140px;
-          transition-delay: 1.5s;
+          transition-delay: 2.5s;
         }
       }
       .text{

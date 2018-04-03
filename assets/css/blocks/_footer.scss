@@ -9,7 +9,7 @@
   }
   .copy{
     text-align: center;
-    @include media('>=tablet') {
+    @include media('>=xtablet') {
       float: left;
     }
   }
@@ -18,7 +18,7 @@
     font-size: 0;
     line-height: 0;
     letter-spacing: 0;
-    @include media('>=tablet') {
+    @include media('>=xtablet') {
       float: right;
     }
     li {
@@ -26,7 +26,9 @@
       display: inline-block;
       vertical-align: top;
       margin-bottom: 25px;
-      @include media('>=tablet') {
+      text-align: center;
+      @include media('>=xtablet') {
+        text-align: left;
         width: auto;
         max-width: 24px;
         max-height: 21px;
