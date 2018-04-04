@@ -33,7 +33,7 @@
     width: 30px;
     height: 30px;
     padding: 0;
-    margin: 0;
+    margin: 5px 0 0;
     position: relative;
     z-index: 3;
     &:before, &:after{
@@ -144,16 +144,16 @@
     }
     .menu{
       margin-bottom: 30px;
-      font: 36px/51px $font-title-bold;
+      font: 36px/51px $font-title;
       @include media('>=tablet') {
         //font: 72px/102px $font-main;
       }
       @include media('>=desktop') {
-        font: 14px/64px $font-title-bold;
+        font: 14px/64px $font-title;
         float: left;
         margin-bottom: 0;
         letter-spacing: 3.8px;
-        word-spacing: 1px;
+        word-spacing: -1px;
       }
       @include media('>=large') {
         font-size: 16px;
@@ -180,12 +180,14 @@
     .btn{
       width: 100%;
       display: block;
+      letter-spacing: 1px;
       @include media('>=desktop') {
         float: left;
         width: auto;
         display: inline-block;
         margin: 5px 0 0 -2px;
         min-width: 182px;
+        word-spacing: 5px;
       }
       @include media('>=large') {
         font-size: 16px;

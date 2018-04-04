@@ -12,6 +12,7 @@
     width: 58.8%;
     background: #1C60FF;
   }
+  margin-bottom: -182px;
   @include media('>=desktop') {
     margin-bottom: -137px;
   }
@@ -127,17 +128,33 @@
   }
   .intro-text{
     position: absolute;
-    top: 54.65%;
-    left: 11.7%;
+    left: 17px;
+    top: 53%;
+    right: 20px;
     transform: translateY(-120%);
     color: $color-white;
     z-index: 6;
     font: 13px/18px $font-main;
+    @include media('>=tablet'){
+      left: 11.7%;
+      top: 53.2%;
+      right: auto;
+    }
     h2{
       text-transform: uppercase;
-
-      letter-spacing: -1px;
-      word-spacing: 3px;
+      word-spacing: -3px;
+      margin-bottom: 7px;
+      letter-spacing: 2px;
+      @include media('>=tablet'){
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+      }
+    }
+    p{
+      margin-bottom: 18px;
+      @include media('>=tablet'){
+        padding-left: 6px;
+      }
     }
     @include media('>=tablet'){
       font: 20px/46px $font-main;
@@ -185,7 +202,7 @@
 //two-col-block section
 .two-col-block{
   max-width: 1095px;
-  padding-left: 5px;
+  padding-left: 19px;
   padding-right: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -193,6 +210,7 @@
   position: relative;
   z-index: 2;
   .animate-block{
+    margin-bottom: 24px;
     @include media('>=xtablet'){
       min-width: 483px;
       margin-bottom: 33px;
@@ -205,13 +223,22 @@
   h2{
     color: $color-blue;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+  }
+  .btn{
+    margin-left: 18px;
+    @include media('>=tablet'){
+      margin-left: 0;
+      min-width: 198px;
+    }
   }
   @include media('>=tablet'){
     display: flex;
     flex-direction: row;
-    margin-bottom:67px;
+    margin-bottom:70px;
     padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   >*{
     flex-grow: 1;
@@ -224,7 +251,7 @@
     font: 13px/18px $font-main;
     @include media('>=tablet'){
       font: 16px/28px $font-main;
-      padding: 13px 30px 0 60px;
+      padding: 23px 30px 0 60px;
       blockquote{
         margin-left: -30px;
       }
@@ -234,10 +261,11 @@
     font-size: 0;
     line-height: 0;
     letter-spacing: 0;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 0;
     @include media('>=tablet'){
-      padding: 0 25px 0 120px;
-      text-align: left;
+      padding: 9px 25px 0 120px;
+      margin-bottom: 25px;
     }
     li{
       list-style: none;
@@ -248,19 +276,28 @@
       font: 16px/22px $font-title;
       color: $color-blue;
       text-transform: uppercase;
-      margin:0 15px 30px;
-      //todo center or left?
+      margin:0 15px 14px;
       @include media('>=tablet'){
         text-align: center;
-        margin-bottom: 44px;
+        margin-bottom: 42px;
       }
       img{
         display: block;
         margin: 0 auto 24px;
-
+        @include media('<tablet'){
+          max-width: 30px;
+          margin-bottom: 5px;
+        }
       }
       p{
-        margin-bottom: 0;
+        margin: 0 -7px;
+        letter-spacing: 3px;
+        word-spacing: -2px;
+        @include media('<tablet'){
+          font-size: 12px;
+          letter-spacing: 2px;
+          word-spacing: 0;
+        }
       }
     }
   }
@@ -270,8 +307,8 @@
 //skew-block section
 .skew-block{
   position: relative;
-  padding: 40px 10px;
-  margin-bottom: 50px;
+  padding: 80px 20px 60px 20px;
+  margin-bottom: 52px;
   color: $color-white;
   text-align: center;
   overflow: hidden;
@@ -279,12 +316,12 @@
   h2, h3{
     text-transform: uppercase;
     @include media('>=desktop') {
-      margin-bottom: 50px;
+      margin-bottom: 46px;
     }
   }
   @include media('>=tablet') {
-    padding: 89px 20px 142px;
-    margin-bottom: 110px;
+    padding: 93px 20px 142px;
+    margin-bottom: 97px;
     font:18px/28px $font-main;
   }
   @include media('>=xlarge') {
@@ -301,8 +338,10 @@
     transform: translateY(-4vw) skewY(-4deg);
   }
   &.flip{
-    &:after{
-      transform: translateY(-4vw) skewY(4deg);
+    @include media('>=tablet') {
+      &:after{
+        transform: translateY(-4vw) skewY(4deg);
+      }
     }
   }
   .holder{
@@ -315,6 +354,7 @@
   p{
     @include media('>=desktop') {
       margin-bottom: 34px;
+      margin-top: -39px;
     }
   }
   .btn{
@@ -335,17 +375,27 @@
   padding: 15px;
   @include media('>=desktop') {
     //padding-bottom: 143px;
-    padding-bottom: 54px;
+    padding-bottom: 60px;
   }
   .container{
+    @include media('<tablet') {
+      padding-left: 0;
+      padding-right: 0;
+    }
     @include media('>=xtablet') {
       max-width: 1013px;
+    }
+  }
+  p{
+    @include media('<tablet') {
+      margin-bottom: 0;
     }
   }
   h2{
     color: $color-blue;
     max-width: 700px;
     text-transform: uppercase;
+    margin-bottom: 17px;
     @include media('>=desktop') {
       margin-bottom: 65px;
     }
@@ -356,7 +406,7 @@
     text-align: center;
   }
   li{
-    padding: 0 15px 30px;
+    padding: 0 19px 25px;
     list-style: none;
     display: inline-block;
     vertical-align: top;
@@ -371,10 +421,10 @@
   }
   img{
     margin-bottom: 10px;
-    max-width: 15px;
+    max-width: 30px;
     @include media(">=tablet") {
-      margin-bottom: 17px;
-      max-width: 60px;
+      margin-bottom: 19px;
+      max-width: 64px;
     }
     img[data-gif-src$="gif"]{
       @include media(">=xtablet") {
@@ -384,12 +434,17 @@
     }
   }
   &.centered{
-    text-align: center;
+    @include media(">=xtablet") {
+      text-align: center;
+    }
     h2{
-      max-width: 100%
+      max-width: 100%;
+      @include media("<xtablet") {
+        margin-bottom: 49px;
+      }
     }
     img{
-      margin-bottom: 10px;
+      margin-bottom: 28px;
       max-width: 132px;
       margin-left: auto;
       margin-right: auto;
@@ -414,18 +469,19 @@
 //long-animations section
 .long-animations{
   text-align: center;
+  margin-bottom: 11px;
   @include media('>=desktop') {
     margin-bottom: 108px;
-    padding-top: 38px;
+    padding-top: 14px;
   }
   h2{
     color: $color-blue;
     text-transform: uppercase;
-    max-width: 55%;
     text-align: left;
     margin-bottom: 30px;
     @include media('>=desktop') {
-      margin-bottom: 100px;
+      margin-bottom: 112px;
+      max-width: 55%;
     }
   }
   .container{
@@ -444,7 +500,7 @@
   font: 12px/17px $font-main;
   @include media(">=xtablet") {
     font: 14px/24px $font-main;
-    margin-bottom: 224px;
+    margin-bottom: 227px;
   }
   .slick-dots{
     margin:0 0 40px;
@@ -452,6 +508,11 @@
     font-size: 0;
     line-height: 0;
     letter-spacing: 0;
+    @include media("<tablet") {
+      padding-left: 60px;
+      text-align: left;
+      margin-bottom: 49px;
+    }
     li{
       list-style: none;
       display: inline-block;
@@ -524,6 +585,9 @@
     }
     p{
       overflow: hidden;
+      @include media(">=xtablet") {
+        padding-top: 10px;
+      }
     }
   }
   img[data-flag$="0"] + .text{
@@ -577,7 +641,7 @@
       .text{
         @include media(">=xtablet") {
           left: -11px;
-          top: 89%;
+          top: 92%;
           transform: translateY(-50%);
           width: 325px;
           &:after{
@@ -604,7 +668,7 @@
       .text{
         @include media(">=xtablet") {
           right: -28px;
-          top: 79%;
+          top: 80%;
           transform: translateY(-50%);
           width: 360px;
           &:after{
@@ -630,7 +694,7 @@
       .text{
         @include media(">=xtablet") {
           left: -10px;
-          top: 91%;
+          top: 104%;
           transform: translateY(-50%);
           width: 360px;
           &:after{
@@ -645,16 +709,20 @@
     }
   }
   img{
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+    @include media(">=xtablet") {
+      margin-bottom: 20px;
+    }
   }
   .num{
     float: left;
     font: 59px/60px $font-title;
     color: $color-blue;
-    margin-right: 10px;
-  }
-  @include media(">=xtablet") {
-
+    margin-right: 7px;
+    @include media(">=xtablet") {
+      margin-right: 15px;
+      font: 48px/60px $font-title;
+    }
   }
 }
 //end steps
@@ -675,7 +743,7 @@
   }
   .video-slider{
     .slick-slide{
-      width: calc(100vw - 35px);
+      width: calc(100vw - 70px);
       margin: 0 5px;
       position: relative;
       transform: scale(0.93);
@@ -734,8 +802,8 @@
       position: absolute;
       z-index: 2;
       font-size: 0;
-      left: 20px;
-      top: 20px;
+      left: 24px;
+      top: 28px;
       .ico{
         margin-right: 0;
         width: 27px;
@@ -755,21 +823,28 @@
     .text-holder{
       position: absolute;
       z-index: 2;
-      bottom: 10px;
-      left: 20px;
+      bottom: -13px;
+      left: 29px;
       font: 12px/13px $font-main;
       color: $color-white;
       opacity: 0;
       transition: opacity .3s .3s;
+      max-width: 70%;
       h2{
         font-size: 24px;
         line-height: 28px;
         text-transform: uppercase;
         margin-bottom: 0;
+        @include media('>=tablet'){
+          margin-bottom: 9px;
+        }
       }
       @include media('>=tablet'){
         font: 16px/26px $font-main;
-        left: 45px;
+        left: 48px;
+        bottom: 8px;
+        letter-spacing: 1px;
+        word-spacing: -2px;
         h2{
           font-size: 48px;
           line-height: 56px;
@@ -783,8 +858,7 @@
 .history-slider-holder{
   max-width: 1070px;
   padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 25px;
   @include media(">=desktop") {
     margin-bottom: 67px;
   }
@@ -792,9 +866,9 @@
     text-align: center;
     color: $color-blue;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 39px;
     @include media(">=tablet") {
-      margin-bottom: 75px;
+      margin-bottom: 62px;
     }
   }
   .history-slider-nav{
@@ -802,7 +876,8 @@
     text-align: center;
     margin-bottom: 40px;
     @include media(">=tablet") {
-      margin-bottom: 87px;
+      padding: 0 45px;
+      margin-bottom: 92px;
     }
     .slick-track:before{
       content: '';
@@ -818,17 +893,17 @@
         bottom: 18px;
       }
     }
-
     time{
       font: 12px/26px $font-medium;
       color: rgba(128, 144, 184, 0.5);
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       transition: color .5s, font .3s;
       white-space: nowrap;
       @include media(">=tablet") {
         font-size: 14px;
         line-height: 36px;
+        margin-bottom: 23px;
       }
     }
     .point{
@@ -855,6 +930,9 @@
     }
     .slick-slide{
       position: relative;
+      @include media("<xtablet") {
+        width: 120px;
+      }
       &:before{
         content: '';
         bottom: 9px;
@@ -911,33 +989,36 @@
     }
     h3{
       color: $color-blue;
-      margin-bottom: 0;
+      margin-bottom: 3px;
       text-transform: uppercase;
+      letter-spacing: 3px;
     }
     .sub-title{
       font: 12px/13px $font-title;
       color: $color-gray;
       margin-bottom: 20px;
       text-transform: uppercase;
+      letter-spacing: 3px;
       @include media(">=tablet") {
         font-size: 16px;
         line-height: 26px;
-        margin-bottom: 35px;
+        margin-bottom: 28px;
       }
     }
-
     .slick-arrow{
       border: none;
       overflow: hidden;
       text-indent: -9999px;
       width: 30px;
       height: 30px;
-      top: 20px;
       position: absolute;
       z-index: 5;
+      padding: 0;
+      top: 5px;
       @include media(">=tablet") {
         width: 60px;
         height: 60px;
+        top: 17px;
       }
       &.slick-prev{
         left: 0;
@@ -952,10 +1033,10 @@
   }
 }
 
-
 //partners-logos section
 .partners-logos{
   padding:20px;
+  margin-bottom: 54px;
   @include media(">=desktop") {
     padding: 50px;
     margin-bottom: 98px;
@@ -983,8 +1064,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 80%;
-      max-height: 800%;
+      max-width: 50%;
+      max-height: 50%;
+      @include media(">=tablet") {
+        max-width: 80%;
+        max-height: 80%;
+      }
     }
   }
 }

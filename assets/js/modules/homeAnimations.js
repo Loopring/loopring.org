@@ -31,6 +31,9 @@ export function videoSlider() {
         "func": "pauseVideo"
     };
     let videoSlider = $('.video-slider');
+
+
+
     videoSlider.slick({
         infinite: true,
         speed: 300,
@@ -91,10 +94,12 @@ export function historySlider() {
     navSlider.slick({
         focusOnSelect: true,
         asNavFor: '.history-slider',
-        slidesToShow: 1,
         infinite: false,
         slidesToScroll: 1,
         mobileFirst: true,
+        centerMode: true,
+        variableWidth: true,
+        slidesToShow: 3,
         arrows: false,
         responsive: [
             {
@@ -102,6 +107,8 @@ export function historySlider() {
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 1,
+                    variableWidth: false,
+                    centerMode: false
                 }
             }
         ]

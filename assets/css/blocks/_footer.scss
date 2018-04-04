@@ -14,18 +14,23 @@
     }
   }
   .social {
-    margin-bottom: 20px;
+    margin-bottom: 33px;
     font-size: 0;
     line-height: 0;
     letter-spacing: 0;
     @include media('>=xtablet') {
       float: right;
     }
+    img{
+      @include media('<tablet') {
+        max-width: 25px;
+      }
+    }
     li {
       width: 25%;
       display: inline-block;
       vertical-align: top;
-      margin-bottom: 25px;
+      margin-bottom: 32px;
       text-align: center;
       @include media('>=xtablet') {
         text-align: left;

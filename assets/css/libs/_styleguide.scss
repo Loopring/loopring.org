@@ -15,10 +15,10 @@ $success-color: #00a800;
 
 $main-fz: 16px;
 $main-lh: 1.5;
-$font-main: 'Helvetica Neue LT W01_55 Roman', sans-serif;
-$font-medium: 'Helvetica Neue LT W01_65 Md', sans-serif;
-$font-title: 'd-din_condensedregular', sans-serif;
-$font-title-bold: 'd-din_condenseddinCnBd', sans-serif;
+$font-main: 'HelveticaNeueLTStd-Roman', sans-serif;
+$font-medium: 'HelveticaNeueLTStd-Md', sans-serif;
+$font-title: 'DINCondensed-Regular', sans-serif;
+//$font-title-bold: 'd-din_condenseddinCnBd', sans-serif;
 
 $headings-lh: 1.2;
 $main-margin: 25px;
@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
   letter-spacing: 1px;
   line-height: $headings-lh;
+  font-weight: 400;
 }
 
 h1 {
@@ -89,20 +90,28 @@ h1 {
 
 h2 {
   margin-bottom: #{22px * $headings-lh};
-  font-size: 36px;
-  line-height: 37px;
+  font-size: 40px;
+  line-height: 41px;
+  letter-spacing: 2px;
+  word-spacing: -2px;
   @include media('>=desktop'){
     font-size: 60px;
     line-height: 64px;
+    letter-spacing: 3px;
+    word-spacing: -5px;
   }
 }
 
 h3 {
-  margin-bottom: #{20px * $headings-lh};
-  font-size: 30px;
+  margin-bottom: 21px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  word-spacing: -2px;
   @include media('>=desktop'){
     font-size: 48px;
     line-height: 56px;
+    letter-spacing: 4px;
+    word-spacing: -4px;
   }
 }
 
@@ -276,11 +285,7 @@ button {
   display: inline-block;
   margin: 0 0 $main-margin;
   border: 1px solid #0092fa;
-  padding: 5px 20px;
-  line-height: 40px;
-  font-size: 16px;
   font-family: $font-title;
-  height: 52px;
   color: $color-white;
   vertical-align: middle;
   text-decoration: none;
@@ -290,6 +295,20 @@ button {
   position: relative;
   text-transform: uppercase;
 
+  letter-spacing: 2px;
+  word-spacing: -2px;
+  padding: 5px 32px;
+  line-height: 24px;
+  font-size: 12px;
+  height: 34px;
+  @include media('>=tablet') {
+    padding: 5px 20px;
+    line-height: 43px;
+    font-size: 16px;
+    height: 52px;
+    letter-spacing: 3px;
+    word-spacing: -3px;
+  }
   .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
     content: '';
     position: absolute;
@@ -352,8 +371,16 @@ button {
   text-transform: uppercase;
   color: $color-white;
   font: 12px/23px $font-title;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  position: relative;
+  top: 3px;
+  height: 23px;
   @include media('>=tablet'){
     font: 16px/46px $font-title;
+    margin-left: 6px;
+    height: 62px;
+    letter-spacing: 4px;
   }
   .ico{
     content: '';
@@ -361,11 +388,11 @@ button {
     vertical-align: middle;
     height: 23px;
     width: 20px;
-    margin-right: 5px;
+    margin: 0 9px 0 7px;
     @include media('>=tablet'){
       height: 46px;
       width: 40px;
-      margin-right: 15px;
+      margin: 0 15px 0 0;
     }
     .svg-bg{
       fill: rgba(140,198,255,0.3);
@@ -417,12 +444,12 @@ label {
   }
 }
 blockquote {
-  margin: 0 0 $main-margin;
+  margin: 0 0 45px;
   position: relative;
-  padding: 15px 25px;
+  padding: 7px 17px;
   @include media('>=tablet'){
     margin-bottom: 39px;
-    padding-right: 60px;
+    padding: 15px 0 10px 31px;
   }
   &:after{
     content: '';
@@ -447,7 +474,10 @@ blockquote {
     opacity: 0;
   }
   p {
-    margin: 0;
+    margin: 0 0 10px;
+    @include media('>=tablet') {
+      margin-bottom: 25px;
+    }
   }
   q {
     quotes: none;
