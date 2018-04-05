@@ -31,9 +31,6 @@ export function videoSlider() {
         "func": "pauseVideo"
     };
     let videoSlider = $('.video-slider');
-
-
-
     videoSlider.slick({
         infinite: true,
         speed: 300,
@@ -43,7 +40,6 @@ export function videoSlider() {
         arrows: false,
         focusOnSelect: true,
         adaptiveHeight: true,
-
     });
     //stop onLeave slider
     videoSlider.on('beforeChange', function (event, slick, currentSlide) {
@@ -113,12 +109,22 @@ export function historySlider() {
             }
         ]
     });
+
+
+
+
+
     historySlider.slick({
         asNavFor: '.history-slider-nav',
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: false,
         fade: true
+    });
+
+    $('.history-slider').on('click', '.slick-next.slick-disabled', function () {
+        historySlider.slick('slickGoTo', 0);
+        return false;
     })
 }
 

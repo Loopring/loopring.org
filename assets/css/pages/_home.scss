@@ -1014,19 +1014,22 @@
       position: absolute;
       z-index: 5;
       padding: 0;
-      top: 5px;
+      top: -7px;
       @include media(">=tablet") {
         width: 60px;
         height: 60px;
-        top: 17px;
+        top: -7px;
       }
       &.slick-prev{
         left: 0;
-        background: url('#{$path-images}/ico-arrow-left.svg') 0 0/contain no-repeat;
+        background: url('#{$path-images}/ico-arrow-left.svg') 50% 50%/contain no-repeat;
       }
       &.slick-next{
         right: 0;
-        background: url('#{$path-images}/ico-arrow-right.svg') 0 0/contain no-repeat;
+        background: url('#{$path-images}/ico-arrow-right.svg') 50% 50%/contain no-repeat;
+        &.slick-disabled{
+          background: url('#{$path-images}/ico-revert.svg') 50% 50%/contain no-repeat;
+        }
       }
     }
 
