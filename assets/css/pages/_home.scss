@@ -19,7 +19,8 @@
 }
 .intro{
   width: 100%;
-  height: calc(100vh + 255px);
+  height: calc(100vh - 255px);
+  transition: height 1s 1s;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -160,6 +161,9 @@
       font: 20px/46px $font-main;
     }
   }
+}
+.load .intro{
+  height: calc(100vh + 255px);
 }
 @keyframes pulse {
   0%, 100%{
@@ -586,7 +590,7 @@
     p{
       overflow: hidden;
       @include media(">=xtablet") {
-        padding-top: 10px;
+        padding-top: 5px;
       }
     }
   }
@@ -675,7 +679,7 @@
             width: 200px;
           }
           &:before{
-            left: calc(100% + 200px);
+            right: calc(100% + 200px);
           }
         }
       }
@@ -688,7 +692,7 @@
           width: 470px;
           height: 388px;
           margin-left: 140px;
-          transition-delay: 1.5s;
+          transition-delay: 1s;
         }
       }
       .text{

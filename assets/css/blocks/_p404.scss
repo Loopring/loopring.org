@@ -22,6 +22,19 @@
     @include media('>=desktop') {
       font-size: 120px;
       line-height: 128px;
+      margin-bottom: -7px;
+    }
+  }
+  p{
+    @include media('>=desktop') {
+      margin-bottom: 41px;
+      letter-spacing: -1;
+    }
+  }
+  .btn{
+    @include media('>=desktop') {
+      padding-left: 43px;
+      padding-right: 43px;
     }
   }
   .header{
