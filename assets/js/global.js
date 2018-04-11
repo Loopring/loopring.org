@@ -11,7 +11,8 @@ let args = [
         ".btn": [btnDecorate],
         ".intro-wrapper": [introWrapper, introVideo],
         ".header": [headerActivities],
-        ".long-animations": [mobileSlider, mobileSliderResize, scrollAnimations],
+        ".long-animations": [mobileSlider, mobileSliderResize],
+        ".animateMe": [scrollAnimations],
         ".history-slider-nav": [historySlider],
         ".video-slider": [videoSlider]
     },

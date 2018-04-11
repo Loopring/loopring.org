@@ -615,17 +615,16 @@
     }
     &:nth-child(1){
       @include media(">=xtablet") {
-        z-index: 4;
         img{
           width: 500px;
           height: 290px;
-          margin-left: 123px;
+          margin-left: 129px;
         }
       }
       .text{
         @include media(">=xtablet") {
           right: 6px;
-          top: 60%;
+          top: 58%;
           transform: translateY(-50%);
           width: 325px;
         }
@@ -633,12 +632,11 @@
     }
     &:nth-child(2){
       @include media(">=xtablet") {
-        z-index: 3;
-        margin-top: -209px;
+        margin-top: -154px;
         img{
-          width: 863px;
-          height: 464px;
-          margin-left: 190px;
+          width: 735px;
+          height: 395px;
+          margin-left: 262px;
           transition-delay: .9s;
         }
       }
@@ -660,19 +658,18 @@
     }
     &:nth-child(3){
       @include media(">=xtablet") {
-        z-index: 2;
-        margin-top: -263px;
+        margin-top: -150px;
         img{
-          width: 860px;
-          height: 529px;
-          margin-left: 21px;
+          width: 693px;
+          height: 426px;
+          margin-left: 93px;
           transition-delay: 1s;
         }
       }
       .text{
         @include media(">=xtablet") {
           right: -28px;
-          top: 80%;
+          top: 74%;
           transform: translateY(-50%);
           width: 360px;
           &:after{
@@ -686,12 +683,11 @@
     }
     &:nth-child(4){
       @include media(">=xtablet") {
-        margin-top: -275px;
-        z-index: 1;
+        margin-top: -210px;
         img{
-          width: 470px;
-          height: 388px;
-          margin-left: 140px;
+          width: 390px;
+          height: 322px;
+          margin-left: 243px;
           transition-delay: 1s;
         }
       }
