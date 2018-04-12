@@ -46,6 +46,8 @@ body {
 .ovh{
   overflow: hidden;
 }
+
+
 .container{
   max-width: 930px;
   margin-left: auto;
@@ -67,6 +69,43 @@ p {
   margin-bottom: $main-margin;
 }
 
+hr{
+  max-width: 100%;
+  height: 1px;
+  border: none;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  @include media('>=desktop'){
+    margin-bottom: 100px;
+  }
+  @include media('>=large'){
+    margin-bottom: 146px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    background-color: $color-mint;
+    opacity: .5;
+    height: 1px;
+    right: 0;
+    left: 100%;
+    transition: left 10s;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    background-color: $color-mint;
+    top: -1px;
+  }
+  &.animate:after{
+    left: -9999px;
+  }
+}
+
 img{
   max-width: 100%;
 }
@@ -77,6 +116,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: $headings-lh;
   font-weight: 400;
 }
+.content{
+  padding:0 20px;
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    color: $color-blue;
+  }
+}
 
 h1 {
   margin-bottom: #{24px * $headings-lh};
@@ -84,6 +130,9 @@ h1 {
   @include media('>=desktop'){
     font-size: 80px;
     line-height: 82px;
+  }
+  @include media('>=large'){
+    letter-spacing: 4px;
   }
 }
 

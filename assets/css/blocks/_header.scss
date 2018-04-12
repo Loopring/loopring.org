@@ -26,8 +26,8 @@
     min-height: 0 !important;
   }
   @include media('>=large') {
-    padding-right: 45px;
-    padding-left: 70px;
+    padding-right: 64px;
+    padding-left: 60px;
   }
   .btn-menu{
     background-color: transparent;
@@ -102,7 +102,6 @@
   }
   .logo{
     width: 90px;
-    height: 28px;
     float: left;
     position: relative;
     z-index: 3;
@@ -116,11 +115,12 @@
     }
     @include media('>=tablet') {
       width: 180px;
-      height: 55px;
     }
     @include media('>=desktop') {
       width: 143px;
-      height: 44px;
+    }
+    @include media('>=large') {
+      width: 187px;
     }
   }
   nav{
@@ -132,6 +132,9 @@
       float: right;
       padding: 0;
       max-width: calc(100% - 165px);
+    }
+    @include media('>=large') {
+      padding-top: 8px;
     }
     .holder{
       height: 100%;
@@ -167,12 +170,17 @@
       }
       @include media('>=large') {
         font-size: 16px;
+        letter-spacing: 4px;
+        word-spacing: 1px;
       }
       li{
         list-style: none;
         @include media('>=desktop') {
           float: left;
           margin:0 28px 0 0;
+        }
+        @include media('>=large') {
+          margin-right: 33px;
         }
         a{
           color: $color-white;
@@ -201,6 +209,8 @@
       }
       @include media('>=large') {
         font-size: 16px;
+        word-spacing: 3px;
+        letter-spacing: 3px;
       }
     }
   }
@@ -401,9 +411,21 @@
         }
       }
     }
-    nav .menu li a{
-      @include media('>=desktop') {
+    nav{
+      .btn{
+        background-color: $color-white;
         color: $color-blue;
+        border-color: $color-blue;
+        &:hover,
+        &:focus {
+          color: $color-white;
+          background: #3256d9;
+        }
+      }
+      .menu li a{
+        @include media('>=desktop') {
+          color: $color-blue;
+        }
       }
     }
     .lang-box{

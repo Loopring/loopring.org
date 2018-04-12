@@ -1,0 +1,186 @@
+.our-team-holder{
+  max-width: 1320px;
+  @include media('>=large'){
+    max-width: 1620px;
+  }
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    color: $color-blue;
+  }
+  h1{
+    @include media('>=large'){
+      margin-bottom: 82px;
+    }
+  }
+}
+.team-list{
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: center;
+  @include media('>=tablet'){
+    display: flex;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-top: 50px;
+  }
+  @include media('>=large'){
+    margin-left: -60px;
+    margin-right: -60px;
+    margin-bottom: 73px;
+  }
+  li{
+    list-style: none;
+  }
+  >li{
+    background-color: $color-blue;
+    color: $color-white;
+    display: inline-block;
+    vertical-align: top;
+    margin:0 20px 40px;
+    padding: 20px;
+    text-align: left;
+    font: 14px/24px $font-main;
+    width: 440px;
+    max-width: calc(100% - 40px);
+    position: relative;
+    @include media(">=tablet") {
+      font: 16px/26px $font-main;
+      max-width: calc(33.33% - 40px);
+      padding-bottom: 60px;
+    }
+    @include media('>=desktop'){
+      margin:0 30px 60px;
+      padding: 50px 0 95px 60px;
+      max-width: calc(33.33% - 60px);
+    }
+    @include media('>=large'){
+      margin:0 60px 120px;
+      max-width: calc(33.33% - 120px);
+    }
+    >img{
+      margin-bottom: 15px;
+      @include media('>=desktop'){
+        width: 105%;
+        margin-bottom: 37px;
+        max-width: 105%;
+      }
+    }
+    .holder{
+      position: relative;
+      @include media('>=desktop'){
+        margin-left: -22px;
+        padding-right: 40px;
+      }
+    }
+    h4{
+      letter-spacing: 1px;
+      font: 400 18px $font-title;
+      color: $color-white;
+      margin-bottom: 0;
+      @include media('>=desktop'){
+        font-size: 30px;
+        line-height: 37px;
+      }
+    }
+    p{
+      margin-bottom: 0;
+    }
+    .post{
+      font: 14px/24px $font-main;
+      color: $color-purple;
+      margin-bottom: 15px;
+      display: block;
+      @include media('>=desktop'){
+        margin-bottom: 20px;
+      }
+    }
+    .social {
+      font-size: 0;
+      line-height: 0;
+      letter-spacing: 0;
+      padding-top: 10px;
+      margin-bottom: 0;
+      @include media('>=tablet') {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+      }
+      @include media('>=desktop') {
+        bottom: -50px;
+      }
+      img{
+        max-width: 19px;
+        width: 100%;
+        @include media('<tablet') {
+          max-width: 19px;
+          max-height: 18px;
+        }
+      }
+      li {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px;
+        @include media('>=xtablet') {
+          width: auto;
+          margin-right: 24px;
+          vertical-align: middle;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.members-list{
+  line-height: 24px;
+  font-size: 14px;
+  padding-top: 20px;
+  @include media('>=xphone'){
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 39px;
+  }
+  @include media('>=desktop'){
+    padding: 50px 0 0;
+  }
+  @include media('>=large'){
+    padding: 44px 0 0;
+  }
+  li{
+    list-style: none;
+    margin-bottom: 20px;
+    @include media('>=xphone'){
+      width: 50%;
+      padding-right: 20px;
+    }
+    @include media('>=tablet'){
+      width: 25%;
+      margin-bottom: 40px;
+    }
+    @include media('>=xtablet'){
+      width: 20%;
+      margin-bottom: 60px;
+    }
+    @include media('>=large'){
+      margin-bottom: 80px;
+    }
+    &.wide{
+      width: 100%;
+      @include media('>=xtablet'){
+        width: 40%;
+      }
+    }
+  }
+  h4{
+    margin-bottom: 0;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}

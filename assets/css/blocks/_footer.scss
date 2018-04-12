@@ -7,6 +7,9 @@
     padding: 20px 55px 47px 56px;
 
   }
+  @include media('>=large') {
+    padding:20px 62px 47px 63px;
+  }
   .copy{
     text-align: center;
     @include media('>=xtablet') {
@@ -40,6 +43,11 @@
         margin-left: 32px;
         vertical-align: middle;
         margin-bottom: 0;
+      }
+      @include media('>=large') {
+        max-width: 32px;
+        max-height: 30px;
+        margin-left: 39px;
       }
     }
   }

@@ -1,4 +1,5 @@
 export function introWrapper() {
+    $('.page-wrap').css('padding-top', 0);
     $(document).on("mousemove", function (e) {
         function mouseFollow(deltaX, deltaY) {
             return {
@@ -53,5 +54,4 @@ export function introVideo() {
             closePopup()
         }
     })
-
 }

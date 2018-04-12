@@ -317,12 +317,7 @@
   text-align: center;
   overflow: hidden;
   font:12px/17px $font-main;
-  h2, h3{
-    text-transform: uppercase;
-    @include media('>=desktop') {
-      margin-bottom: 46px;
-    }
-  }
+
   @include media('>=tablet') {
     padding: 93px 20px 142px;
     margin-bottom: 97px;
@@ -330,6 +325,26 @@
   }
   @include media('>=xlarge') {
     padding: 189px 20px 242px;
+  }
+  @include media('>=large') {
+    letter-spacing: 1px;
+    padding:143px 20px 214px;
+  }
+  h2, h3{
+    text-transform: uppercase;
+    @include media('>=desktop') {
+      margin-bottom: 46px;
+    }
+    @include media('>=large') {
+      margin-bottom: 49px;
+      letter-spacing: 3px;
+    }
+  }
+  a{
+    color: $color-white;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &:after{
     content: '';
@@ -764,8 +779,8 @@
     width: 100%;
     .box{
       position: relative;
-      //padding-top: 56.25%;
-      padding-top: 51%;
+      padding-top: 56.25%;
+      //padding-top: 51%;
       height: 0;
     }
     iframe{

@@ -13,3 +13,16 @@
 }
 
 
+.page-wrap{
+  padding-top: 80px;
+  padding-bottom: 40px;
+  @include media(">=tablet") {
+    padding-top: 150px;
+    padding-bottom: 70px;
+  }
+  @include media(">=desktop") {
+    padding-top: 288px;
+    padding-bottom: 116px;
+  }
+}
+
