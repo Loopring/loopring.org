@@ -5,6 +5,14 @@
   background-color: $color-blue;
   //height: 835px;
   height: calc(100vh - 96px);
+  margin-bottom: 50px;
+  @include media('>=tablet') {
+    margin-bottom: 100px;
+  }
+  @include media('>=large') {
+    margin-bottom: 170px;
+  }
+
 }
 .intro-inner{
   width: 100%;
