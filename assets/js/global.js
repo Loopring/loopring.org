@@ -9,7 +9,7 @@ let args = [
     {
         "html": [constants, afteLoads],
         ".btn": [btnDecorate],
-        ".intro-wrapper": [introWrapper, introVideo],
+        ".parall": [introWrapper, introVideo],
         ".header": [headerActivities],
         ".long-animations": [mobileSlider, mobileSliderResize],
         ".animateMe": [scrollAnimations],

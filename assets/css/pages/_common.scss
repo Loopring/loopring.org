@@ -13,7 +13,7 @@
 }
 
 
-.page-wrap{
+.header.blue + .page-wrap{
   padding-top: 80px;
   padding-bottom: 40px;
   @include media(">=tablet") {

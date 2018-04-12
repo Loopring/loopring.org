@@ -102,6 +102,7 @@
   }
   .logo{
     width: 90px;
+    height: 27px;
     float: left;
     position: relative;
     z-index: 3;
@@ -115,12 +116,15 @@
     }
     @include media('>=tablet') {
       width: 180px;
+      height: 53px;
     }
     @include media('>=desktop') {
       width: 143px;
+      height: 42px;
     }
     @include media('>=large') {
       width: 187px;
+      height: 55px;
     }
   }
   nav{
