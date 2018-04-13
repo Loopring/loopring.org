@@ -19,7 +19,7 @@
 }
 .intro{
   width: 100%;
-  height: calc(100vh - 255px);
+  height: calc(100vh + 255px);
   transition: height 1s 1s;
   position: relative;
   z-index: 2;
@@ -161,9 +161,6 @@
       font: 20px/46px $font-main;
     }
   }
-}
-.load .intro{
-  height: calc(100vh + 255px);
 }
 @keyframes pulse {
   0%, 100%{
