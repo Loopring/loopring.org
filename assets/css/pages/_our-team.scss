@@ -72,7 +72,6 @@
       }
     }
     .holder{
-      position: relative;
       @include media('>=desktop'){
         margin-left: -22px;
         padding-right: 40px;
@@ -108,11 +107,12 @@
       margin-bottom: 0;
       @include media('>=tablet') {
         position: absolute;
-        bottom: -30px;
-        left: 0;
+        bottom: 30px;
+        left: 20px;
       }
       @include media('>=desktop') {
-        bottom: -50px;
+        bottom: 47px;
+        left: 38px;
       }
       img{
         max-width: 19px;

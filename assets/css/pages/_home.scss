@@ -584,9 +584,9 @@
     @include media(">=xtablet") {
       position: absolute;
       padding: 0 15px;
-      opacity: 0;
-      transition: opacity 1s 1s, margin-top 1s 1s;
-      margin-top: 100px;
+      //opacity: 0;
+      //transition: opacity 1s 1s, margin-top 1s 1s;
+      //margin-top: 100px;
       &:after{
         content: '';
         position: absolute;
@@ -614,12 +614,12 @@
       }
     }
   }
-  img[data-flag$="0"] + .text{
-    @include media(">=xtablet") {
-      opacity: 1;
-      margin-top: 0;
-    }
-  }
+  //img[data-flag$="0"] + .text{
+  //  @include media(">=xtablet") {
+  //    opacity: 1;
+  //    margin-top: 0;
+  //  }
+  //}
   li{
     list-style: none;
     overflow: hidden;
@@ -647,6 +647,9 @@
           top: 58%;
           transform: translateY(-50%);
           width: 325px;
+          &:after{
+            transform-origin: 0 0 0;
+          }
         }
       }
     }
@@ -669,6 +672,7 @@
           &:after{
             left: 100%;
             width: 333px;
+            transform-origin: 100% 0 0;
           }
           &:before{
             left: calc(100% + 333px);
@@ -694,6 +698,7 @@
           width: 360px;
           &:after{
             width: 200px;
+            transform-origin: 0 0 0;
           }
           &:before{
             right: calc(100% + 200px);
@@ -720,6 +725,7 @@
           &:after{
             left: 100%;
             width: 188px;
+            transform-origin: 100% 0 0;
           }
           &:before{
             left: calc(100% + 188px);

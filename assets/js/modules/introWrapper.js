@@ -10,9 +10,9 @@ export function introWrapper() {
         if($(window).width() >= 1024){
             $('.parall.one').css(mouseFollow(80, 80));
             $('.parall.two').css(mouseFollow(40, 40));
-            $('.parall.three').css(mouseFollow(100, 100));
+            $('.parall.three').css(mouseFollow(20, 20));
             $('.parall.four').css(mouseFollow(60, 60));
-            $('.parall.five').css(mouseFollow(20, 20));
+            $('.parall.five').css(mouseFollow(100, 100));
         }
     });
 }

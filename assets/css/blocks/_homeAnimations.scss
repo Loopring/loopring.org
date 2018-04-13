@@ -3,7 +3,7 @@
     //*{
     //  transition-timing-function: ease-out;
     //}
-    &.header,  &.two-col-block, &.icons-list-holder, &.long-animations, &.partners-logos{
+    &.header,  &.two-col-block, &.icons-list-holder, &.partners-logos{
       li, .lang-box, .btn, .logo-holder{
         opacity: 0;
         transform: translateY(100%);
@@ -79,23 +79,23 @@
         }
       }
     }
-    &.long-animations{
-      .slick-slide,  li{
-        opacity: 0;
-        transition: opacity 1s;
-        transition-timing-function: ease-out;
-        @for $i from 1 through 10 {
-          &:nth-child(#{$i}) {
-            transition-delay: #{$i/4}s;
-          }
-        }
-      }
-      &.animate{
-        .slick-slide,  li{
-          opacity: 1;
-        }
-      }
-    }
+    //&.long-animations{
+    //  .slick-slide,  li{
+    //    opacity: 0;
+    //    transition: opacity 1s;
+    //    transition-timing-function: ease-out;
+    //    @for $i from 1 through 10 {
+    //      &:nth-child(#{$i}) {
+    //        transition-delay: #{$i/4}s;
+    //      }
+    //    }
+    //  }
+    //  &.animate{
+    //    .slick-slide,  li{
+    //      opacity: 1;
+    //    }
+    //  }
+    //}
     &.history-slider-holder, &.video-block{
       opacity: 0;
       transform: translateY(100%);
@@ -109,6 +109,47 @@
       &.animate{
         opacity: 1;
         transform: translateX(0);
+      }
+    }
+  }
+}
+
+
+.long-animations, .skewed-text{
+  @include media(">=xtablet") {
+    li.animateMe, .rhombus.animateMe{
+      .text{
+        > *, &:before{
+          opacity: 0;
+          transition: opacity 1s 4s;
+          transition-timing-function: ease-out;
+        }
+        &:after{
+          transform: rotateY(-90deg);
+          transition: transform 2s 2s;
+          transition-timing-function: ease-out;
+          opacity: 1 !important;
+        }
+      }
+      //@for $i from 1 through 10 {
+      //  &:nth-child(#{$i}) {
+      //
+      //    transition-delay: #{$i/4}s;
+      //  }
+      //}
+      &.animate{
+        .text{
+          > *, &:before{
+            opacity: 1;
+          }
+          &:before{
+            transition-delay: 2s;
+            transition-duration: 1s;
+          }
+          &:after{
+            transform: rotateY(0deg);
+          }
+        }
       }
     }
   }
