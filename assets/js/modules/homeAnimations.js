@@ -129,9 +129,8 @@ export function scrollAnimations() {
     animateMe.attr('data-flag', 1);
     function scrollLoad() {
         if ($(window).innerWidth() >= 1024) {
-
-            //for gif
             let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.7;
+            //for gif
             gifs.each(function () {
                 let $this = $(this);
                 if ($this.offset().top <= scrollTop && $this.attr('data-flag') == 1) {

@@ -740,15 +740,16 @@
       margin-bottom: 20px;
     }
   }
-  .num{
-    float: left;
-    font: 59px/60px $font-title;
-    color: $color-blue;
-    margin-right: 7px;
-    @include media(">=xtablet") {
-      margin-right: 15px;
-      font: 48px/60px $font-title;
-    }
+}
+
+.num{
+  float: left;
+  font: 59px/60px $font-title;
+  color: $color-blue;
+  margin-right: 7px;
+  @include media(">=xtablet") {
+    margin-right: 15px;
+    font: 48px/60px $font-title;
   }
 }
 //end steps

@@ -115,6 +115,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   line-height: $headings-lh;
   font-weight: 400;
+
+  text-transform: uppercase;
 }
 .content{
   padding:0 20px;
