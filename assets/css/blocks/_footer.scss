@@ -54,10 +54,12 @@
 }
 
 .no-touch{
-    .footer .social li{
-        &:hover{
+    .footer , .skew-block{
+      .social li{
+        &:hover img{
           animation: swing .5s linear 1;
         }
+      }
     }
 }
 @keyframes swing {

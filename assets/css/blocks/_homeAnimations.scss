@@ -121,12 +121,12 @@
       .text{
         > *, &:before{
           opacity: 0;
-          transition: opacity 1s 4s;
+          transition: opacity 1s 3s;
           transition-timing-function: ease-out;
         }
         &:after{
           transform: rotateY(-90deg);
-          transition: transform 2s 2s;
+          transition: transform 2s 1s;
           transition-timing-function: ease-out;
           opacity: 1 !important;
         }

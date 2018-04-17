@@ -322,7 +322,6 @@
   text-align: center;
   overflow: hidden;
   font:12px/17px $font-main;
-
   @include media('>=tablet') {
     padding: 93px 20px 142px;
     margin-bottom: 97px;
@@ -334,6 +333,32 @@
   @include media('>=large') {
     letter-spacing: 1px;
     padding:143px 20px 214px;
+  }
+  .social{
+    @include media('<xtablet') {
+      font-size: 0;
+      line-height: 0;
+    }
+    li{
+      list-style: none;
+      margin: 0 5px 5px;
+      display: inline-block;
+      vertical-align: baseline;
+      @include media('>=xphone') {
+        margin: 0 10px 10px;
+      }
+      @include media('>=large') {
+        margin: 0 8px;
+      }
+    }
+    img{
+      max-width: 20px;
+      max-height: 16px;
+      margin-right: 15px;
+    }
+    a{
+      white-space: nowrap;
+    }
   }
   h2, h3{
     text-transform: uppercase;
@@ -347,9 +372,10 @@
   }
   a{
     color: $color-white;
-    &:hover{
-      text-decoration: underline;
-    }
+    text-decoration: none;
+    //&:hover{
+    //  text-decoration: underline;
+    //}
   }
   &:after{
     content: '';
@@ -374,6 +400,12 @@
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
+    @include media('>=desktop') {
+      max-width: 1200px;
+    }
+    @include media('>=large') {
+      max-width: 1440px;
+    }
   }
   p{
     @include media('>=desktop') {

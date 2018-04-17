@@ -4,6 +4,7 @@ import "./libs/slick";
 import "./libs/odometer";
 import {constants, afteLoads, btnDecorate, headerActivities} from "./modules/globals";
 import {odometer} from "./modules/odometer";
+import {accordeon} from "./modules/accordeon";
 import {introWrapper, introVideo} from "./modules/introWrapper";
 import {mobileSlider, mobileSliderResize, videoSlider, historySlider, scrollAnimations} from "./modules/homeAnimations";
 
@@ -17,6 +18,7 @@ let args = [
         ".animateMe": [scrollAnimations],
         ".history-slider-nav": [historySlider],
         ".odometer": [odometer],
+        ".accordeon": [accordeon],
         ".video-slider": [videoSlider]
     },
 ];

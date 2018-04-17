@@ -214,16 +214,39 @@
         width: 50%;
         margin-bottom: 0;
         &:nth-child(1){
-          width: 49%;
+          width: 50%;
           margin-top: 28px;
+
         }
         &:nth-child(2){
-          width: 43%;
-          margin: 0 3.7% 0 1.5%;
+          width: 44%;
+          margin: 0 3.5% 0 0;
+
         }
         &:nth-child(3){
           margin: -8.3% 0 0 15%;
           width: 42.5%;
+        }
+      }
+      @include media(">=large") {
+        &:nth-child(1){
+          .text{
+            right: 68%;
+            top: 62px;
+          }
+        }
+        &:nth-child(2){
+          .text{
+            right: 66%;
+            top: 35px;
+          }
+        }
+        &:nth-child(3){
+          .text{
+            right: 85%;
+            top: auto;
+            bottom: 37%;
+          }
         }
       }
     }
@@ -256,6 +279,7 @@
       font: 14px/24px $font-main;
       color: $color-gray;
       padding-bottom: 15px;
+      text-shadow: 1px 1px $color-white;
       @include media(">=xtablet") {
         text-align: left;
         position: absolute;
@@ -297,28 +321,6 @@
   }
 }
 //end skewed-text section
-.two-titles{
-  @include media(">=tablet") {
-    max-width: 600px;
-    float: left;
-    padding-top: 55px;
-  }
-  h1{
-    color: $color-blue;
-    margin-bottom: 6px;
-  }
-  h2{
-    color: #c4d0ed;
-    @include media(">=large") {
-      letter-spacing: 4px;
-    }
-  }
-}
-//end two-titles section
-.two-col-text{
-
-
-}
 
 .numeric-list{
   p{
@@ -341,8 +343,6 @@
     }
   }
 }
-
-
 //end numeric-list section
 .circles-section{
   overflow: hidden;
@@ -382,6 +382,9 @@
       margin-right: auto;
       display: inline-block;
       vertical-align: top;
+      @include media("<tablet") {
+        margin-bottom: 20px;
+      }
       @include media(">=tablet", "<desktop") {
         width: 50%;
         margin-right: -4px;
@@ -479,7 +482,7 @@
     color: $color-blue;
   }
   @include media(">=tablet") {
-    margin: 0 -45px  50px;
+    margin: 0 -30px  50px;
     display: flex;
   }
   @include media(">=desktop") {
@@ -495,7 +498,7 @@
     padding: 0 20px;
     @include media(">=tablet") {
       width: 50%;
-      padding: 0 45px;
+      padding: 0 30px;
     }
     @include media(">=large") {
       padding: 0 90px;
@@ -506,6 +509,23 @@
       font-size: 80px;
       line-height: 84px;
       margin-right: 38px;
+    }
+  }
+}
+.two-titles{
+  @include media(">=tablet") {
+    max-width: 600px;
+    float: left;
+    padding-top: 55px;
+  }
+  h1{
+    color: $color-blue;
+    margin-bottom: 6px;
+  }
+  h2{
+    color: #c4d0ed;
+    @include media(">=large") {
+      letter-spacing: 4px;
     }
   }
 }

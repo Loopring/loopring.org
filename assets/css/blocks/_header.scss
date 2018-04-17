@@ -342,6 +342,7 @@
       }
       a{
         color: $color-purple;
+        text-decoration: none;
         @include media('>=desktop') {
           color: rgba(255,255,255,0.7);
           &:hover{
