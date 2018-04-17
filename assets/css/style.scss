@@ -5,9 +5,9 @@
 @import "libs/styleguide";
 @import "libs/odometer-theme-minimal";
 @import "libs/slick";
-@import "blocks/preloader";
 //@import "gridflex/gridlex";
 
+@import "blocks/preloader";
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/popup";
@@ -20,6 +20,8 @@
 @import "pages/home";
 @import "pages/our-team";
 @import "pages/leaf";
+@import "pages/news";
+
 @import "blocks/innerAnimations";
 .wrapper{
   position: relative;

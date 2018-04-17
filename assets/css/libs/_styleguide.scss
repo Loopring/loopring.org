@@ -7,6 +7,7 @@ $color-purple: #8dafff;
 $color-mint: #3fafff;
 $color-white: #fff;
 $color-gray: #8090b8;
+$color-gray-darken: #67759a;
 $color-black: #000;
 
 $danger-color: #c81615;
@@ -206,7 +207,6 @@ ul {
   margin-bottom: $main-margin;
   @include media('>=desktop'){
     font-size: 16px;
-    line-height: 40px;
   }
   li {
     list-style: disc inside;
