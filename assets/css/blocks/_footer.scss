@@ -5,10 +5,12 @@
   @include media('>=tablet') {
     font: 14px/26px $font-main;
     padding: 20px 55px 47px 56px;
-
+  }
+  @include media('>=desktop') {
+    padding: 90px 55px 47px 56px;
   }
   @include media('>=large') {
-    padding:20px 62px 47px 63px;
+    padding: 90px 62px 47px 63px;
   }
   .copy{
     text-align: center;
