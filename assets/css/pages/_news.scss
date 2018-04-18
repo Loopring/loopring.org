@@ -1,5 +1,5 @@
 .right-container{
-  max-width: 1620px;
+  max-width: 1682px;
   margin: 0 0 0 auto;
   padding: 0 20px;
   overflow: hidden;
@@ -7,18 +7,23 @@
     padding-right: 60px;
   }
   @include media(">=large") {
-    padding-right: 90px;
+    padding-right: 82px;
   }
   h1, h2, h3, h4{
     color: $color-blue;
+    @include media(">=large") {
+      margin-bottom: 48px;
+    }
   }
 }
-
-.news-list{
+.news-list-holder{
   @include media(">=desktop") {
-    padding-top: 30px;
     width: 64.5%;
     float: left;
+  }
+}
+.news-list{
+  @include media(">=desktop") {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -38,30 +43,80 @@
         h4{
           font-size: 60px;
           line-height: 64px;
+          margin-bottom: 19px;
+        }
+        time{
+          margin-bottom: 15px;
         }
       }
     }
     @include media(">=large") {
       width: calc(50% - 50px);
-      margin-bottom: 60px;
+      margin-bottom: 67px;
+      &:first-child{
+        margin-bottom: 56px;
+      }
     }
   }
   img{
     display: block;
     margin-bottom: 20px;
     @include media(">=desktop") {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
   }
   time{
     font: 14px/24px $font-main;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   a{
     text-decoration: none;
     &:hover{
       text-decoration: underline;
     }
+  }
+  h4{
+    margin-bottom: 13px;
+
+  }
+}
+
+
+.ajax-loader{
+  text-align: center;
+  font-family: $font-title;
+  color: $color-blue;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  p{
+    margin-bottom: 0;
+    text-indent: 20px;
+  }
+  svg, img{
+    max-width: 13px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 22px 4px;
+    animation: load .9s steps(3) infinite;
+    opacity: 0.5;
+    &:nth-child(2){
+      animation-delay: .3s;
+    }
+    &:nth-child(3){
+      animation-delay: .6s;
+    }
+  }
+}
+@keyframes load {
+  0%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
   }
 }
