@@ -49,6 +49,10 @@
         time{
           margin-bottom: 15px;
         }
+        .pub-logo{
+          right: 30px;
+          bottom: 25px;
+        }
       }
     }
     @include media(">=large") {
@@ -76,6 +80,22 @@
     text-decoration: none;
     &:hover{
       text-decoration: underline;
+      .pub-logo{
+        opacity: 1;
+      }
+    }
+  }
+  .image-holder{
+    position: relative;
+    display: block;
+    .pub-logo{
+      max-width: 72px;
+      position: absolute;
+      opacity: .5;
+      transition: opacity .5s;
+      bottom: 20px;
+      right: 20px;
+      margin: 0;
     }
   }
   h4{

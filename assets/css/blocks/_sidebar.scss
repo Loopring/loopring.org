@@ -1,0 +1,36 @@
+.sidebar{
+  min-height: 1px;
+  width: 100%;
+  max-width: 380px;
+  @include media(">=desktop") {
+    float: right;
+  }
+  .sidebar-box{
+    background-color: $color-blue;
+    color: $color-white;
+    padding: 35px 35px 15px;
+    max-width: 380px;
+    @include media(">=desktop") {
+      padding:59px 40px 30px;
+    }
+  }
+  &.fixed{
+    .sidebar-box{
+      position: fixed;
+      top: 0;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-white;
+    margin-bottom: 17px;
+  }
+  a{
+    color: #b6ccff;
+  }
+  img{
+    margin-bottom: 16px;
+  }
+  p{
+    margin-bottom: 15px;
+  }
+}

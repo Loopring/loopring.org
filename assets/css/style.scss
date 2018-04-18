@@ -22,6 +22,7 @@
 @import "pages/leaf";
 @import "pages/news";
 
+@import "blocks/sidebar";
 @import "blocks/innerAnimations";
 .wrapper{
   position: relative;
@@ -40,28 +41,3 @@
   }
 }
 
-.sidebar{
-  background-color: $color-blue;
-  color: $color-white;
-
-  width: 100%;
-  max-width: 380px;
-  padding: 35px 35px 15px;
-  @include media(">=desktop") {
-    float: right;
-    padding:59px 40px 30px;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    color: $color-white;
-    margin-bottom: 17px;
-  }
-  a{
-    color: #b6ccff;
-  }
-  img{
-    margin-bottom: 16px;
-  }
-  p{
-    margin-bottom: 15px;
-  }
-}
