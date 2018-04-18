@@ -22,7 +22,6 @@ export function sidebarSticky() {
                     console.log(footer.offset().top );
                     sidebar.find('.sidebar-box').css({
                         'top': 'auto',
-                        // 'bottom': bot+'px'
                         'bottom': bot+'px'
                     })
                 }

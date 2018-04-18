@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 6;
+  z-index: 66;
   max-height: 100vh;
   min-height: 0;
   background-color: transparent;
@@ -397,10 +397,6 @@
       }
     }
   }
-
-
-
-
   &.blue{
     .logo{
       background: none;
@@ -450,6 +446,9 @@
         }
       }
       .drop-down{
+        @include media('>=desktop') {
+          background-color: $color-white;
+        }
         &:after{
           @include media('>=desktop') {
             border-color: $color-blue transparent transparent transparent;

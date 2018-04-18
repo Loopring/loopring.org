@@ -24,6 +24,9 @@
 
 @import "blocks/sidebar";
 @import "blocks/innerAnimations";
+
+
+//pixelperfect overlay
 .wrapper{
   position: relative;
   &:after{
