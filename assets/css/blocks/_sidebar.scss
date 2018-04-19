@@ -1,21 +1,28 @@
-.sidebar{
+.sidebar {
   min-height: 1px;
   width: 100%;
   max-width: 380px;
   @include media(">=desktop") {
     float: right;
   }
-  .sidebar-box{
+  .sidebar-box {
     background-color: $color-blue;
     color: $color-white;
     padding: 35px 35px 15px;
     max-width: 380px;
     @include media(">=desktop") {
-      padding:59px 40px 30px;
+      padding: 59px 40px 30px;
     }
   }
-  &.fixed{
-    .sidebar-box{
+  .wrap {
+    & + .wrap {
+      @include media(">=desktop") {
+        padding-top: 12px;
+      }
+    }
+  }
+  &.fixed {
+    .sidebar-box {
       position: fixed;
       top: 0;
       max-height: 100vh;
@@ -26,13 +33,13 @@
     color: $color-white;
     margin-bottom: 17px;
   }
-  a{
+  a {
     color: #b6ccff;
   }
-  img{
+  img {
     margin-bottom: 16px;
   }
-  p{
+  p {
     margin-bottom: 15px;
   }
 }

@@ -24,5 +24,8 @@
     padding-top: 216px;
     padding-bottom: 116px;
   }
+  @include media(">=1920px") {
+    padding-top: 289px;
+  }
 }
 
