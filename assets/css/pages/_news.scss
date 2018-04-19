@@ -2,7 +2,8 @@
   max-width: 1682px;
   margin: 0 0 0 auto;
   padding: 0 20px;
-  overflow: hidden;
+  position: relative;
+  z-index: 20;
   @include media(">=desktop") {
     padding-right: 60px;
   }
@@ -11,6 +12,11 @@
   }
   @include media(">=1921px") {
     margin: 0 auto;
+  }
+  &:after{
+    content: '';
+    clear: both;
+    display: block;
   }
   h1, h2, h3, h4 {
     color: $color-blue;

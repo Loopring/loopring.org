@@ -11,6 +11,7 @@
   }
 }
 
+//Whitepapers list
 .whitepapers-list {
   padding-bottom: 15px;
   margin-bottom: 30px;
@@ -55,10 +56,19 @@
     }
     > div {
       padding: 10px 0;
+      @include media(">=460px") {
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+      }
+      @include media(">=tablet") {
+        width: 23%;
+      }
       @include media(">=desktop") {
         display: table-cell;
         vertical-align: middle;
         padding: 10px 0 30px;
+        width: auto;
       }
     }
   }
@@ -68,6 +78,7 @@
     vertical-align: top;
     color: $color-gray-darken;
     padding-left: 40px;
+    margin-right: 10px;
     background: {
       repeat: no-repeat;
       size: 19px 15px;
@@ -76,6 +87,7 @@
   }
 }
 
+//FAQ
 .faq {
   position: relative;
   top: -10px;
