@@ -29,9 +29,11 @@ $breakpoints: (xphone: 480px, tablet: 768px, xtablet: 1024px, desktop: 1200px, l
 html {
   min-height: 100%;
 }
-*{
+
+* {
   outline: none;
 }
+
 body {
   background: $color-white;
   color: $color-gray;
@@ -44,12 +46,12 @@ body {
     //font-size: 18px;
   }
 }
-.ovh{
+
+.ovh {
   overflow: hidden;
 }
 
-
-.container{
+.container {
   max-width: 930px;
   margin-left: auto;
   margin-right: auto;
@@ -59,31 +61,33 @@ body {
     max-width: 1380px;
   }
 }
-.clearfix-after{
-  &:after{
+
+.clearfix-after {
+  &:after {
     content: '';
     display: block;
     clear: both;
   }
 }
+
 p {
   margin-bottom: $main-margin;
 }
 
-hr{
+hr {
   max-width: 100%;
   height: 1px;
   border: none;
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     margin-bottom: 100px;
   }
-  @include media('>=large'){
+  @include media('>=large') {
     margin-bottom: 146px;
   }
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     background-color: $color-mint;
@@ -93,7 +97,7 @@ hr{
     left: 100%;
     transition: left 10s;
   }
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     right: 0;
@@ -102,12 +106,12 @@ hr{
     background-color: $color-mint;
     top: -1px;
   }
-  &.animate:after{
+  &.animate:after {
     left: -9999px;
   }
 }
 
-img{
+img {
   max-width: 100%;
 }
 
@@ -118,8 +122,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   text-transform: uppercase;
 }
-.content{
-  padding:0 20px;
+
+.content {
+  padding: 0 20px;
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     color: $color-blue;
@@ -129,11 +134,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin-bottom: #{24px * $headings-lh};
   font-size: 60px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 80px;
     line-height: 82px;
   }
-  @include media('>=large'){
+  @include media('>=large') {
     letter-spacing: 4px;
   }
 }
@@ -144,7 +149,7 @@ h2 {
   line-height: 41px;
   letter-spacing: 2px;
   word-spacing: -2px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 60px;
     line-height: 64px;
     letter-spacing: 3px;
@@ -157,7 +162,7 @@ h3 {
   font-size: 24px;
   letter-spacing: 2px;
   word-spacing: -2px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 48px;
     line-height: 56px;
     letter-spacing: 4px;
@@ -168,7 +173,7 @@ h3 {
 h4 {
   margin-bottom: #{18px * $headings-lh};
   font-size: 18px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 30px;
     line-height: 38px;
   }
@@ -177,7 +182,7 @@ h4 {
 h5 {
   margin-bottom: #{16px * $headings-lh};
   font-size: 20px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 24px;
     line-height: 32px;
   }
@@ -186,7 +191,7 @@ h5 {
 h6 {
   margin-bottom: #{14px * $headings-lh};
   font-size: 16px;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 20px;
     line-height: 28px;
   }
@@ -199,23 +204,41 @@ a {
   text-decoration: underline;
   &:hover {
     text-decoration: none;
+    color: $color-light-blue;
   }
 }
 
 ul {
   margin-bottom: $main-margin;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 16px;
   }
   li {
-    list-style: disc inside;
+    list-style-type: none;
+    .content & {
+      position: relative;
+      padding-left: 15px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $color-light-blue;
+        @include media('>=desktop') {
+          top: 10px;
+        }
+      }
+    }
   }
 }
 
 ol {
   margin-bottom: $main-margin;
   counter-reset: counterName;
-  @include media('>=desktop'){
+  @include media('>=desktop') {
     font-size: 16px;
     line-height: 40px;
   }
@@ -259,73 +282,75 @@ input[type="number"] {
   }
 }
 
-.load{
+.load {
   .btn,
   input[type="submit"],
   button {
     .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
       opacity: 1;
     }
-    .decor-top:before{
+    .decor-top:before {
       top: -2px;
       left: -2px;
       right: auto;
       bottom: auto;
     }
-    .decor-top:after{
+    .decor-top:after {
       top: -2px;
       right: -2px;
       left: auto;
       bottom: auto;
     }
-    .decor-bot:before{
+    .decor-bot:before {
       left: -2px;
       bottom: -2px;
       top: auto;
       right: auto;
     }
-    .decor-bot:after{
+    .decor-bot:after {
       right: -2px;
       bottom: -2px;
       left: auto;
       top: auto;
     }
-    &.active{
-      .decor-top:before{
+    &.active {
+      .decor-top:before {
         left: calc(100% - 1px);
       }
-      .decor-top:after{
+      .decor-top:after {
         top: calc(100% - 1px);
       }
-      .decor-bot:before{
+      .decor-bot:before {
         bottom: calc(100% - 1px);
       }
-      .decor-bot:after{
+      .decor-bot:after {
         right: calc(100% - 1px);
       }
     }
   }
 }
+
 body:not(.touch) {
   .btn,
   input[type="submit"],
-  button{
-    &:hover{
-      .decor-top:before{
+  button {
+    &:hover {
+      .decor-top:before {
         left: calc(100% - 1px);
       }
-      .decor-top:after{
+      .decor-top:after {
         top: calc(100% - 1px);
       }
-      .decor-bot:before{
+      .decor-bot:before {
         bottom: calc(100% - 1px);
       }
-      .decor-bot:after{
+      .decor-bot:after {
         right: calc(100% - 1px);
       }
     }
   }
 }
+
 .btn,
 input[type="submit"],
 button {
@@ -369,7 +394,7 @@ button {
     right: 50%;
     bottom: 50%;
     opacity: 0;
-    transition: top .5s .3s, left .5s .3s, right .5s .3s, bottom .5s .3s, opacity .6s ;
+    transition: top .5s .3s, left .5s .3s, right .5s .3s, bottom .5s .3s, opacity .6s;
   }
   &:hover,
   &:focus {
@@ -391,7 +416,9 @@ button {
   &.danger {
     background: $danger-color;
     border-color: #ff2100;
-    .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {background: $danger-color;}
+    .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
+      background: $danger-color;
+    }
     &:hover,
     &:focus {
       background: darken($danger-color, 10%);
@@ -400,7 +427,9 @@ button {
   &.warning {
     background: $warning-color;
     border-color: #e0ff00;
-    .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {background: $warning-color;}
+    .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
+      background: $warning-color;
+    }
     &:hover,
     &:focus {
       background: darken($warning-color, 10%);
@@ -409,14 +438,17 @@ button {
   &.success {
     background: $success-color;
     border-color: #00ff62;
-    .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {background: $success-color;}
+    .decor-top:before, .decor-top:after, .decor-bot:before, .decor-bot:after {
+      background: $success-color;
+    }
     &:hover,
     &:focus {
       background: darken($success-color, 10%);
     }
   }
 }
-.btn-watch{
+
+.btn-watch {
   text-transform: uppercase;
   color: $color-white;
   font: 12px/23px $font-title;
@@ -426,42 +458,42 @@ button {
   top: 3px;
   height: 23px;
   text-decoration: none;
-  @include media('>=tablet'){
+  @include media('>=tablet') {
     font: 16px/46px $font-title;
     margin-left: 6px;
     height: 62px;
     letter-spacing: 4px;
   }
-  .ico{
+  .ico {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 23px;
     width: 20px;
     margin: 0 9px 0 7px;
-    @include media('>=tablet'){
+    @include media('>=tablet') {
       height: 46px;
       width: 40px;
       margin: 0 15px 0 0;
     }
-    .svg-bg{
-      fill: rgba(140,198,255,0.3);
+    .svg-bg {
+      fill: rgba(140, 198, 255, 0.3);
       stroke: $color-white;
       transition: fill .5s, stroke .5s;
     }
-    .svg-arrow{
+    .svg-arrow {
       fill: $color-white;
       transition: fill .5s;
     }
   }
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $color-mint;
-    .svg-bg{
-      fill: rgba(140,198,255,0);
+    .svg-bg {
+      fill: rgba(140, 198, 255, 0);
       stroke: $color-mint;
     }
-    .svg-arrow{
+    .svg-arrow {
       fill: $color-mint;
     }
   }
@@ -485,23 +517,24 @@ label {
   vertical-align: middle;
 }
 
-.load blockquote{
-  &:before{
+.load blockquote {
+  &:before {
     opacity: 1;
   }
-  &:after{
+  &:after {
     height: 100%;
   }
 }
+
 blockquote {
   margin: 0 0 45px;
   position: relative;
   padding: 7px 17px;
-  @include media('>=tablet'){
+  @include media('>=tablet') {
     margin-bottom: 39px;
     padding: 15px 0 10px 31px;
   }
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     left: 0;
@@ -512,7 +545,7 @@ blockquote {
     transition: height .5s;
     opacity: 0.5;
   }
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     top: -1px;
@@ -542,11 +575,28 @@ blockquote {
 }
 
 table {
+  width: 100%;
+  border: 1px solid rgba(28, 96, 255, .5);
   margin: 0 0 $main-margin;
-  th,
+  tr:nth-child(odd) {
+    background-color: rgba(28, 96, 255, .05);
+  }
+  th {
+    text-align: left;
+    padding: 5px 14px;
+    color: #fefeff;
+    background-color: $color-blue;
+    @include media(">=xtablet") {
+      padding: 5px 28px;
+    }
+  }
   td {
-    border: 1px solid $color-gray;
-    padding: 5px;
+    font-size: 14px;
+    padding: 5px 14px;
+    color: $color-gray-darken;
+    @include media(">=xtablet") {
+      padding: 14px 28px;
+    }
   }
 }
 

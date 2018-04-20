@@ -1,0 +1,29 @@
+//Developers portal
+.developers-portal {
+  @include media(">=desktop") {
+    width: 59.5%;
+    float: left;
+  }
+  h2 {
+    @include media(">=large") {
+      margin-top: 48px;
+    }
+  }
+  .example {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 26px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 8px;
+      width: 4px;
+      background-color: $color-blue;
+    }
+  }
+}

@@ -129,7 +129,7 @@ export function scrollAnimations() {
     animateMe.attr('data-flag', 1);
     function scrollLoad() {
         if ($(window).innerWidth() >= 1024) {
-            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.7;
+            let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.8;
             //for gif
             gifs.each(function () {
                 let $this = $(this);
@@ -149,8 +149,6 @@ export function scrollAnimations() {
                     $this.attr('data-flag', 0)
                 }
             });
-
-
         }
     }
     window.addEventListener("scroll", () => {

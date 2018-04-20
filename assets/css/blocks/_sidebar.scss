@@ -10,6 +10,7 @@
     color: $color-white;
     padding: 35px 35px 15px;
     max-width: 380px;
+    width: 100%;
     @include media(">=desktop") {
       padding: 59px 40px 30px;
     }
@@ -41,5 +42,23 @@
   }
   p {
     margin-bottom: 15px;
+  }
+  ul {
+    margin-bottom: 0;
+    &.accordeon {
+      margin-bottom: 15px;
+    }
+    a {
+      text-decoration: none;
+      color: #8dafff;
+      &.active {
+        color: #fefeff;
+      }
+      @include media(">=xtablet") {
+        &:hover {
+          color: #fefeff;
+        }
+      }
+    }
   }
 }
