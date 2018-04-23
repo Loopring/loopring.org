@@ -1,5 +1,7 @@
 //Developers portal
 .developers-portal {
+  padding: 0;
+  color: $color-gray-darken;
   @include media(">=desktop") {
     width: 59.5%;
     float: left;
@@ -24,6 +26,63 @@
       bottom: 8px;
       width: 4px;
       background-color: $color-blue;
+    }
+  }
+  a{
+    color: $color-gray-darken;
+  }
+}
+
+.add-navigation {
+  text-align: center;
+  @include media(">=desktop") {
+    text-align: left;
+  }
+  @include media(">=1920px") {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 270px;
+  }
+
+  ul {
+    font-size: 0;
+    line-height: 0;
+  }
+  li {
+    font:16px/26px $font-title;
+    letter-spacing: 2.55px;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    @include media(">=tablet") {
+      margin: 0 30px 10px;
+      width: auto;
+    }
+    @include media(">=xtablet") {
+      letter-spacing: 4.55px;
+    }
+    @include media(">=desktop") {
+      margin: 0 15px 10px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+    @include media(">=1920px") {
+      margin: 0 0 10px;
+      width: 100%;
+    }
+    &.active a {
+      color: $color-blue;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $color-purple;
+    &:hover {
+      @include media(">=xtablet") {
+        color: $color-blue;
+      }
     }
   }
 }

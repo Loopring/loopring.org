@@ -113,6 +113,25 @@
         <!--end header section-->
         <div class="page-wrap">
             <div class="right-container">
+                <nav class="add-navigation">
+                    <ul>
+                        <li class="active"><a href="#">Overview</a>
+                        </li>
+                        <li><a href="#">LRC Token</a>
+                        </li>
+                        <li><a href="#">Protocol</a>
+                        </li>
+                        <li><a href="#">Relays</a>
+                        </li>
+                        <li><a href="#">Wallets</a>
+                        </li>
+                        <li><a href="#">Tokenization Services</a>
+                        </li>
+                        <li><a href="#">Contribution</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--add nav-->
                 <div class="developers-portal content">
                      <h1 class="animateMe">Loopring Smart <br>Contracts</h1>
 
@@ -134,7 +153,7 @@
                                 <p class="animateMe">To understand what the LSC does, we must first take a look at the definition
                                     of an order, the available actions for the user, and how the current order
                                     state is tracked.</p>
-                                 <h2 class="animateMe">Anatomy of an Order</h2>
+                                 <h2 class="animateMe" data-anchor="Anatomy of an Order">Anatomy of an Order</h2>
 
                                 <p class="animateMe">An order is a pack of data that describes the intent of the user on the
                                     market. To ensure the origin of the order, it is signed against the hash
@@ -206,13 +225,13 @@
                                     transaction at a rate of 4 and you ended up selling 4 tokenS for each tokenB,
                                     effectively saving 2 tokenS. Keep in mind that this does not take into
                                     account the miner fees.</p>
-                                 <h2 class="animateMe">Full or Partial Cancellation</h2>
+                                 <h2 class="animateMe" data-anchor="Full or Partial Cancellation">Full or Partial Cancellation</h2>
 
                                 <p class="animateMe">A user can partially or fully cancel an order by sending a special transaction
                                     to the LSC, containing the details about the order and the amounts to cancel.
                                     The LSC will take that into account, store the amounts to cancel and emit
                                     an OrderCancelled event to the network.</p>
-                                 <h2 class="animateMe">Fill and Cancellation Tracking</h2>
+                                 <h2 class="animateMe" data-anchor="Fill and Cancellation Tracking">Fill and Cancellation Tracking</h2>
 
                                 <p class="animateMe">The LSC keeps track of fill and cancellation amounts by storing their
                                     values using the order's hash as an identifier. This data is publicly accessible
@@ -224,7 +243,7 @@
 
                                     <p class="animateMe">This section will talk about what the LSC expect to receive from the miners
                                         and the steps taken to verify the data.</p>
-                                     <h2 class="animateMe">Order Ring</h2>
+                                     <h2 class="animateMe" data-anchor="Order Ring">Order Ring</h2>
 
                                     <p class="animateMe">The LSC expect to receive order rings from the miners. An order ring is
                                         multiple orders linked together in a way that allows them to be all matched
@@ -242,7 +261,7 @@
                                             <p class="animateMe">Example: Let's check if the above ring in the diagram is valid. 0.2 *
                                                 14 * 0.5 = 1.4 the result is greater than 1, thus the trade should be possible.</p>
                                             <h2
-                                            class="animateMe">Order Ring Validation</h2>
+                                            class="animateMe" data-anchor="Order Ring Validation">Order Ring Validation</h2>
                                                 <p class="animateMe">The LSC does not perform the exchange rate or amount calculations but
                                                     still has to verify what the miner supplied for these values. This is done
                                                     by miners for two main reasons: solidity does not have support for floating
@@ -251,7 +270,7 @@
                                                 <p class="animateMe">The following section discusses mathematical validation of the order rings.
                                                     We recommend you to check supersymmetry’s complementary document listed
                                                     at the beginning of this page.</p>
-                                                 <h2 class="animateMe">Sub-Loop Checking</h2>
+                                                 <h2 class="animateMe" data-anchor="Sub-Loop Checking">Sub-Loop Checking</h2>
 
                                                 <p class="animateMe">This step prevents <a target="_blank" href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">covered
                     interest arbitrage</a>. Once a valid ring is found
@@ -267,7 +286,7 @@
                                                     this: a token cannot be twice in a buy or sell position. In the above diagram
                                                     we can see that ARK is twice as a token to sell and twice as a token to
                                                     buy.</p>
-                                                 <h2 class="animateMe">Fill Rate Checking</h2>
+                                                 <h2 class="animateMe" data-anchor="Fill Rate Checking">Fill Rate Checking</h2>
 
                                                 <p class="animateMe">The rates calculation for the transactions in the ring are made by the
                                                     miners for the reasons stated above in this page. Therefore the LSC have
@@ -279,7 +298,7 @@
                                                 <p class="animateMe">Once the exchange rates are confirmed, we make sure that all the margins
                                                     (discounts) are at the same percentage for every order, to ensure fairness.</p>
                                                 <h2
-                                                class="animateMe">Order Scaling</h2>
+                                                class="animateMe" data-anchor="Order Scaling">Order Scaling</h2>
                                                     <p class="animateMe">This is the part where the orders are scaled according to: - The history
                                                         of filled and cancelled amounts - The current balance of the senders' accounts.</p>
                                                     <p
@@ -294,7 +313,7 @@
                                                         class="animateMe">Ring Settlement</h2>
                                                             <p class="animateMe">If all the lights are green from the previous checks, the transactions
                                                                 can be made.</p>
-                                                             <h2 class="animateMe">Transactions</h2>
+                                                             <h2 class="animateMe" data-anchor="Transactions">Transactions</h2>
 
                                                             <p class="animateMe">To make the transactions, the LSC uses the TokenTransferDelegate smart
                                                                 contract. The introduction of such a delegate makes upgrading the protocol
@@ -307,7 +326,7 @@
                                                                 is fired.</p>
                                                             <p class="animateMe">Once all the transaction are made, a RingMined event is fired.</p>
                                                             <h2
-                                                            class="animateMe">Fee Model</h2>
+                                                            class="animateMe" data-anchor="Fee Model">Fee Model</h2>
                                                                 <p class="animateMe">This section describes the current fee model of Loopring. As complementary
                                                                     material, we advise you to read Daniel's Medium article on the subject.</p>
                                                                 <p
@@ -359,7 +378,7 @@
                                                                             talk about it. Suggestions are welcomed to the <a target="_blank" href="https://github.com/Loopring/LIPs">LIPs</a>
 repository
                                                                             on github.</p>
-                                                                         <h2 class="animateMe">Emitted Events</h2>
+                                                                         <h2 class="animateMe" data-anchor="Emitted Events">Emitted Events</h2>
 
                                                                         <p class="animateMe">In this page you should have come by a set of events that are emitted
                                                                             by the LSC. These events exist to allow the relays/order browsers and other
@@ -368,7 +387,7 @@ repository
                                                                         <p class="animateMe">A list of the emitted events: * OrderCancelled * OrderFilled * RingMined</p>
                                                                         <h2
                                                                         class="animateMe">Fraud and Attack Protections</h2>
-                                                                             <h2 class="animateMe">Ring Filch</h2>
+                                                                             <h2 class="animateMe" data-anchor="Ring Filch">Ring Filch</h2>
 
                                                                             <p class="animateMe">An attacker could monitor all unconﬁrmed Rings and broadcast the same
                                                                                 rings with their own digital signature. We call this Ring Filch. In order
@@ -381,19 +400,19 @@ repository
                                                                             <p class="animateMe">This protection is valid for a blocksToLive time specified in the LSC.
                                                                                 After that duration, if the ring has not been submitted, an other miner
                                                                                 can claim it.</p>
-                                                                             <h2 class="animateMe">Denial of Service</h2>
+                                                                             <h2 class="animateMe" data-anchor="Denial of Service">Denial of Service</h2>
 
                                                                             <p class="animateMe">We allow nodes to selectively handle orders by setting their own criteria
                                                                                 and they may choose to hide or reveal them. Therefore we do not see denial
                                                                                 of service as a form of unethical behaviour.</p>
-                                                                             <h2 class="animateMe">Massive Tiny Order Attack</h2>
+                                                                             <h2 class="animateMe" data-anchor="Massive Tiny Order Attack">Massive Tiny Order Attack</h2>
 
                                                                             <p class="animateMe">A user could send a large amount of tiny orders to attack the Loopring
                                                                                 nodes. However, since we allow nodes to reject orders based on their own
                                                                                 criteria, most of these orders will be rejected because they do not yield
                                                                                 satisfying profit when matched. Thus, a massive tiny order attack is not
                                                                                 feasible.</p>
-                                                                             <h2 class="animateMe">Insufficient Balance</h2>
+                                                                             <h2 class="animateMe" data-anchor="Insufficient Balance">Insufficient Balance</h2>
 
                                                                             <p class="animateMe">Malicious users may sign and spread out orders whose value inside the
                                                                                 order is not zero but whose address actually has zero balance. Nodes could
@@ -402,21 +421,23 @@ repository
                                                                                 time to update the status of an order, but can also choose to minimize
                                                                                 the effort by, for example, blacklisting addresses and drop related orders.</p>
                 </div>
-                <!--about us-->
+                <!--developers portal-->
                 <aside class="sidebar">
                     <div class="sidebar-box">
                          <h4>Table of contents</h4>
 
-                        <ul class="accordeon animateMe">
+                        <ul class="accordeon animateMe anchor-list">
                             <li>
                                 <div class="title">Management of Orders</div>
                                 <div class="acc-holder">
                                     <ul class="animateMe">
-                                        <li><a href="#">Anatomy of an Order</a>
+                                        <li><a data-anchor="Anatomy of an Order" href="#">Anatomy of an Order</a>
                                         </li>
-                                        <li><a href="#">Full or Partial Cancellation</a>
+                                        <li><a data-anchor="Full or Partial Cancellation" href="#">Full or Partial
+                                        Cancellation</a>
                                         </li>
-                                        <li><a href="#">Fill and Cancellation Tracking</a>
+                                        <li><a data-anchor="Fill and Cancellation Tracking" href="#">Fill and Cancellation
+                                        Tracking</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -425,15 +446,15 @@ repository
                                 <div class="title">Verification of Miner Supplied Data</div>
                                 <div class="acc-holder">
                                     <ul class="animateMe">
-                                        <li><a href="#">Order Ring</a>
+                                        <li><a data-anchor="Order Ring" href="#">Order Ring</a>
                                         </li>
-                                        <li><a href="#">Order Ring Validation</a>
+                                        <li><a data-anchor="Order Ring Validation" href="#">Order Ring Validation</a>
                                         </li>
-                                        <li><a href="#">Sub-Loop Checking</a>
+                                        <li><a data-anchor="Sub-Loop Checking" href="#">Sub-Loop Checking</a>
                                         </li>
-                                        <li><a href="#">Fill Rate Checking</a>
+                                        <li><a data-anchor="Fill Rate Checking" href="#">Fill Rate Checking</a>
                                         </li>
-                                        <li><a href="#">Order Scaling</a>
+                                        <li><a data-anchor="Order Scaling" href="#">Order Scaling</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -442,27 +463,28 @@ repository
                                 <div class="title">Ring Settlement</div>
                                 <div class="acc-holder">
                                     <ul class="animateMe">
-                                        <li><a href="#">Transactions</a>
+                                        <li><a data-anchor="Transactions" href="#">Transactions</a>
                                         </li>
-                                        <li><a href="#">Fee Model</a>
+                                        <li><a data-anchor="Fee Model" href="#">Fee Model</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <div class="title">Emitted Events</div>
+                                <div class="title" data-anchor="Emitted Events">Emitted Events</div>
                             </li>
                             <li>
                                 <div class="title">Fraud and Attack Protections</div>
                                 <div class="acc-holder">
                                     <ul class="animateMe">
-                                        <li><a href="#">Ring Filch</a>
+                                        <li><a data-anchor="Ring Filch" href="#">Ring Filch</a>
                                         </li>
-                                        <li><a href="#">Denial of Service</a>
+                                        <li><a data-anchor="Denial of Service" href="#">Denial of Service</a>
                                         </li>
-                                        <li><a href="#">Massive Tiny Order Attack</a>
+                                        <li><a data-anchor="Massive Tiny Order Attack" href="#">Massive Tiny Order
+                                        Attack</a>
                                         </li>
-                                        <li><a href="#">Insufficient Balance</a>
+                                        <li><a data-anchor="Insufficient Balance" href="#">Insufficient Balance</a>
                                         </li>
                                     </ul>
                                 </div>
