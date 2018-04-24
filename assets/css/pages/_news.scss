@@ -10,10 +10,22 @@
   @include media(">=large") {
     padding: 0 90px 0 10px;
   }
-  @include media(">=1921px") {
+  @include media(">=xlarge") {
     margin: 0 auto;
   }
-  &:after{
+  &.small {
+    max-width: 1440px;
+    @include media(">=1920px") {
+      margin: 0 0 0 auto;
+    }
+    @include media(">=2200px") {
+      margin: 0 auto;
+      position: relative;
+      left: 250px;
+
+    }
+  }
+  &:after {
     content: '';
     clear: both;
     display: block;

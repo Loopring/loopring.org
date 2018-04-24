@@ -28,11 +28,12 @@
       background-color: $color-blue;
     }
   }
-  a{
+  a {
     color: $color-gray-darken;
   }
 }
 
+//add nav
 .add-navigation {
   text-align: center;
   @include media(">=desktop") {
@@ -43,6 +44,7 @@
     right: 100%;
     top: 0;
     width: 270px;
+    margin-right: 130px;
   }
 
   ul {
@@ -50,7 +52,7 @@
     line-height: 0;
   }
   li {
-    font:16px/26px $font-title;
+    font: 16px/26px $font-title;
     letter-spacing: 2.55px;
     display: inline-block;
     width: 100%;
@@ -64,7 +66,7 @@
     }
     @include media(">=desktop") {
       margin: 0 15px 10px;
-      &:first-child{
+      &:first-child {
         margin-left: 0;
       }
     }
