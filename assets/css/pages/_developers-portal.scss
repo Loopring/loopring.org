@@ -3,27 +3,36 @@
   padding: 0;
   color: $color-gray-darken;
   @include media(">=desktop") {
-    width: 59.5%;
+    width: 54.5%;
     float: left;
+    line-height: 28px;
+  }
+  h1 {
+    @include media(">=desktop") {
+      margin-bottom: 25px;
+    }
   }
   h2 {
+    @include media(">=desktop") {
+      margin-bottom: 26px;
+    }
     @include media(">=large") {
-      margin-top: 48px;
+      margin-top: 74px;
     }
   }
   .example {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    padding-left: 30px;
+    padding-left: 31px;
     font-size: 14px;
     line-height: 26px;
     &:after {
       content: '';
       position: absolute;
       left: 0;
-      top: 4px;
-      bottom: 8px;
+      top: 7px;
+      bottom: 9px;
       width: 4px;
       background-color: $color-blue;
     }
@@ -44,7 +53,7 @@
     right: 100%;
     top: 0;
     width: 270px;
-    margin-right: 130px;
+    margin-right: 121px;
   }
 
   ul {
@@ -62,7 +71,7 @@
       width: auto;
     }
     @include media(">=xtablet") {
-      letter-spacing: 4.55px;
+      letter-spacing: 4.25px;
     }
     @include media(">=desktop") {
       margin: 0 15px 10px;

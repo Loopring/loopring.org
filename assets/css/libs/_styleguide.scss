@@ -574,6 +574,13 @@ blockquote {
   }
 }
 
+.table-holder{
+  padding-top: 7px;
+  @include media("<tablet"){
+    max-width: 400px;
+    overflow: auto;
+  }
+}
 table {
   width: 100%;
   border: 1px solid rgba(28, 96, 255, .5);
@@ -583,19 +590,19 @@ table {
   }
   th {
     text-align: left;
-    padding: 5px 14px;
+    padding: 10px 14px;
     color: #fefeff;
     background-color: $color-blue;
     @include media(">=xtablet") {
-      padding: 5px 28px;
+      padding: 20px 26px 21px;
     }
   }
   td {
     font-size: 14px;
-    padding: 5px 14px;
+    padding: 10px 14px;
     color: $color-gray-darken;
     @include media(">=xtablet") {
-      padding: 14px 28px;
+      padding: 21px 27px 22px;
     }
   }
 }

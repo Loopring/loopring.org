@@ -2,6 +2,42 @@
   @include media(">=large") {
     margin-bottom: 55px;
   }
+  &.anchor-list {
+    @include media(">=desktop") {
+      margin-top: -13px;
+    }
+    ul {
+      padding: 5px 0 0 20px;
+      @include media(">=desktop") {
+        margin-bottom: -18px;
+      }
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      padding-left: 9px;
+      @include media(">=xtablet") {
+        &:hover:after {
+          background-color: #fefeff;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 3px;
+        height: 3px;
+        background-color: #8dafff;
+        border-radius: 50%;
+
+      }
+    }
+  }
   li {
     list-style: none;
   }
@@ -35,12 +71,12 @@
     }
     @include media(">=desktop") {
       padding: 24px 24px 24px 0;
+      .sidebar & {
+        padding: 20px 24px 20px 0;
+      }
     }
     @include media(">=large") {
       padding: 34px 34px 34px 0;
-      .sidebar & {
-        padding: 24px 24px 24px 0;
-      }
     }
     &:after {
       content: '';

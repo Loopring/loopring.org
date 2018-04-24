@@ -29,7 +29,7 @@
     padding-right: 64px;
     padding-left: 60px;
   }
-  .btn-menu{
+  .btn-menu {
     background-color: transparent;
     float: right;
     width: 30px;
@@ -38,7 +38,7 @@
     margin: 5px 0 0;
     position: relative;
     z-index: 3;
-    &:before, &:after{
+    &:before, &:after {
       content: '';
       height: 2px;
       width: 18px;
@@ -50,44 +50,44 @@
       transform: translate(-50%, -50%);
       margin-top: -4px;
     }
-    &:after{
+    &:after {
       transform: translate(-50%, -50%);
       margin-top: 4px;
     }
     @include media('>=tablet') {
       width: 60px;
       height: 60px;
-      &:before, &:after{
+      &:before, &:after {
         height: 4px;
         width: 36px;
         margin-top: -8px;
       }
-      &:after{
+      &:after {
         margin-top: 8px;
       }
     }
     @include media('>=desktop') {
       display: none;
     }
-    &.active{
-      &:before, &:after{
+    &.active {
+      &:before, &:after {
         margin-top: 0;
-        transform: translate(-50%,- 50%) rotate(45deg);
+        transform: translate(-50%, - 50%) rotate(45deg);
       }
-      &:after{
-        transform: translate(-50%,- 50%) rotate(-45deg);
+      &:after {
+        transform: translate(-50%, - 50%) rotate(-45deg);
       }
     }
   }
-  &.opened{
+  &.opened {
     background-color: $color-blue;
     min-height: 100vh;
     @include media('<desktop') {
       overflow: auto;
     }
   }
-  .logo-holder{
-    &:after{
+  .logo-holder {
+    &:after {
       content: '';
       display: block;
       clear: both;
@@ -95,23 +95,23 @@
     @include media('>=desktop') {
       float: left;
       margin-right: 20px;
-      &:after{
+      &:after {
         display: none;
       }
     }
   }
-  .logo{
+  .logo {
     width: 90px;
     height: 27px;
     float: left;
     position: relative;
     z-index: 3;
     background: url('#{$path-images}/logo-white.svg') 50% 50%/contain no-repeat;
-    a{
+    a {
       display: block;
       height: 100%;
     }
-    img{
+    img {
       display: none;
     }
     @include media('>=tablet') {
@@ -127,7 +127,7 @@
       height: 55px;
     }
   }
-  nav{
+  nav {
     padding: 45px 0 20px;
     text-transform: uppercase;
     display: none;
@@ -140,12 +140,12 @@
     @include media('>=large') {
       padding-top: 8px;
     }
-    .holder{
+    .holder {
       height: 100%;
       display: -ms-grid;
       display: grid;
-      -ms-grid-rows:  1fr auto auto;
-      grid-template-rows:  1fr auto auto;
+      -ms-grid-rows: 1fr auto auto;
+      grid-template-rows: 1fr auto auto;
       -ms-grid-columns: 100%;
       grid-template-columns: 100%;
       align-items: center;
@@ -159,7 +159,7 @@
         max-width: 100%;
       }
     }
-    .menu{
+    .menu {
       margin-bottom: 30px;
       font: 36px/20px $font-title;
       padding: 15px 0;
@@ -179,29 +179,32 @@
         letter-spacing: 4px;
         word-spacing: 1px;
       }
-      li{
+      li {
         list-style: none;
         @include media('>=desktop') {
           float: left;
-          margin:0 28px 0 0;
+          margin: 0 28px 0 0;
         }
         @include media('>=large') {
           margin-right: 33px;
         }
-        a{
+        a {
           color: $color-white;
           text-decoration: none;
           display: inline-block;
-          &:hover{
-            box-shadow: inset 0 -2px $color-white;
+          @include media(">=desktop") {
+            transition: box-shadow .7s;
+            &:hover {
+              box-shadow: inset 0 -2px $color-white;
+            }
           }
         }
-        &.active a, .active {
+        &.current-menu-item a, .current-menu-item {
           box-shadow: inset 0 -2px $color-white;
         }
       }
     }
-    .btn{
+    .btn {
       width: 100%;
       display: block;
       letter-spacing: 1px;
@@ -220,7 +223,7 @@
       }
     }
   }
-  .lang-box{
+  .lang-box {
     position: relative;
     color: $color-white;
     font: 12px/33px $font-title;
@@ -233,7 +236,7 @@
       padding: 0 1px;
       font: 16px/42px $font-title;
     }
-    &:after, &:before{
+    &:after, &:before {
       content: '';
       position: absolute;
       width: 0;
@@ -244,7 +247,8 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -3px;transition: opacity .5s;
+      margin-top: -3px;
+      transition: opacity .5s;
       @include media('>=desktop') {
         opacity: .7;
         width: 11px;
@@ -256,7 +260,7 @@
         transition: transform .5s, margin-top .5s, opacity .5s;
       }
     }
-    &:after{
+    &:after {
       margin-top: 3px;
       border-width: 4px 4px 0 4px;
       border-color: #fff transparent transparent transparent;
@@ -264,17 +268,17 @@
         display: none;
       }
     }
-    .current{
+    .current {
       text-decoration: underline;
       position: relative;
       display: inline-block;
     }
-    .text-holder-mobile{
+    .text-holder-mobile {
       @include media('>=desktop') {
         display: none;
       }
     }
-    .text-holder-desktop{
+    .text-holder-desktop {
       display: none;
       @include media('>=desktop') {
         display: block;
@@ -285,12 +289,12 @@
         transition: opacity .5s;
       }
     }
-    .btn-close{
+    .btn-close {
       width: 25px;
       height: 25px;
       float: right;
       position: relative;
-      &:after, &:before{
+      &:after, &:before {
         content: '';
         position: absolute;
         top: 50%;
@@ -300,14 +304,14 @@
         transform: translate(-50%, -50%) rotate(45deg);
         background-color: $color-blue;
       }
-      &:after{
+      &:after {
         transform: translate(-50%, -50%) rotate(-45deg);
       }
       @include media('>=desktop') {
         display: none;
       }
     }
-    .drop-down{
+    .drop-down {
       display: none;
       position: absolute;
       bottom: 100%;
@@ -316,7 +320,7 @@
       background-color: $color-white;
       padding: 10px 10px 30px 25px;
       width: 210px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.24);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
       @include media('>=desktop') {
         bottom: auto;
         top: 100%;
@@ -325,7 +329,7 @@
         background-color: transparent;
         box-shadow: none;
       }
-      &:after{
+      &:after {
         width: 0;
         height: 0;
         border-style: solid;
@@ -340,24 +344,24 @@
           display: none;
         }
       }
-      a{
+      a {
         color: $color-purple;
         text-decoration: none;
         @include media('>=desktop') {
-          color: rgba(255,255,255,0.7);
-          &:hover{
+          color: rgba(255, 255, 255, 0.7);
+          &:hover {
             text-decoration: none;
             color: $color-white;
           }
         }
       }
-      ul{
+      ul {
         margin-bottom: 0;
         font-size: 0;
         line-height: 0;
         letter-spacing: 0;
       }
-      li{
+      li {
         display: inline-block;
         vertical-align: top;
         width: 50%;
@@ -368,54 +372,54 @@
           font: 16px/32px $font-title;
         }
       }
-      .current-lang a, .current-lang{
+      .current-lang a, .current-lang {
         color: $color-blue;
         @include media('>=desktop') {
           display: none;
         }
       }
-      .short{
+      .short {
         display: none;
         @include media('>=desktop') {
           display: inline;
         }
       }
-      .full{
+      .full {
         @include media('>=desktop') {
           display: none;
         }
       }
     }
-    &.active{
-      .text-holder-desktop{
+    &.active {
+      .text-holder-desktop {
         opacity: 1;
       }
-      &:before{
+      &:before {
         transform: translateY(-50%) rotate3d(1, 0.4, 0, 180deg);
         margin-top: 3px;
         opacity: 1;
       }
     }
   }
-  &.blue{
-    .logo{
+  &.blue {
+    .logo {
       background: none;
-      img{
+      img {
         display: block;
       }
     }
-    .btn-menu{
-      &:before, &:after{
+    .btn-menu {
+      &:before, &:after {
         background-color: $color-blue;
       }
-      &.active{
-        &:before, &:after{
+      &.active {
+        &:before, &:after {
           background-color: $color-white;
         }
       }
     }
-    nav{
-      .btn{
+    nav {
+      .btn {
         background-color: $color-white;
         color: $color-blue;
         border-color: $color-blue;
@@ -425,45 +429,53 @@
           background: #3256d9;
         }
       }
-      .menu li a{
-        @include media('>=desktop') {
-          color: $color-blue;
+      .menu li {
+        &.current-menu-item a, .current-menu-item {
+          box-shadow: inset 0 -2px $color-blue;
+        }
+        a {
+          @include media('>=desktop') {
+            color: $color-blue;
+            &:hover {
+              box-shadow: inset 0 -2px $color-blue;
+            }
+          }
         }
       }
     }
-    .lang-box{
+    .lang-box {
       @include media('>=desktop') {
         color: $color-blue;
       }
-      &:after, &:before{
+      &:after, &:before {
         @include media('>=desktop') {
           border-color: $color-blue;
         }
       }
-      &:after{
+      &:after {
         @include media('>=desktop') {
           border-color: $color-blue transparent transparent transparent;
         }
       }
-      .drop-down{
+      .drop-down {
         @include media('>=desktop') {
           background-color: $color-white;
         }
-        &:after{
+        &:after {
           @include media('>=desktop') {
             border-color: $color-blue transparent transparent transparent;
           }
         }
-        a{
+        a {
           @include media('>=desktop') {
             color: $color-blue;
-            &:hover{
+            &:hover {
               text-decoration: underline;
               color: $color-blue;
             }
           }
         }
-        .current-lang a, .current-lang{
+        .current-lang a, .current-lang {
           color: $color-blue;
           @include media('>=desktop') {
             display: none;
