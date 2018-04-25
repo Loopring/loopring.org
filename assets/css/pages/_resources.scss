@@ -114,17 +114,5 @@
     @include media(">=large") {
       margin-top: 43px;
     }
-    li:first-child {
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 1px;
-        width: 100%;
-        background-color: $color-mint;
-        opacity: 0.5;
-      }
-    }
   }
 }

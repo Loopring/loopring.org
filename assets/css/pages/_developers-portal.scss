@@ -20,6 +20,14 @@
       margin-top: 74px;
     }
   }
+  h3{
+    @include media(">=desktop") {
+      margin-bottom: 26px;
+    }
+    @include media(">=large") {
+      margin-top: 54px;
+    }
+  }
   .example {
     display: inline-block;
     vertical-align: top;

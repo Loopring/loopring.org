@@ -574,17 +574,22 @@ blockquote {
   }
 }
 
-.table-holder{
+.table-holder {
   padding-top: 7px;
-  @include media("<tablet"){
-    max-width: 400px;
-    overflow: auto;
+  @include media("<tablet") {
+    max-width: 100%;
+    overflow-x: auto;
+
   }
 }
+
 table {
   width: 100%;
   border: 1px solid rgba(28, 96, 255, .5);
   margin: 0 0 $main-margin;
+  @include media("<tablet") {
+    min-width: 450px;
+  }
   tr:nth-child(odd) {
     background-color: rgba(28, 96, 255, .05);
   }
@@ -601,6 +606,7 @@ table {
     font-size: 14px;
     padding: 10px 14px;
     color: $color-gray-darken;
+    max-width: 65%;
     @include media(">=xtablet") {
       padding: 21px 27px 22px;
     }
