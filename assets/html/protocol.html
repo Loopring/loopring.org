@@ -29,7 +29,7 @@
                     loopring protocol.
                     This document describes the functionalities they provide and is structured as follows:</p>
                 <p class="animateMe">The code is open source and available on <a target="_blank"
-                                                                href="https://github.com/Loopring/protocol">Github</a>.
+                                                                                 href="https://github.com/Loopring/protocol">Github</a>.
                 </p>
                 <p class="animateMe">The Loopring Smart Contracts will be referred to as LSC in this document. You can
                     read more about the
@@ -140,7 +140,7 @@
                     orders linked
                     together in a way that allows them to be all matched at their desired exchange rate or better. See
                     the diagram below as an example.</p>
-                <h5 class="animateMe">(Developer 101 Fig 3.0)</h5>
+                <img class="animateMe" src="../images/developer-3.png" alt="Developer 101 Fig 3.0">
                 <p class="animateMe">Notice how each order's token to sell is the following order's token to buy. It
                     creates a loop that
                     allows each order to effectively sell and buy their desired tokens without having a matching order
@@ -169,7 +169,7 @@
                     from the miner in Loopring.</p>
                 <p class="animateMe">The diagram below illustrates the previous valid ring where 2 orders were
                     added.</p>
-                <h5 class="animateMe">(Developer 101 Fig 4.0)</h5>
+                <img class="animateMe" src="../images/developer-4.png" alt="Developer 101 Fig 4.0">
                 <p class="animateMe">To prevent this, Loopring requires that <strong>a valid loop cannot contain a
                     sub-loop</strong>.
                     There is a very
@@ -222,7 +222,7 @@
                     made on his order that the miner can claim. This is called the margin split. The decision of which
                     one to choose is left to the miner.</p>
                 <p class="animateMe">A representation of the margin split:</p>
-                <h5 class="animateMe">(Developer 101 Fig 5.0)</h5>
+                <img class="animateMe" src="../images/developer-5.png" alt="Developer 101 Fig 5.0">
                 <p class="animateMe">If the miner decides that the margin on the ring is too small, he will choose the
                     LRC fee. On the
                     contrary, if the margin is substantial enough for the resulting margin split to be worth more than
@@ -237,7 +237,7 @@
                     drawback of getting less income from the higher margin rings. As the market grows and becomes more
                     mature, we expect to have less high margin rings and our fee model is based on that future.</p>
                 <p class="animateMe">We end up with the following graph:</p>
-                <h5 class="animateMe">(Developer 101 Fig 6.0)</h5>
+                <img class="animateMe" src="../images/developer-6.png" alt="Developer 101 Fig 6.0">
                 <ul class="animateMe">
                     <li>f is the LRC fee</li>
                     <li>x is the margin split</li>
