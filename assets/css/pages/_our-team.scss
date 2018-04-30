@@ -39,7 +39,7 @@
   }
   >li{
     background-color: $color-blue;
-    color: $color-white;
+    color: #fefeff;
     display: inline-block;
     vertical-align: baseline;
     margin:0 20px 40px;
@@ -80,7 +80,7 @@
     h4{
       letter-spacing: 1px;
       font: 400 18px $font-title;
-      color: $color-white;
+      color: #fefefe;
       margin-bottom: 0;
       @include media('>=desktop'){
         font-size: 30px;
@@ -92,7 +92,7 @@
     }
     .post{
       font: 14px/24px $font-main;
-      color: $color-purple;
+      color: #b6ccff;
       margin-bottom: 15px;
       display: block;
       @include media('>=desktop'){

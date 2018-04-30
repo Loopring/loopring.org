@@ -29,14 +29,14 @@
 @import "blocks/innerAnimations";
 
 
-//pixelperfect overlay
+//pixel perfect overlay
 .wrapper{
   position: relative;
   &:after{
     content: '';
     position: absolute;
     z-index: 555555;
-    top: 0;
+    top: -295px;
     left: 0;
     right: 0;
     height: 9999px;

@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-bottom: #{24px * $headings-lh};
-  font-size: 60px;
+  font-size: 54px;
   @include media('>=desktop') {
     font-size: 80px;
     line-height: 82px;

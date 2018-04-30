@@ -2,6 +2,7 @@
   min-height: 1px;
   width: 100%;
   max-width: 380px;
+  margin-bottom: 60px;
   @include media(">=desktop") {
     float: right;
   }
