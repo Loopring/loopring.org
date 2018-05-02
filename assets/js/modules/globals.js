@@ -1,7 +1,7 @@
 export const constants = {
     isTouch: "ontouchstart" in window ? function() {document.body.classList.add("touch"); return true;}() : function() {document.body.classList.add("no-touch"); return false;}() ,
     body: $("body")
-}
+};
 export function afteLoads() {
     window.addEventListener("load", () => {
         this.body.addClass('load');
@@ -35,7 +35,7 @@ export function headerActivities() {
     $('.btn-close').on('click', function () {
         $(this).closest('.drop-down').fadeOut();
         $('.lang-box').removeClass('active')
-    })
+    });
     window.addEventListener("resize", () => {
         if ($(window).innerWidth() >= 1200) {
             this.body.removeClass('ovh');
