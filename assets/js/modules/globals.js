@@ -36,5 +36,9 @@ export function headerActivities() {
         $(this).closest('.drop-down').fadeOut();
         $('.lang-box').removeClass('active')
     })
-
+    window.addEventListener("resize", () => {
+        if ($(window).innerWidth() >= 1200) {
+            this.body.removeClass('ovh');
+        }
+    });
 }

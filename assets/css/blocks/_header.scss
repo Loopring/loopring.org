@@ -160,9 +160,9 @@
       }
     }
     .menu {
-      margin-bottom: 30px;
-      font: 36px/20px $font-title;
-      padding: 15px 0;
+      font: 36px/51px $font-title;
+      //margin-bottom: 30px;
+      //padding: 15px 0;
       @include media('>=tablet') {
         //font: 72px/102px $font-main;
       }
@@ -395,9 +395,11 @@
         opacity: 1;
       }
       &:before {
-        transform: translateY(-50%) rotate3d(1, 0.4, 0, 180deg);
-        margin-top: 3px;
-        opacity: 1;
+        @include media('>=desktop') {
+          transform: translateY(-50%) rotate3d(1, 0.4, 0, 180deg);
+          margin-top: 3px;
+          opacity: 1;
+        }
       }
     }
   }

@@ -141,11 +141,22 @@
               opacity: 1;
             }
             &:before{
-              transition-delay: 2s;
+              transition-delay: 3s;
               transition-duration: 1s;
             }
             &:after{
               transform: rotateY(0deg);
+            }
+          }
+        }
+      }
+      li.animateMe{
+        &.animate{
+          &:nth-child(4), &:nth-child(3){
+            .text{
+              > *, &:before, &:after{
+                transition-delay: 4s;
+              }
             }
           }
         }

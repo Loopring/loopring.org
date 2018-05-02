@@ -11,7 +11,15 @@
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
 }
+@media all and (-ms-high-contrast:none){
+  .wrapper {
+    display: block;
+  }
+}
+//edge
+@supports (-ms-accelerator:true) {
 
+}
 
 .header.blue + .page-wrap{
   padding-top: 80px;
