@@ -1167,18 +1167,24 @@
     }
     .point {
       width: 16px;
+      height: 18px;
       margin-left: auto;
       margin-right: auto;
       position: relative;
       z-index: 3;
       @include media(">=tablet") {
-        width: 31px;
+        width: 32px;
+        height: 36px;
       }
       svg {
         background-color: $color-white;
         display: block;
-        width: 100%;
-        height: 100%;
+        width: 16px;
+        height: 18px;
+        @include media(">=tablet") {
+          width: 32px;
+          height: 36px;
+        }
       }
       .out, .in {
         opacity: .3;
