@@ -389,10 +389,9 @@ button {
   text-decoration: none;
   white-space: nowrap;
   background: $color-blue;
-  transition: background .5s, color .5s;
+  transition: background .5s, color .5s !important;
   position: relative;
   text-transform: uppercase;
-
   letter-spacing: 2px;
   word-spacing: -2px;
   padding: 5px 32px;
@@ -424,7 +423,7 @@ button {
   &:focus {
     text-decoration: none;
     background: $color-mint;
-    transition-delay: .8s;
+    transition-delay: .5s !important;
   }
   &.white {
     background-color: $color-white;
