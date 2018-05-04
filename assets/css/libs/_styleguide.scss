@@ -258,7 +258,9 @@ ol {
   li {
     &:before {
       counter-increment: counterName;
-      content: counters(counterName, "-") ". ";
+      content: counters(counterName, "-") " ";
+      //color: #b6ccff;
+      opacity: .9;
     }
 
   }

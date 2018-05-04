@@ -12,7 +12,7 @@
     width: 58.8%;
     background: #1C60FF;
   }
-  margin-bottom: -182px;
+  margin-bottom: -25vh;
   @include media('>=desktop') {
     margin-bottom: -137px;
   }
@@ -319,7 +319,6 @@
       min-width: 198px;
     }
   }
-
   > * {
     flex-grow: 1;
     flex-basis: 0;
@@ -339,6 +338,7 @@
     @include media('>=desktop') {
       min-width: 550px;
       padding-right: 0;
+      max-width: 45%;
     }
     @include media('>=large') {
       padding-top: 74px;
@@ -353,6 +353,9 @@
     @include media('>=tablet') {
       padding: 9px 25px 0 120px;
       margin-bottom: 25px;
+    }
+    @include media('>=desktop') {
+      max-width: 55%;
     }
     @include media('>=large') {
       //padding: 83px 25px 0 220px;
@@ -399,7 +402,6 @@
     }
   }
 }
-
 //end two-col-block section
 
 //skew-block section
@@ -1207,6 +1209,8 @@
         background-color: $color-blue;
         right: 2000px;
         transition: right .5s .5s;
+        will-change: right;
+
         @include media(">=tablet") {
           bottom: 18px;
         }
