@@ -1,8 +1,19 @@
 export const constants = {
-    isTouch: "ontouchstart" in window ? function() {document.body.classList.add("touch"); return true;}() : function() {document.body.classList.add("no-touch"); return false;}() ,
+    isTouch: "ontouchstart" in window ? function() {
+        // document.body.classList.add("touch");
+        return true;
+    }() : function() {
+        // document.body.classList.add("no-touch");
+        return false;
+    }() ,
     body: $("body")
 };
 export function afteLoads() {
+    if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+        $('html').addClass('touch');
+    } else {
+        $('html').addClass('no-touch');
+    }
     window.addEventListener("load", () => {
         this.body.addClass('load');
         $('.preloader').removeClass('loading');

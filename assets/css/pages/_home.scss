@@ -550,7 +550,7 @@
     @include media('>=desktop') {
       margin-bottom: 65px;
     }
-    @include media('>=desktop') {
+    @include media('>=large') {
       font-size: 80px;
       line-height: 82px;
       letter-spacing: 4px;
@@ -647,6 +647,7 @@
     @include media('>=desktop') {
       margin-bottom: 112px;
       max-width: 55%;
+
     }
     @include media('>=large') {
       font-size: 80px;
@@ -1215,7 +1216,7 @@
       &:first-child, &:last-child{
         time{
           font: 15px/26px $font-title;
-          color: $color-blue;
+          //color: $color-blue;
           text-transform: uppercase;
           @include media(">=tablet") {
             font: 30px/36px $font-title;
@@ -1230,7 +1231,7 @@
       }
       time {
         //font: 15px/26px $font-title;
-        //color: $color-blue;
+        color: $color-blue;
         //text-transform: uppercase;
         //@include media(">=tablet") {
         //  font: 30px/36px $font-title;
