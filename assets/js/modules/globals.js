@@ -18,6 +18,9 @@ export function afteLoads() {
             'bottom': '100%',
             'left': 0
         });
+        setTimeout(function () {
+            $('.preload-images').remove();
+        }, 1000);
         $('html').addClass('no-touch');
     }
     window.addEventListener("load", () => {
