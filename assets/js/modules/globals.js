@@ -10,8 +10,10 @@ export const constants = {
 };
 export function afteLoads() {
     if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+        $('.preload-images').remove();
         $('html').addClass('touch');
     } else {
+        $('.preload-images').remove();
         $('html').addClass('no-touch');
     }
     window.addEventListener("load", () => {
