@@ -1192,6 +1192,7 @@
       }
       .out, .in {
         opacity: .3;
+        will-change: opacity;
         transition: opacity .3s 0s;
       }
     }
@@ -1210,7 +1211,6 @@
         right: 2000px;
         transition: right .5s .5s;
         will-change: right;
-
         @include media(">=tablet") {
           bottom: 18px;
         }
