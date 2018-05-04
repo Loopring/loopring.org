@@ -17,8 +17,8 @@
     margin-bottom: -137px;
   }
   @include media('>=large') {
-    //margin-bottom: -222px;
-    margin-bottom: -111px;
+    margin-bottom: -200px;
+    //margin-bottom: -111px;
   }
 
 }
@@ -355,7 +355,8 @@
       margin-bottom: 25px;
     }
     @include media('>=large') {
-      padding: 83px 25px 0 220px;
+      //padding: 83px 25px 0 220px;
+      padding: 83px 25px 0 184px;
     }
     li {
       list-style: none;
@@ -1203,14 +1204,11 @@
         position: absolute;
         width: 100vw;
         height: 1px;
-        background-color: #bacfff;
+        background-color: $color-blue;
         right: 2000px;
         transition: right .5s .5s;
-        opacity: .3;
         @include media(">=tablet") {
           bottom: 18px;
-          opacity: 1;
-          background-color: $color-blue;
         }
       }
       &:first-child, &:last-child{
