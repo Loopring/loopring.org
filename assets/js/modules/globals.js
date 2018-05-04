@@ -13,7 +13,11 @@ export function afteLoads() {
         $('.preload-images').remove();
         $('html').addClass('touch');
     } else {
-        $('.preload-images').css('dispaly', 'none');
+        $('.preload-images').css({
+            'position': 'absolute',
+            'bottom': '100%',
+            'left': 0
+        });
         $('html').addClass('no-touch');
     }
     window.addEventListener("load", () => {
