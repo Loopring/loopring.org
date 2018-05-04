@@ -13,7 +13,7 @@ export function afteLoads() {
         $('.preload-images').remove();
         $('html').addClass('touch');
     } else {
-        $('.preload-images').remove();
+        $('.preload-images').css('dispaly', 'none');
         $('html').addClass('no-touch');
     }
     window.addEventListener("load", () => {
