@@ -98,6 +98,7 @@ export function historySlider() {
         variableWidth: true,
         slidesToShow: 3,
         useCSS: false,
+        useTransform: false,
         arrows: false,
         responsive: [
             {
