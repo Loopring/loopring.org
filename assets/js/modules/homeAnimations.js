@@ -97,6 +97,7 @@ export function historySlider() {
         centerMode: true,
         variableWidth: true,
         slidesToShow: 3,
+        useCSS: false,
         arrows: false,
         responsive: [
             {
