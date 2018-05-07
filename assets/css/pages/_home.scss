@@ -1118,6 +1118,9 @@
   margin: 0 auto 25px;
   @include media(">=desktop") {
     margin-bottom: 67px;
+    .slick-track{
+      will-change: left;
+    }
   }
   h2 {
     text-align: center;
