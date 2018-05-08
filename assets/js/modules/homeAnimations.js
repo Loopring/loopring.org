@@ -18,8 +18,10 @@ export function mobileSlider() {
     if ($('html').hasClass('touch')) {
         $('img[data-gif-src$="gif"]').each(function () {
             let $this = $(this);
-            $this.attr('src', $this.attr('data-src'))
-            $this.css('opacity', 1)
+            $this.attr('src', $this.attr('data-src')).css('opacity', 1);
+            if($(window).innerWidth() >= 1024 && $this.closest('.steps').length){
+                $this.attr('src', $this.attr('data-src-big'));
+            }
         })
     }
 }
