@@ -131,7 +131,7 @@ export function scrollAnimations() {
     gifs.attr('data-flag', 1);
     animateMe.attr('data-flag', 1);
     function scrollLoad() {
-        if ($(window).innerWidth() >= 1024 && ($('html').hasClass('no-touch'))) {
+        if (($('html').hasClass('no-touch'))) {
             let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.8;
             //for gif
             gifs.each(function () {
