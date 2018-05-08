@@ -15,12 +15,12 @@ export function mobileSlider() {
         ]
     });
     // if ($(window).innerWidth() < 1024 && ($('html').hasClass('touch'))) {
-    if (($('html').hasClass('touch'))) {
-        $('img[data-gif-src$="gif"]').each(function () {
-            let $this = $(this);
-            $this.attr('src', $this.attr('data-src'))
-        })
-    }
+    // if (($('html').hasClass('touch'))) {
+    //     $('img[data-gif-src$="gif"]').each(function () {
+    //         let $this = $(this);
+    //         $this.attr('src', $this.attr('data-src'))
+    //     })
+    // }
 }
 export function videoSlider() {
     const commandPlay = {
@@ -130,6 +130,7 @@ export function scrollAnimations() {
     let animateMe = $('.animateMe');
     gifs.attr('data-flag', 1);
     animateMe.attr('data-flag', 1);
+    gifs.attr('src', '#');
     function scrollLoad() {
         if ($(window).innerWidth() >= 1024 && ($('html').hasClass('no-touch'))) {
             let scrollTop = $(window).scrollTop() + $(window).innerHeight() * 0.8;
