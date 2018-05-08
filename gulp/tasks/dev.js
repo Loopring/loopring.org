@@ -2,7 +2,7 @@ module.exports = ({gulp, tojson, bs}) => {
     tojson();
     function serve(done) {
         bs.init({
-            // server: './',
+            server: './',
             notify: false,
             logFileChanges: false,
         });
