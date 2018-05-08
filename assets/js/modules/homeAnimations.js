@@ -155,6 +155,8 @@ export function scrollAnimations() {
                     $this.attr('data-flag', 0)
                 }
             });
+        }else{
+            animateMe.addClass('animate');
         }
     }
     window.addEventListener("scroll", () => {
