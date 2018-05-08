@@ -433,7 +433,9 @@
       }
       .menu li {
         &.current-menu-item a, .current-menu-item {
-          box-shadow: inset 0 -2px $color-blue;
+          @include media('>=desktop') {
+            box-shadow: inset 0 -2px $color-blue;
+          }
         }
         a {
           @include media('>=desktop') {
