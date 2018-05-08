@@ -15,10 +15,33 @@
   .wrapper {
     display: block;
   }
+  .header nav {
+    @include media('<desktop') {
+      height: 100vh;
+    }
+    .holder{
+      @include media('<desktop') {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
 }
 //edge
 @supports (-ms-accelerator:true) {
-
+  .header nav {
+    @include media('<desktop') {
+      height: 100vh;
+    }
+    .holder{
+      @include media('<desktop') {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
 }
 .preload-images{
 
