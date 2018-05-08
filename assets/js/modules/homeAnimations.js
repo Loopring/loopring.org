@@ -14,7 +14,8 @@ export function mobileSlider() {
             }
         ]
     });
-    if ($(window).innerWidth() < 1024 && ($('html').hasClass('touch'))) {
+    // if ($(window).innerWidth() < 1024 && ($('html').hasClass('touch'))) {
+    if (($('html').hasClass('touch'))) {
         $('img[data-gif-src$="gif"]').each(function () {
             let $this = $(this);
             $this.attr('src', $this.attr('data-src'))
