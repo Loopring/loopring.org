@@ -6,6 +6,7 @@
   z-index: 20;
   @include media(">=desktop") {
     padding-right: 60px;
+    padding-left: 60px;
   }
   @include media(">=large") {
     padding: 0 90px 0 10px;

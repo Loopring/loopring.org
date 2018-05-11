@@ -7,20 +7,20 @@
         transition: transform 1s, opacity .7s;
         @for $i from 1 through 25 {
           &:nth-child(#{$i}) {
-            transition-delay: #{$i/3}s;
+            transition-delay: #{$i/7}s;
             img, .holder {
-              transition-delay: #{$i/3 * 2}s;
+              transition-delay: #{$i/7 * 2}s;
             }
           }
         }
         img {
           opacity: 0;
           transform: translateX(50%);
-          transition: transform .7s, opacity .7s;
+          transition: transform .5s, opacity .5s;
         }
         .holder {
           opacity: 0;
-          transition: opacity 1.4s;
+          transition: opacity 1s;
         }
       }
       &.animate {

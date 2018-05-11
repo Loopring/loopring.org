@@ -23,9 +23,8 @@
             </nav>
             <!--end add nav-->
             <!--start developers portal-->
-            <div class="developers-portal content">
-                <h1 class="animateMe">Relays</h1>
-                <p class="animateMe">In Construction.</p>
+            <div id="content" class="developers-portal content">
+
             </div>
             <!--end developers portal-->
         </div>
@@ -34,5 +33,20 @@
 </div>
 
 <partial src="scripts.html"></partial>
+<script>
+    $.ajax({
+        url: "/relays.md",
+        context: document.body,
+        beforeSend: function( xhr ) {
+            xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+        },
+        success: function(mdText){
+            //where text will be the text returned by the ajax call
+            var converter = new showdown.Converter();
+            var htmlText = converter.makeHtml(mdText);
+            $("#content").append(htmlText); //append this to a div with class outputDiv
+        }
+    });
+</script>
 </body>
 </html>

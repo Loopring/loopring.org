@@ -30,6 +30,10 @@ export function afteLoads() {
             $('.preloader-wrapper').fadeOut(600)
         }, 500)
     });
+
+
+
+
 }
 export function btnDecorate() {
     $('.btn, input[type="submit"], button').append('<span class="decor-top"></span><span class="decor-bot"></span>')

@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="../images/favicon/favicon.ico">
         <meta name="msapplication-config" content="../images/favicon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="../css/style.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
         <title>Loopring</title>
     </head>
     
@@ -133,11 +133,7 @@
                 </nav>
                 <!--end add nav-->
                 <!--start developers portal-->
-                <div class="developers-portal content">
-                     <h1 class="animateMe">Wallets</h1>
-
-                    <p class="animateMe">In Construction.</p>
-                </div>
+                <div id="content" class="developers-portal content"></div>
                 <!--end developers portal-->
             </div>
         </div>
@@ -174,7 +170,23 @@
         <!--end footer-->
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="../js/global.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+        <script src="../js/global.js"></script>
+        <script>
+            $.ajax({
+                url: "/wallets.md",
+                context: document.body,
+                beforeSend: function( xhr ) {
+                    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+                },
+                success: function(mdText){
+                    //where text will be the text returned by the ajax call
+                    var converter = new showdown.Converter();
+                    var htmlText = converter.makeHtml(mdText);
+                    $("#content").append(htmlText); //append this to a div with class outputDiv
+                }
+            });
+        </script>
     </body>
 
 </html>
