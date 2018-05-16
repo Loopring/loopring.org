@@ -192,11 +192,13 @@
       left: 8.2%;
       //top: 52.4%;
     }
-    h2 {
+    h1 {
       text-transform: uppercase;
       word-spacing: -3px;
       margin-bottom: 7px;
       letter-spacing: 2px;
+      font-size: 40px;
+      line-height: 41px;
       @include media('>=tablet') {
         margin-bottom: 10px;
         letter-spacing: 3px;
