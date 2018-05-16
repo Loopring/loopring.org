@@ -123,7 +123,7 @@
     font: 13px/18px $font-main;
     max-width: 100%;
     text-align: center;
-    h2, h1{
+    h2, .h1, h1{
       text-transform: uppercase;
       word-spacing: -3px;
       margin-bottom: 7px;
@@ -197,7 +197,7 @@
       margin-bottom: 150px;
     }
   }
-  h1{
+  .h1, h1{
     text-transform: uppercase;
     color: $color-blue;
     margin-bottom: 15px;
@@ -524,7 +524,7 @@
     float: left;
     padding-top: 55px;
   }
-  h1{
+  .h1, h1{
     color: $color-blue;
     margin-bottom: 6px;
   }

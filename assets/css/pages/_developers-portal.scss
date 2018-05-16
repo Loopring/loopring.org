@@ -7,7 +7,7 @@
     float: left;
     line-height: 28px;
   }
-  h1 {
+  .h1, h1 {
     @include media(">=desktop") {
       margin-bottom: 25px;
     }

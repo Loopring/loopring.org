@@ -31,7 +31,7 @@
     clear: both;
     display: block;
   }
-  h1, h2, h3, h4 {
+  .h1, h1, h2, h3, h4 {
     color: $color-blue;
     @include media(">=large") {
       margin-bottom: 48px;

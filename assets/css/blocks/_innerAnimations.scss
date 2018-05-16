@@ -60,13 +60,13 @@
       }
     }
     &.two-col {
-      h1, h2, p {
+      h1, .h1, h2, p {
         opacity: 0;
         transform: translateY(50%);
         transition: transform 1.3s .3s, opacity 1.3s .3s;
       }
       &.animate {
-        h1, h2, p {
+        h1, .h1, h2, p {
           opacity: 1;
           transform: translateY(0);
         }
@@ -132,7 +132,7 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6, p, table, .content img {
+h1, .h1, h2, h3, h4, h5, h6, p, table, .content img {
   @include media(">=xtablet") {
     &.animateMe {
       opacity: 0;

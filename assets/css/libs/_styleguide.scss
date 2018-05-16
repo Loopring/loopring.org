@@ -128,7 +128,7 @@ img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
   letter-spacing: 1px;
   line-height: $headings-lh;
@@ -145,13 +145,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
   padding: 0 20px;
-  h1, h2, h3, h4, h5, h6 {
+  h1, .h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     color: $color-blue;
   }
 }
 
-h1 {
+h1, .h1{
   margin-bottom: #{24px * $headings-lh};
   font-size: 54px;
   @include media('>=desktop') {
