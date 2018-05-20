@@ -8,7 +8,7 @@
         li, .lang-box, .btn, .logo-holder{
           opacity: 0;
           transform: translateY(100%);
-          transition: transform .7s, opacity .7s, background .7s .3s, color .7s;
+          transition: transform 1s, opacity 1s, background 1s .3s, color 1s;
           transition-timing-function: ease-out;
           @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
@@ -27,7 +27,7 @@
         .description, .animate-block{
           opacity: 0;
           transform: translateY(100%);
-          transition: transform .7s, opacity .7s;
+          transition: transform 1s, opacity 1s;
           transition-timing-function: ease-out;
           @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
@@ -46,7 +46,7 @@
         .holder *{
           opacity: 0;
           transform: translateY(100%);
-          transition: transform .7s, opacity .7s;
+          transition: transform 1s, opacity 1s;
           transition-timing-function: ease-out;
           @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
@@ -65,7 +65,7 @@
         h2, h3{
           opacity: 0;
           transform: translateY(100%);
-          transition: transform .7s, opacity .7s;
+          transition: transform 1s, opacity 1s;
           transition-timing-function: ease-out;
           @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
@@ -100,7 +100,7 @@
       &.history-slider-holder, &.video-block{
         opacity: 0;
         transform: translateY(100%);
-        transition: transform .7s, opacity .7s;
+        transition: transform 1s, opacity 1s;
         transition-timing-function: ease-out;
         @for $i from 1 through 10 {
           &:nth-child(#{$i}) {
@@ -120,12 +120,12 @@
         .text{
           > *, &:before{
             opacity: 0;
-            transition: opacity .7s 2s;
+            transition: opacity 1s 3s;
             transition-timing-function: ease-out;
           }
           &:after{
             transform: rotateY(-90deg);
-            transition: transform 1.5s .7s;
+            transition: transform 2s 1s;
             transition-timing-function: ease-out;
             opacity: 1 !important;
           }
@@ -141,8 +141,8 @@
               opacity: 1;
             }
             &:before{
-              transition-delay: 2s;
-              transition-duration: .7s;
+              transition-delay: 3s;
+              transition-duration: 1s;
             }
             &:after{
               transform: rotateY(0deg);
@@ -155,7 +155,7 @@
           &:nth-child(4), &:nth-child(3){
             .text{
               > *, &:before, &:after{
-                transition-delay: 2s;
+                transition-delay: 4s;
               }
             }
           }
