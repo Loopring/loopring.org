@@ -4,7 +4,7 @@
       li {
         opacity: 0;
         transform: translateY(100%);
-        transition: transform 1s, opacity .7s;
+        transition: transform.7s, opacity .5s;
         @for $i from 1 through 25 {
           &:nth-child(#{$i}) {
             transition-delay: #{$i/7}s;
@@ -20,7 +20,7 @@
         }
         .holder {
           opacity: 0;
-          transition: opacity 1s;
+          transition: opacity.7s;
         }
       }
       &.animate {
@@ -41,12 +41,12 @@
       img {
         opacity: 0;
         transform: translateY(50%);
-        transition: transform .7s .3s, opacity .7s .3s;
+        transition: transform .7s .3s, opacity .5s .3s;
       }
       .skew-text {
         opacity: 0;
         margin-top: -50%;
-        transition: margin .7s .3s, opacity .7s .3s;
+        transition: margin .7s .3s, opacity .5s .3s;
       }
       &.animate {
         img {
@@ -63,7 +63,7 @@
       h1, .h1, h2, p {
         opacity: 0;
         transform: translateY(50%);
-        transition: transform 1.3s .3s, opacity 1.3s .3s;
+        transition: transform 1s .3s, opacity 1s .3s;
       }
       &.animate {
         h1, .h1, h2, p {
@@ -75,13 +75,13 @@
     &.whitepapers-list {
       &:before {
         width: 0;
-        transition: width 1s;
-        transition-delay: 1s;
+        transition: width.7s;
+        transition-delay:.7s;
       }
       &:after {
         right: 100%;
-        transition: right 1s;
-        transition-delay: 1s;
+        transition: right.7s;
+        transition-delay:.7s;
       }
       &.animate {
         &:before {
@@ -96,7 +96,7 @@
       .wrap > div {
         opacity: 0;
         transform: translateY(100%);
-        transition: transform 1s, opacity .7s;
+        transition: transform .7s, opacity .5s;
         @for $i from 1 through 25 {
           &:nth-child(#{$i}) {
             transition-delay: #{$i/3}s;
@@ -118,7 +118,7 @@
     li {
       opacity: 0;
       transform: translateY(100%);
-      transition: transform 1s, opacity .7s;
+      transition: transform .7s, opacity .5s;
       @for $i from 1 through 25 {
         &:nth-child(#{$i}) {
           transition-delay: #{$i/3}s;
@@ -137,7 +137,7 @@ h1, .h1, h2, h3, h4, h5, h6, p, table, .content img {
     &.animateMe {
       opacity: 0;
       transform: translateY(100px);
-      transition: transform 1s, opacity .7s;
+      transition: transform .7s, opacity .5s;
       &.animate {
         opacity: 1;
         transform: translateY(0);
@@ -152,7 +152,7 @@ h1, .h1, h2, h3, h4, h5, h6, p, table, .content img {
       figure, .about-description {
         opacity: 0;
         transform: translateY(100px);
-        transition: transform 1.2s, opacity .7s;
+        transition: transform.7s, opacity .5s;
       }
       &.animate {
         figure, .about-description {
