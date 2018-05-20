@@ -25,6 +25,7 @@ const variables = {
         bs: require('browser-sync').create(),
         newer: require('gulp-newer'),
         htmlPartial: require('gulp-html-partial'),
+        ghPages: require('gulp-gh-pages'),
         tojson: function () {
             let dir = variables.fs.readdirSync('./assets/html/'),
                 nameProj = variables.path.resolve(__dirname).split('/'),
@@ -50,7 +51,8 @@ const variables = {
         './gulp/tasks/script',
         './gulp/tasks/watch',
         './gulp/tasks/dev',
-        './gulp/tasks/prod'
+        './gulp/tasks/prod',
+        './gulp/tasks/deploy'
     ];
 
 tasks.forEach(function (taskPath) {
