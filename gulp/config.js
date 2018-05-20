@@ -25,11 +25,11 @@ module.exports = {
     },
 
     markup: {
-        src: './assets/html/*.html',
-        templates: './assets/html/templates/',
-        dest: './dist/html/',
-        compiled: './dist/html/*.html',
-        watch: './assets/html/**/*.html'
+        src: './assets/*.html',
+        templates: './assets/templates/',
+        dest: './dist/',
+        compiled: './dist/*.html',
+        watch: './assets/**/*.html'
     },
 
     fonts: {

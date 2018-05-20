@@ -27,7 +27,7 @@ const variables = {
         htmlPartial: require('gulp-html-partial'),
         ghPages: require('gulp-gh-pages'),
         tojson: function () {
-            let dir = variables.fs.readdirSync('./assets/html/'),
+            let dir = variables.fs.readdirSync('./assets/'),
                 nameProj = variables.path.resolve(__dirname).split('/'),
                 arrHTML = dir.filter(item => item.indexOf('.html') >= 0),
                 dataPages = arrHTML.map(item => {

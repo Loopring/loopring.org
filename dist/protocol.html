@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/style.min.css" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Loopring" />
+        <meta property="og:image" content="https://loopring.org/dist/images/logo.JPG"
+        />
+        <meta name="twitter:image" content="https://loopring.org/dist/images/logo.JPG"
+        />
+        <meta name="twitter:card" content="summary" />
+        <title>Protocol | Loopring</title>
+    </head>
+    
+    <body>
+        <div class="preloader-wrapper">
+            <div class="preloader loading"> <span class="slice"></span>
+ <span class="slice"></span>
+ <span class="slice"></span>
+
+                <span
+                class="slice"></span> <span class="slice"></span>
+ <span class="slice"></span>
+
+            </div>
+        </div>
+        <div class="wrapper">
+            <!--start header section-->
+            <header class="header blue">
+                <div class="logo-holder"> <strong class="logo"><a href="home.html"><img src="images/logo.svg" alt="Loopring"/></a></strong>
+
+                    <div
+                    class="btn btn-menu"></div>
+        </div>
+        <nav>
+            <div class="holder">
+                <ul class="menu">
+                    <li class="@@about-us"><a href="about-us.html">About</a>
+
+                    </li>
+                    <li class="@@leaf"><a href="leaf.html">Leaf</a>
+
+                    </li>
+                    <li class="@@our-team"><a href="our-team.html">Team</a>
+
+                    </li>
+                    <li class="@@resources"><a href="resources.html">Resources</a>
+
+                    </li>
+                    <!-- <li class="current-menu-item"><a href="overview.html">Developer portal</a></li> -->
+                    <li class="@@news"><a href="news.html">News &amp; updates</a>
+
+                    </li>
+                </ul> <a href="https://loopring.io/" class="btn" target="_blank">loopring wallet</a>
+
+                <!--
+                <div class="lang-box">
+                <div class="text-holder-mobile">your language is
+                    <div class="current">English</div>
+                </div>
+                <div class="text-holder-desktop">En</div> -->
+                <!-- <div class="drop-down">
+                    <div class="ovh">
+                        <div class="btn-close"></div>
+                    </div>
+                    <ul>
+                        <li class="current-lang"><a href="#"><span class="full"> English </span><span
+                                class="short">EN</span></a></li>
+                        <li><a href="#"><span class="full"> Chinese </span><span class="short">CN</span></a></li>
+                        <li><a href="#"><span class="full"> Spanish </span><span class="short">SP</span></a></li>
+                        <li><a href="#"><span class="full"> Japanese </span><span class="short">JP</span></a></li>
+                        <li><a href="#"><span class="full"> French </span><span class="short">FR</span></a></li>
+                        <li><a href="#"><span class="full"> Korean </span><span class="short">KO</span></a></li>
+                        <li><a href="#"><span class="full"> Russian </span><span class="short">RU</span></a></li>
+                        <li><a href="#"><span class="full"> Vietnamese </span><span class="short">VI</span></a></li>
+                        <li><a href="#"><span class="full"> German </span><span class="short">DE</span></a></li>
+                    </ul>
+                </div> -->
+                <!-- </div> -->
+            </div>
+        </nav>
+        </header>
+        <!--end header section-->
+        <div class="page-wrap">
+            <div class="right-container small">
+                <!--start add nav-->
+                <nav class="add-navigation">
+                    <ul>
+                        <li><a href="overview.html">Overview</a>
+                        </li>
+                        <li><a href="lrc-token.html">LRC Token</a>
+                        </li>
+                        <li class="active"><a href="protocol.html">Protocol</a>
+                        </li>
+                        <li><a href="relays.html">Relays</a>
+                        </li>
+                        <li><a href="wallets.html">Wallets</a>
+                        </li>
+                        <li><a href="tokenization-services.html">Tokenization Services</a>
+                        </li>
+                        <li><a href="contribution.html">Contribution</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--end add nav-->
+                <!--start aside-->
+                <aside class="sidebar">
+                    <div class="sidebar-box dev-nav">
+                         <h4>Table of contents</h4>
+
+                        <ul class="accordeon animateMe anchor-list">
+                            <li>
+                                <div class="title">Management of Orders</div>
+                                <div class="acc-holder">
+                                    <ul class="animateMe">
+                                        <li><a data-anchor="Anatomy of an Order" href="#">Anatomy of an Order</a>
+                                        </li>
+                                        <li><a data-anchor="Full or Partial Cancellation" href="#">Full or Partial
+                                        Cancellation</a>
+                                        </li>
+                                        <li><a data-anchor="Fill and Cancellation Tracking" href="#">Fill and Cancellation
+                                        Tracking</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">Verification of Miner Supplied Data</div>
+                                <div class="acc-holder">
+                                    <ul class="animateMe">
+                                        <li><a data-anchor="Order Ring" href="#">Order Ring</a>
+                                        </li>
+                                        <li><a data-anchor="Order Ring Validation" href="#">Order Ring Validation</a>
+                                        </li>
+                                        <li><a data-anchor="Sub-Loop Checking" href="#">Sub-Loop Checking</a>
+                                        </li>
+                                        <li><a data-anchor="Fill Rate Checking" href="#">Fill Rate Checking</a>
+                                        </li>
+                                        <li><a data-anchor="Order Scaling" href="#">Order Scaling</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">Ring Settlement</div>
+                                <div class="acc-holder">
+                                    <ul class="animateMe">
+                                        <li><a data-anchor="Transactions" href="#">Transactions</a>
+                                        </li>
+                                        <li><a data-anchor="Fee Model" href="#">Fee Model</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title" data-anchor="Emitted Events">Emitted Events</div>
+                            </li>
+                            <li>
+                                <div class="title">Fraud and Attack Protections</div>
+                                <div class="acc-holder">
+                                    <ul class="animateMe">
+                                        <li><a data-anchor="Ring Filch" href="#">Ring Filch</a>
+                                        </li>
+                                        <li><a data-anchor="Denial of Service" href="#">Denial of Service</a>
+                                        </li>
+                                        <li><a data-anchor="Massive Tiny Order Attack" href="#">Massive Tiny Order
+                                        Attack</a>
+                                        </li>
+                                        <li><a data-anchor="Insufficient Balance" href="#">Insufficient Balance</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!--end aside-->
+                <!--start developers portal-->
+                <div class="developers-portal content">
+                     <h1 class="animateMe">Loopring Smart <br>Contracts</h1>
+
+                    <p class="animateMe">The loopring smart contracts are a set of ethereum contracts that implement
+                        the loopring protocol. This document describes the functionalities they
+                        provide and is structured as follows:</p>
+                    <p class="animateMe">The code is open source and available on <a target="_blank" href="https://github.com/Loopring/protocol">Github</a>.</p>
+                    <p
+                    class="animateMe">The Loopring Smart Contracts will be referred to as LSC in this document.
+                        You can read more about the calculations and formulas used here in the
+                        <a
+                        target="_blank" href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">whitepaper</a>and supersymmetry {<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>}
+                            <a
+                            target="_blank" href="#">Remarks on Loopring</a>. Please note that in the current protocol implementation,
+                                the pricing model is the same as in our whitepaper and supersymmetry’s
+                                document, but the fee model is different.</p>
+                                 <h2 class="animateMe">Management of Orders</h2>
+
+                                <p class="animateMe">To understand what the LSC does, we must first take a look at the definition
+                                    of an order, the available actions for the user, and how the current order
+                                    state is tracked.</p>
+                                <hr class="animateMe">
+                                 <h2 class="animateMe" data-anchor="Anatomy of an Order">Anatomy of an Order</h2>
+
+                                <p class="animateMe">An order is a pack of data that describes the intent of the user on the
+                                    market. To ensure the origin of the order, it is signed against the hash
+                                    of its parameters with the user's private key. The signature is sent alongside
+                                    the order on the network. This requires the order to stay immutable during
+                                    its whole lifetime to verify the sender's address.</p>
+                                <p class="animateMe">Signature = ECDSA(SHA3(order_params))</p>
+                                <p class="animateMe">Even if the order never changes, the LSC has the possibility to <a target="_blank"
+                                    href="https://docs.loopring.org/English/projects/protocol/#transactions">compute
+                    its current state</a>.</p>
+                                <div class="table-holder">
+                                    <table class="animateMe">
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                        <tr>
+                                            <td>owner</td>
+                                            <td>The owner (signer) address</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tokenS</td>
+                                            <td>Token to sell</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tokenB</td>
+                                            <td>Token to buy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>amountS</td>
+                                            <td>Amount of tokenS to sell</td>
+                                        </tr>
+                                        <tr>
+                                            <td>amountB</td>
+                                            <td>Amount of tokenB to buy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>buyNoMoreThanAmountB</td>
+                                            <td>see below</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ttl</td>
+                                            <td>(time to live) Seconds after wich the order will expire</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lrcFee</td>
+                                            <td>Max amount of LRC to pay to the miner</td>
+                                        </tr>
+                                        <tr>
+                                            <td>marginSplitPercentage</td>
+                                            <td>The percentage of margin paid to the miner (when a better rate is found)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <p class="animateMe">We called the above model
+                                    <stron>Unidirectional Order Model</stron>, or UDOM for short. To learn more about
+                                    UDOM, check out our <a target="_blank" href="https://medium.com/loopring-protocol/looprings-uni-directional-order-model-510067377fe9">medium
+                        post</a>.</p>
+                                <p class="animateMe">The exchange rate r of the order is determined using the following formula
+                                    r = amountS/amountB. When a miner does the ring-matching there is a possibility
+                                    that he finds you a better rate that gets you more tokenB than the amountB
+                                    you specified. But, if the buyNoMoreThanAmountB flag is set, the LSC will
+                                    make sure that you still get exactly amountB of tokenB.</p>
+                                <p class="animateMe example">Example: with amountS = 10 and amountB = 2, r = 10/2 = 5. This means that
+                                    you are willing to sell 5 tokenS for each tokenB. The miner does the ring-matching
+                                    and finds you a rate of 4, topping the amount he could get you to 2.5 tokensB
+                                    instead of 2. You only wanted 2 tokensB and set the buyNoMoreThanAmountB
+                                    flag to true. The LSC takes that into consideration and still makes the
+                                    transaction at a rate of 4 and you ended up selling 4 tokenS for each tokenB,
+                                    effectively saving 2 tokenS. Keep in mind that this does not take into
+                                    account the miner fees.</p>
+                                 <h2 class="animateMe" data-anchor="Full or Partial Cancellation">Full or Partial Cancellation</h2>
+
+                                <p class="animateMe">A user can partially or fully cancel an order by sending a special transaction
+                                    to the LSC, containing the details about the order and the amounts to cancel.
+                                    The LSC will take that into account, store the amounts to cancel and emit
+                                    an OrderCancelled event to the network.</p>
+                                 <h2 class="animateMe" data-anchor="Fill and Cancellation Tracking">Fill and Cancellation Tracking</h2>
+
+                                <p class="animateMe">The LSC keeps track of fill and cancellation amounts by storing their
+                                    values using the order's hash as an identifier. This data is publicly accessible
+                                    and OrderCancelled / OrderFilledevents are emitted when it changes.</p>
+                                <p
+                                class="animateMe">This tracking is useful for the LSC during the <a target="_blank" href="https://docs.loopring.org/English/projects/protocol/#ring-settlement">settlement</a>ring
+                                    step.</p>
+                                     <h2 class="animateMe">Verification of Miner Supplied Data</h2>
+
+                                    <p class="animateMe">This section will talk about what the LSC expect to receive from the miners
+                                        and the steps taken to verify the data.</p>
+                                     <h2 class="animateMe" data-anchor="Order Ring">Order Ring</h2>
+
+                                    <p class="animateMe">The LSC expect to receive order rings from the miners. An order ring is
+                                        multiple orders linked together in a way that allows them to be all matched
+                                        at their desired exchange rate or better. See the diagram below as an example.</p>
+                                    <img
+                                    class="animateMe" src="images/developer-3.png" alt="Developer 101 Fig 3.0">
+                                        <p class="animateMe">Notice how each order's token to sell is the following order's token to
+                                            buy. It creates a loop that allows each order to effectively sell and buy
+                                            their desired tokens without having a matching order of the opposite pair.</p>
+                                        <p
+                                        class="animateMe">A ring is said to be valid when all the transactions can be made at an
+                                            exchange rate equal or better than the original one specified by the user.
+                                            To verify the ring validity, the product of the original exchange rates
+                                            of all orders should be equal to or greater than 1.</p>
+                                            <p class="animateMe">Example: Let's check if the above ring in the diagram is valid. 0.2 *
+                                                14 * 0.5 = 1.4 the result is greater than 1, thus the trade should be possible.</p>
+                                            <h2
+                                            class="animateMe" data-anchor="Order Ring Validation">Order Ring Validation</h2>
+                                                <p class="animateMe">The LSC does not perform the exchange rate or amount calculations but
+                                                    still has to verify what the miner supplied for these values. This is done
+                                                    by miners for two main reasons: solidity does not have support for floating
+                                                    point maths, especially pow(x, 1/n) and it is desired that the computation
+                                                    is made off-chain to save gas.</p>
+                                                <p class="animateMe">The following section discusses mathematical validation of the order rings.
+                                                    We recommend you to check supersymmetry’s complementary document listed
+                                                    at the beginning of this page.</p>
+                                                 <h2 class="animateMe" data-anchor="Sub-Loop Checking">Sub-Loop Checking</h2>
+
+                                                <p class="animateMe">This step prevents <a target="_blank" href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">covered
+                    interest arbitrage</a>. Once a valid ring is found
+                                                    by a miner, he could be tempted to add other orders to it to achieve a
+                                                    zero-risk covered interest arbitrage. This is considered unfair conduct
+                                                    from the miner in Loopring.</p>
+                                                <p class="animateMe">The diagram below illustrates the previous valid ring where 2 orders were
+                                                    added.</p>
+                                                <img class="animateMe" src="images/developer-4.png" alt="Developer 101 Fig 4.0">
+                                                <p class="animateMe">To prevent this, Loopring requires that <strong>a valid loop cannot contain a
+                    sub-loop</strong>. There is a very simple way to check
+                                                    this: a token cannot be twice in a buy or sell position. In the above diagram
+                                                    we can see that ARK is twice as a token to sell and twice as a token to
+                                                    buy.</p>
+                                                 <h2 class="animateMe" data-anchor="Fill Rate Checking">Fill Rate Checking</h2>
+
+                                                <p class="animateMe">The rates calculation for the transactions in the ring are made by the
+                                                    miners for the reasons stated above in this page. Therefore the LSC have
+                                                    to verify that they are correct.</p>
+                                                <p class="animateMe">This first verifies that the sell rate the miner supplied for each order
+                                                    is at least equal or less than the original sell rate set by the user.
+                                                    Meaning that the user gets at least the exchange rate he asked for or better
+                                                    at the moment of the transaction.</p>
+                                                <p class="animateMe">Once the exchange rates are confirmed, we make sure that all the margins
+                                                    (discounts) are at the same percentage for every order, to ensure fairness.</p>
+                                                <h2
+                                                class="animateMe" data-anchor="Order Scaling">Order Scaling</h2>
+                                                    <p class="animateMe">This is the part where the orders are scaled according to: - The history
+                                                        of filled and cancelled amounts - The current balance of the senders' accounts.</p>
+                                                    <p
+                                                    class="animateMe">The process finds the order with the smallest amount to be filled according
+                                                        to the above characteristics and uses it as a reference for scaling all
+                                                        the transactions in the ring.</p>
+                                                        <p class="animateMe example">Example: If the smallest amount to be filled compared to the original
+                                                            order is 5%, all the transactions in the ring are scaled down to 5%. Once
+                                                            the transactions are completed, the order that was considered to have the
+                                                            smallest amount remaining to be filled should be completely filled.</p>
+                                                        <h2
+                                                        class="animateMe">Ring Settlement</h2>
+                                                            <p class="animateMe">If all the lights are green from the previous checks, the transactions
+                                                                can be made.</p>
+                                                             <h2 class="animateMe" data-anchor="Transactions">Transactions</h2>
+
+                                                            <p class="animateMe">To make the transactions, the LSC uses the TokenTransferDelegate smart
+                                                                contract. The introduction of such a delegate makes upgrading the protocol
+                                                                smart contract easier as all orders only need to authorize this delegate
+                                                                instead of different versions of the protocol.</p>
+                                                            <p class="animateMe">For each order in the ring, a payment of tokenS is made to the following
+                                                                order. Then the miner's fee is paid depending on the fee model chosen by
+                                                                the miner. If the model was the LRC fee, the remaining amount after the
+                                                                fee is paid is returned to the order's owner. Finally, an OrderFilled event
+                                                                is fired.</p>
+                                                            <p class="animateMe">Once all the transaction are made, a RingMined event is fired.</p>
+                                                            <h2
+                                                            class="animateMe" data-anchor="Fee Model">Fee Model</h2>
+                                                                <p class="animateMe">This section describes the current fee model of Loopring. As complementary
+                                                                    material, we advise you to read Daniel's Medium article on the subject.</p>
+                                                                <p
+                                                                class="animateMe">In the current fee model, the miner has two possible choices. When a user
+                                                                    creates his order, he specifies a maximum of LRC to be paid to the miner
+                                                                    as a fee, as well as a percentage of the margin made on his order that
+                                                                    the miner can claim. This is called the margin split. The decision of which
+                                                                    one to choose is left to the miner.</p>
+                                                                    <p class="animateMe">A representation of the margin split:</p>
+                                                                    <img class="animateMe" src="images/developer-5.png"
+                                                                    alt="Developer 101 Fig 5.0">
+                                                                    <p class="animateMe">If the miner decides that the margin on the ring is too small, he will
+                                                                        choose the LRC fee. On the contrary, if the margin is substantial enough
+                                                                        for the resulting margin split to be worth more than the LRC fee, he will
+                                                                        choose the margin split.</p>
+                                                                    <p class="animateMe">But here comes the twist. When the miner chooses the margin split, he
+                                                                        has to pay the user a fee, which is equal to what the user would have paid
+                                                                        as a fee to the miner for his transaction. This increases the threshold
+                                                                        where the miner will choose the margin split to twice the LRC fee of the
+                                                                        order, adding weight to the LRC fee choice.</p>
+                                                                    <p class="animateMe">From the miner's point of view, this allows him to get a constant income
+                                                                        on low margin rings with the drawback of getting less income from the higher
+                                                                        margin rings. As the market grows and becomes more mature, we expect to
+                                                                        have less high margin rings and our fee model is based on that future.</p>
+                                                                    <p
+                                                                    class="animateMe">We end up with the following graph:</p>
+                                                                        <img class="animateMe" src="images/developer-6.png"
+                                                                        alt="Developer 101 Fig 6.0">
+                                                                        <ul class="animateMe">
+                                                                            <li>f is the LRC fee</li>
+                                                                            <li>x is the margin split</li>
+                                                                            <li>y is the miner's income</li>
+                                                                        </ul>
+                                                                        <p class="animateMe">If f is the LRC fee and x the Margin Split, then the miner's income y
+                                                                            is y = max(f, x-f) and we get the blue line.</p>
+                                                                        <p class="animateMe">If the specified LRC fee for the order is 0, the equation is y = max(0,
+                                                                            x - 0) that simplifies to y = x and we get the orange line.</p>
+                                                                        <p class="animateMe">This has the following consequences: - If the margin split is 0, the miners
+                                                                            will choose the flat LRC fee and are still incentivized. - If the LRC fee
+                                                                            is 0, this is the orange line and the income is based on a general model.
+                                                                            - When the margin split income get's bigger than twice the LRC fee, only
+                                                                            then will the miner choose the margin split.</p>
+                                                                        <p class="animateMe">It should be noted that if the LRC fee is non-zero, no matter which option
+                                                                            the miner chooses, there will always be a transfer of LRC between the miner
+                                                                            and the order's sender. Either by sending back the surplus of LRC fee or
+                                                                            by paying the LRC fee to the sender to take the margin split.</p>
+                                                                        <p class="animateMe">The current fee model is still open for discussion. Feel free to join
+                                                                            our community on <a target="_blank" href="#">slack</a>
+to talk about it.
+                                                                            Suggestions are welcomed to the <a target="_blank" href="#">LIPs</a>
+repository
+                                                                            on github.</p>
+                                                                         <h2 class="animateMe" data-anchor="Emitted Events">Emitted Events</h2>
+
+                                                                        <p class="animateMe">In this page you should have come by a set of events that are emitted
+                                                                            by the LSC. These events exist to allow the relays/order browsers and other
+                                                                            elements that need an update of their orderbooks to get the information
+                                                                            as quickly as possible.</p>
+                                                                        <p class="animateMe">A list of the emitted events: * OrderCancelled * OrderFilled * RingMined</p>
+                                                                        <h2
+                                                                        class="animateMe">Fraud and Attack Protections</h2>
+                                                                             <h2 class="animateMe" data-anchor="Ring Filch">Ring Filch</h2>
+
+                                                                            <p class="animateMe">An attacker could monitor all unconﬁrmed Rings and broadcast the same
+                                                                                rings with their own digital signature. We call this Ring Filch. In order
+                                                                                to prevent Ring Filch, Loopring allows miners to use two steps in order
+                                                                                to submit their Rings:</p>
+                                                                            <ul class="animateMe">
+                                                                                <li>Submit the hash of the Ring and wait for confirmation</li>
+                                                                                <li>Submit the Ring itself</li>
+                                                                            </ul>
+                                                                            <p class="animateMe">This protection is valid for a blocksToLive time specified in the LSC.
+                                                                                After that duration, if the ring has not been submitted, an other miner
+                                                                                can claim it.</p>
+                                                                             <h2 class="animateMe" data-anchor="Denial of Service">Denial of Service</h2>
+
+                                                                            <p class="animateMe">We allow nodes to selectively handle orders by setting their own criteria
+                                                                                and they may choose to hide or reveal them. Therefore we do not see denial
+                                                                                of service as a form of unethical behaviour.</p>
+                                                                             <h2 class="animateMe" data-anchor="Massive Tiny Order Attack">Massive Tiny Order Attack</h2>
+
+                                                                            <p class="animateMe">A user could send a large amount of tiny orders to attack the Loopring
+                                                                                nodes. However, since we allow nodes to reject orders based on their own
+                                                                                criteria, most of these orders will be rejected because they do not yield
+                                                                                satisfying profit when matched. Thus, a massive tiny order attack is not
+                                                                                feasible.</p>
+                                                                             <h2 class="animateMe" data-anchor="Insufficient Balance">Insufficient Balance</h2>
+
+                                                                            <p class="animateMe">Malicious users may sign and spread out orders whose value inside the
+                                                                                order is not zero but whose address actually has zero balance. Nodes could
+                                                                                monitor and notice that some orders actual balance is zero, update these
+                                                                                orders states accordingly and then discard them. Nodes do have to spend
+                                                                                time to update the status of an order, but can also choose to minimize
+                                                                                the effort by, for example, blacklisting addresses and drop related orders.</p>
+                </div>
+                <!--end developers portal-->
+            </div>
+        </div>
+        <!--start footer-->
+        <footer class="footer @@alter-class">
+            <ul class="social">
+                <li><a rel="nofollow" href="https://github.com/loopring" target="_blank"><img src="images/socials/github.svg" alt="Loopring Github"/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://loopring.rocket.chat/" target="_blank"><img src="images/socials/rocketchat.svg" alt="Loopring Rocket.Chat"/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://twitter.com/loopringorg" target="_blank"><img src="images/socials/twitter.svg" alt="Loopring Twitter"/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://www.reddit.com/r/loopringorg/" target="_blank"><img src="images/socials/Forma1.svg" alt="Loopring Reddit"/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://medium.com/loopring-protocol" target="_blank"><img src="images/socials/medium.svg" alt="Loopring Medium"/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://www.facebook.com/loopringofficial" target="_blank"><img src="images/socials/facebook.svg" alt="Loopring Facebook"/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://t.me/loopring_en" target="_blank"><img src="images/socials/telegram.svg" alt="Loopring "/></a>
+
+                </li>
+                <li><a rel="nofollow" href="https://www.youtube.com/results?search_query=loopring"
+                    target="_blank"><img src="images/socials/youtube.svg" alt="Loopring Youtube"/></a>
+
+                </li>
+            </ul>
+            <p class="copy">&copy; 2018 Loopring Foundation. All rights reserved.</p>
+        </footer>
+        <!--end footer-->
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+        <script src="js/global.min.js"></script>
+    </body>
+
+</html>
