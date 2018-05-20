@@ -35,5 +35,10 @@ module.exports = {
     fonts: {
         src: './assets/fonts/**',
         dest: './dist/fonts/'
+    },
+
+    resources: {
+        src: './assets/resources/**',
+        dest: './dist/resources/'
     }
 };

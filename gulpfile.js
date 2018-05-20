@@ -47,6 +47,7 @@ const variables = {
         './gulp/tasks/fonts',
         './gulp/tasks/scss',
         './gulp/tasks/images',
+        './gulp/tasks/resources',
         './gulp/tasks/htmlimport',
         './gulp/tasks/script',
         './gulp/tasks/watch',
