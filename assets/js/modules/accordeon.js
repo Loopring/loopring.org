@@ -17,7 +17,7 @@ export function accordeon() {
 	$('.anchor-list .title, .anchor-list  a').on('click', function () {
 		let targetAttr = $(this).data('anchor');
 		if (targetAttr !== undefined) {
-			$('.developers-portal').find('h2').each(function () {
+			$('.developers').find('h2').each(function () {
 				if ($(this).data('anchor') === targetAttr) {
 					let translate = 10;
 					if (!$(this).hasClass('animate') && window.innerWidth > 1024) {
