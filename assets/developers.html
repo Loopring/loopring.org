@@ -25,7 +25,7 @@
                     <li class="active"><a href="developers.html">Developer Portal</a></li>
                     <li><a href="protocol.html">Protocol</a></li>
                     <li><a href="tokens.html">Tokens</a></li>
-                    <li><a href="relays.html">Relays</a></li>
+                    <li><a href="relayers.html">Relayers</a></li>
                     <li><a href="wallets.html">Wallets</a></li>
                     <!-- <li><a href="tokenization-services.html">Tokenization Services</a></li> -->
                     <!-- <li><a href="contribution.html">Contribution</a></li> -->
@@ -88,15 +88,15 @@
                     wallet service/interface that gives you access to your tokens and provides you with a way to send
                     orders to the loopring network.</p>
                 <p class="animateMe"><a
-                        href="https://docs.loopring.org/English/projects/relay/"><strong>Relays:</strong></a> maintains
-                    public orderbooks and trade history. Broadcasts new orders to other relays and ring miners.
-                    Ring-mining is a feature of relays. It is computational heavy and is done completely off-chain. The
+                        href="https://docs.loopring.org/English/projects/relayer/"><strong>Relayers:</strong></a> maintains
+                    public orderbooks and trade history. Broadcasts new orders to other relayers and ring miners.
+                    Ring-mining is a feature of relayers. It is computational heavy and is done completely off-chain. The
                     process produces chains of trades involving at least 2 tokens, we call that an
                     <a href="https://docs.loopring.org/English/projects/protocol/#order-ring">order ring.</a></p>
                 <p class="animateMe"><a href="https://docs.loopring.org/English/projects/protocol/"><strong>Loopring
                     Protocol Smart Contracts:</strong></a> a set of smart contracts that checks ring-matched orders
                     received from the miners, do the token transfers on behalf of the users, incentivize the miners and
-                    emit events. The relays/order browsers listen to these events to keep their orderbooks and trade
+                    emit events. The relayers/order browsers listen to these events to keep their orderbooks and trade
                     history up to date.
                 </p>
                 <p class="animateMe"><a href="https://docs.loopring.org/English/projects/tokenization/"><strong>Asset
@@ -113,7 +113,7 @@
                 <img class="animateMe" src="images/developer-1.png" alt="Developer 101 Fig 1.0">
                 <p class="animateMe"><strong>The user wants to make a trade:</strong> The user wants to exchange X
                     amount of TokenA for Yamount of TokenB. The current rate and orderbook for this pair can be found on
-                    multiple sources provided by the relays or any other interface hooked up on the network (e.g.
+                    multiple sources provided by the relayers or any other interface hooked up on the network (e.g.
                     orderbook browsers). Once he is ready, he uses his wallet interface to enter the details of his
                     order and submits it. An amount of LRC can be added to the order as a fee for miners. Orders with a
                     higher LRC fee have a better chance to be processed earlier by miners.</p>
@@ -127,9 +127,9 @@
                 </p>
                 <p class="animateMe"><strong>Sending the order to the network:</strong> Once the authorization is made,
                     the order's data is signed with the private key of the sender. Then, the wallet sends the order
-                    along with its signature to one or more nodes in the network (relay).</p>
-                <p class="animateMe"><strong>Broadcast:</strong> On the reception of the order, relays update their
-                    public orderbook and broadcast the order to other relays as well as ring miners to start the order
+                    along with its signature to one or more nodes in the network (relayer).</p>
+                <p class="animateMe"><strong>Broadcast:</strong> On the reception of the order, relayers update their
+                    public orderbook and broadcast the order to other relayers as well as ring miners to start the order
                     processing as quickly as possible.</p>
                 <p class="animateMe"><strong>Ring Miners (order matching):</strong> Ring Miners receive the order and
                     add it to their orderbook. Each one of them tries to fill it fully or partially at the given
