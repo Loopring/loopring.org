@@ -8,3 +8,5 @@ logs/
 README.md
 robots.txt
 yarn.lock
+.DS_Store
+dist/
