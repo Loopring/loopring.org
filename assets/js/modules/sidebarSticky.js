@@ -3,7 +3,7 @@ export function sidebarSticky() {
     let winHeight = $(window).innerHeight();
     let bottomBlock = $('.footer');
     if($('.partners-logos ').length){
-        bottomBlock = $('.partners-logos ');
+        bottomBlock = $('.partners-logos');
     }
     // let footerHeight = footer.innerHeight();
     function scrollLoad() {
