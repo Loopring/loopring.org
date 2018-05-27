@@ -9,4 +9,5 @@ module.exports = ({gulp, tojson, bs}) => {
         done();
     }
     gulp.task('dev', gulp.parallel(serve, 'htmlimport', 'scss', 'images', 'resources', 'script', 'watch'));
+    // gulp.task('dev', gulp.parallel(serve, 'htmlimport', 'scss', 'resources', 'script', 'watch'));
 };
