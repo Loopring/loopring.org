@@ -12,15 +12,11 @@ We don’t share your information with third parties except to deliver you our S
 ### Information We Collect
 We receive or collect information when we operate and provide our Services, including when you install, access, or use our Services.
 
-### Information you provide
-
+<u>Information you provide</u>
 - Your Transactions - Your Ethereum private key, which you utilize to access your Ethereum funds and initiate transactions, is stored only on your own device. However, to facilitate your transactions and provide you with your Ethereum account balance, we store the Ethereum public key.
-
 - Customer Support - We may collect additional information you may disclose to our customer support team.
 
-
-### Automatically collected information
-
+<u>Automatically collected information</u>
 - Metrics and Performance Data - We may collect service-related, diagnostic, and performance information. This includes high level information about your activity (such as how you use our Services and how you interact with others using our Services), and diagnostic, crash, website, and performance logs and reports.
 
 - Device and Connection Information - We may collect device-specific information when you install, access, or use our Services. This may include your IP address and, if you choose to allow push notifications, your device’s unique push token.
