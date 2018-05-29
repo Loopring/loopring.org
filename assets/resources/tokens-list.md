@@ -75,21 +75,158 @@ What is the history of this virtual currency?
 AirSwap protocol serves a growing demand for a decentralized asset exchange on the Ethereum network. Blockchain-based order books, while novel and certainly within the ethos of our ecosystem, have limitations that we believe ultimately make it difficult for them to compete with currently available centralized solutions. Swap provides a method that is both decentralized and unaffected by these limitations. By implementing the protocol, participants gain access to liquidity in a scalable, private, and fair way, without sacrificing access to great pricing. The protocol and APIs are extensible and we encourage the community to build applications with us. We welcome feedback and look forward to pushing the Ethereum community forward with you.
 
 
-ATM
+ATM (ATMChain)
+https://atmchain.io/en.html
 
-BAR
+What is this virtual currency’s most recent market cap?
+$ 13,210,830
 
-BNB
+What kind of virtual currency is this?
+It's ERC20 token
 
-BNT
+What is this virtual currency primarily used for?
+ATMChain is an intelligent, credible and open digital media ecosystem. It is an innovative application of blockchain technology in digital media
 
-BTM
+When was this virtual currency first introduced?
+2017-10-05
 
-CAT
+What is the history of this virtual currency?
+ATMChain is an intelligent,trustable and open digital media ecology. It is the innovative application of blockchain technology in the field of digital media.ATMChain uses ATM(Attention Token of Media) token to realize value quantification and value circulation in ecology. The mature blockchain application ecology of ATMChain encapsulate the bottom-layer capability into API interface and provides various functionalities like free access to digital media information,smart contract management,automatic token distribution and data interoperation, etc. ATMChain takes digital media advertising as the core. Based on blockchain network, it covers the digital media culture ecology of the industries like ticketing, ainema. cultural entertainment, sociality, We-Media, etc; using media screen, it collects numerous surrounding information to support big data analysis with artificial intelligence techniques and it further expands more interactive scenes of media screen, aiming to create top-ranking digital media culture ecology.
+
+
+BNB (Binance Coin)
+
+What is this virtual currency’s most recent market cap?
+$ 1,353,567,475
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+The BNB token itself has multiple forms of utility, essentially being the underlying gas that powers the Binance Ecosystem. The current most prominent use cases include using BNB to:
+- Pay for trading fees on the exchange, obtaining the equivalent of a 50% discount on trades (during the first year).
+- Monaco has included support for Binance’s BNB token to its platform which includes the Monaco Visa Card and mobile app.
+- Uplive platform supports BNB to buy virtual gifts.
+
+When was this virtual currency first introduced?
+2017-07-08
+
+What is the history of this virtual currency?
+From the ICO, Binance issued its own token called the Binance Coin, with BNB as the symbol. BNB runs natively on the Ethereum blockchain and follows the ERC20 token standard.The token was established with a total supply of 200 million. As per the whitepaper, Binance plans to use 20% of our profits each Quarter to buyback and burn BNB, until 50% of the total BNB supply (100 million) is burned.
+
+
+BNT (Bancor)
+https://www.bancor.network/discover
+
+What is this virtual currency’s most recent market cap?
+$ 178,067,584
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+The Bancor Protocol is a blockchain-based system for discovery and a liquidity mechanism supporting multiple smart contract platforms. The flexibility of these blockchains allows tokens to be locked in reserve and to issue smart tokens on the Bancor system, enabling anyone to instantly purchase or liquidate the smart token in exchange for any of its reserve tokens.
+
+When was this virtual currency first introduced?
+2017-06-13
+
+What is the history of this virtual currency?
+The BNT is the first smart token on the Bancor system and it will hold a single reserve in Ether. Other smart tokens, by using BNT as one of their reserves, connect to the BNT network. The BNT establishes network dynamics where increased demand for any of the network’s smart tokens increases demand for the common BNT, benefiting all other smart tokens holding it in reserve.
+
+
+BTM(Bytom)
+https://bytom.io/
+
+What is this virtual currency’s most recent market cap?
+$ 600,194,700
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom.
+
+When was this virtual currency first introduced?
+2017-08-09
+
+What is the history of this virtual currency?
+The Bytom Blockchain project formally begins in January 2017. In June 2017, private equity funding completed. Bytom published the economic and technical white papers, and announced plans for public fundraising. Bytom 0.1.0 BigBang version released. China Hangzhou’s First Public Chain Bytom Releases The Alpha Testnet BigBangs. Bytom passed the SEC “Howey Test”, Bytom Becomes the First Non-Securities Public Blockchain Project in the USA. Bytom released the test network Beta version 0.2 on December 1st — Spark —including the multi-platform client program (command line version). Bytom Visual Client 0.3“Scope” released On 4th January. In January, Artificial Intelligence Friendly POW Algorithm Verified Global Released. Bytom Visual Client released new version of Testnet, named“NEU”.
+
+
+CAT (BitClave)
+https://www.bitclave.com/en/
+
+What is this virtual currency’s most recent market cap?
+$ 10,498,509
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+BitClave’s decentralized solution enables companies big and small to participate in a common ecosystem. The innovative search technology enables sellers to pay directly for outcomes, optimizing marketing spend for results; users and other data providers are paid on the data’s value, measured by conversions (not clicks); and consumers gain access to monetary incentives and lower-cost goods while gaining control over their personal information. BitClave’s ecosystem uses the blockchain to encode the value of data in the data itself, enabling transactions that are both anonymous for consumers (until such time as they chose otherwise, e.g., complete a purchase transaction), while providing attestation required to charge sellers for outcomes and pay users for their data. Consumer privacy is built into the very fabric of the BitClave decentralized search ecosystem by design.
+
+When was this virtual currency first introduced?
+2018-01-03
+
+What is the history of this virtual currency?
+BitClave was created from smart contract during the public sale back in January 2018. It’s world's first decentralized Search Engine that enables direct costumer-to-business interactions. With BitClave customers get paid for their search request, businesses make money on personalized offers and all data is private and secured.
+
 
 CFI
+https://cofound.it/
+
+What is this virtual currency’s most recent market cap?
+$ 17,761,250
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+Currently, the Cofound.it token (CFI) is your ticket to the Priority Pass. As an active Priority Pass member, you can unlock early access to all Cofound.it presales and other exclusive content, plus a direct line to the world's best teams that are changing old businesses with blockchain. 
+
+When was this virtual currency first introduced?
+2017-06-20
+
+What is the history of this virtual currency?
+Cofound.it is a self-sustained business consultancy, focusing on carefully-selected projects. But just as we know that great ideas can come from anywhere, we also know there are many experts all over the world that can help good ideas grow into exceptional businesses. That is why our ultimate goal is to build a platform where hundreds of thousands of the best startups go to expand their potential and find investment. A platform where millions of experts with proven track records offer their expertise. And a platform where tens of millions of investors go to find the best projects to support without worrying about their legitimacy. In doing so, Cofound.it will become one of the platforms that will harness the disruptive power of the blockchain and translate the logic of interactions into successful distributed business models that shape the future.
+
 
 CVC
+https://www.civic.com/
+
+What is this virtual currency’s most recent market cap?
+$ 98,288,069
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+Civic is a decentralized identity ecosystem that allows for on-demand, secure and lower cost access to identity verification via the blockchain. Through a digital Identity platform, users to set up their own virtual identity and to store it along with their personally identifiable information on the device. This information will go through a verification process conducted by the identity validators on the platform and then ported into the blockchain where service providers can access it with the proper permission from the user.
+CVC is an Ethereum-based token used by service providers that are looking to acquire information about a user. These can make a payment in CVC. The smart contract system employed will then see funds delivered to both the validator and the identity owner (user).
+When was this virtual currency first introduced?
+2017-07-18
+
+What is the history of this virtual currency?
+
+Q3 2017 - Civic Partner Network Established.
+- Integration work with the first group of partner sites begins. 
+- wikiHow signup and login integrations completed
+- First smart contracts built to support the Marketplace and tested on the RootStock testnet
+
+Q4 2017 - Marketplace Alpha Phase
+- Select providers with existing identity verification capabilities are available directly through Civic
+- Civic provides new KYC services including document verification, launching with BitGo’s Royal Mint Gold Wallets
+- Civic can validate identities in exchange for CVC on the RootStock testnet
+- WordPress plugin becomes available to the developer community
+- Rollout of Civic Community Developer Program
+
+Q1 2018 - Beta v.1
+- Partners can transact with CVC as payment for verification services
+- Select identity providers can operate independently on the network
+- Select identity providers offer own validation services within the Civic ecosystem
+- Civic expands app functionality to include generalized KYC services based on provider capabilities
+- Re-usable Know Your Customer (KYC) available
+
 
 DNT
 
@@ -128,6 +265,24 @@ KNC
 LINK
 
 LRC
+https://loopring.org
+
+What is this virtual currency’s most recent market cap?
+$372,053,598 USD
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+
+Loopring protocol token (LRC) is utilized to: 1) solve the coordination problem and drive network effects around liquidity, creating a feedback loop where early adopters of the protocol benefit from wider adoption, and 2) be used for decentralized governance of the Loopring protocol's update mechanism.
+
+When was this virtual currency first introduced?
+2017.Aug.1
+
+What is the history of this virtual currency?
+Loopring token(LRC) was created from smart contract during the public sale back in August 2017. Loopring is a decentralized token exchange protocol. It is implemented as an ethereum smart-contract at the core of the loopring decentralized exchange system. Its design allows for several improvements over traditional centralized exchanges. In January 2018. Loopring protocol launched on its web-based wallet loopr.io. Start from then loopring protocol has been functioning fully. 
+
 
 LUN
 
