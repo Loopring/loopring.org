@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "gulp dev",
     "prod": "gulp prod",
-    "deploy": "",
+    "deploy": "gulp build & firebase deploy",
     "deploy-gh-pages": "gulp deploy"
   },
   "devDependencies": {
