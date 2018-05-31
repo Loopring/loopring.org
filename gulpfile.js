@@ -52,7 +52,6 @@ const variables = {
         './gulp/tasks/script',
         './gulp/tasks/watch',
         './gulp/tasks/dev',
-        './gulp/tasks/build',
         './gulp/tasks/prod',
         './gulp/tasks/deploy'
     ];

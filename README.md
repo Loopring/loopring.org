@@ -19,11 +19,12 @@ npm install
 #### 开发调试
 npm run dev
 
-#### 自动部署到 gh-pages
-npm run deploy
 
 #### 打包文件
 npm run prod
+
+#### 自动打包并部署到 firebase
+npm run deploy
 
 ```
 
@@ -43,4 +44,21 @@ Library not loaded: /usr/local/opt/libpng/lib/libpng16.16.dylib
 快速解决方案：
 - 打开 gulp/tasks/images.js
 - 注释掉 imagemin  相关的代码
+```
+
+## 关于firebase
+
+```
+## 安装firebase-cli
+npm install -g firebase-tools
+
+## 登录firebase (账号必须被提交到loopr-org项目管理员中)
+firebase login 
+
+## 部署(必须使用VPN网络)
+npm run deploy
+
+## 查看更新
+https://loopring-org.firebaseapp.com
+
 ```
