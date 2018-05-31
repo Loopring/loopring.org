@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "gulp dev",
     "prod": "gulp prod",
-    "deploy": "gulp deploy"
+    "deploy": "",
+    "deploy-gh-pages": "gulp deploy"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
