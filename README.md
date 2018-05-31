@@ -24,7 +24,10 @@ npm run dev
 npm run prod
 
 #### 自动打包并部署到 firebase
-npm run deploy
+npm run deploy-firebase
+
+#### 自动打包并部署到 gh-pages
+npm run deploy-gh-pages
 
 ```
 
@@ -56,7 +59,7 @@ npm install -g firebase-tools
 firebase login 
 
 ## 部署(必须使用VPN网络)
-npm run deploy
+npm run deploy-firebase
 
 ## 查看更新
 https://loopring-org.firebaseapp.com
