@@ -228,11 +228,106 @@ Q1 2018 - Beta v.1
 - Re-usable Know Your Customer (KYC) available
 
 
-DNT
+DNT(distict0x)
+https://district0x.io/
 
-DRP
+What is this virtual currency’s most recent market cap?
+$ 38,136,925
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+To provide all internet citizens with an opportunity to freely join and contribute to any district, to align incentives across all of a district’s participants, and to implement coordinated decision-making mechanisms to the district0x Network, we introduce the district0x Network Token.
+
+The district0x Network Token (DNT) is a staking token, used by holders to join districts and participate in their governance. Upon staking district0x Network Tokens to a district, participants receive an equivalent amount of voting rights in the district.
+
+Voting rights can be used to partake in the processes that determine everything from a district’s branding, to its accepted code of conduct, to the auxiliary modules that are integrated, to the way that fees collected by revenue-generating auxiliary modules are utilized, and beyond.
+
+When was this virtual currency first introduced?
+2017-08-04
+
+What is the history of this virtual currency?
+DNT was created from smart contract during the public sale back in August 2017. The final draft of white paper was released. 3 outside audits of the district0x contract hve been completed.
+
+
+DRP (DCORP)
+https://www.dcorp.it/
+
+What is this virtual currency’s most recent market cap?
+$ 2,848,371
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+DCORP is an entity that resembles a corporation and exists on the blockchain in the form of a series of smart contracts. It manages its own token (DRP) and the Ether (ETH) that it holds.
+While the DRP token is used to give a voice to the shareholders, the Ether is used to fund projects and attract talent, in order to make profit.
+
+When was this virtual currency first introduced?
+2017-11-01
+
+What is the history of this virtual currency?
+DRP was created from smart contract during the public sale back in August 2017.
+
 
 EDG
+https://www.edgeless.io/#!/index
+
+What is this virtual currency’s most recent market cap?
+$ 43,902,974
+
+What kind of virtual currency is this?
+It's ERC20 token
+
+What is this virtual currency primarily used for?
+EDG token is used to play Edgeless casino games. EDG is an Ethereum-based ERC20 protocol token, guaranteeing absolute casino transparency.
+
+EDGELESS - the First Licensed Ethereum Based Casino in the World!
+Using the power of the Ethereum smart contract, we are introducing the Ethereum-based Online Casino which offers ZERO edge for its players and 100% transparency.
+ABSOLUTE TRANSPARENCY
+The random number generator is based on an Ethereum Smart Contract which is completely public. That means that everyone can see everything that is going on inside the servers of the casino.
+0% HOUSE EDGE
+Our casino will offer games that are solely based on skill and luck. If played perfectly, people will have a 0% edge gambling experience. If players, however, make mistakes, the casino will profit in the long run.
+LEGALLY COMPLIANT
+We have a casino license which includes: strict terms and conditions, responsible gambling information, account registration as well as other needed requirements to fit into a legal framework. In this way, we support legal and responsible gambling.
+INSTANT MONEY DEPOSITS AND WITHDRAWALS
+Instant and cost-effective cryptocurrency transfers will provide instant money deposits and withdraws for the customer, while regular casinos hold your money for 1 - 3 days before remitting it to you.
+
+When was this virtual currency first introduced?
+2017-03-21
+
+What is the history of this virtual currency?
+
+
+Over the last couple of years, Edgeless team has built our platform using ethereum blockchain technology and 'smart-contracts'
+
+Timeline
+2016
+
+Q1 - Blockchain enthusiasts launched an ethereum smart - contract based slot machine. This was the first decentralized slot machine ever created on a blockchain.
+
+Q2 - After tons of positive feedback from the blockchain community, team named themselves “Edgeless”
+And announced the next game: 0% house edge Black Jack running on smart - contracts.
+
+Q3 - Edgeless announced plans to conduct an ICO 
+(before ICO’s were cool. During that time only hard-core blockchain enthusiasts used to understand what one was.)
+
+Q4 - ICO successfully finished raising 47.000+ ETH.
+
+2017
+Q1 - Edgeless launched it’s platform for 800 randomly selected users from the Edgeless and blockchain community
+Main objective was to test the platform and provide feedback to the team.
+
+Q3 - Casino license was acquired from a legal jurisdiction.
+Edgeless becomes first ever smart - contract based casino which is legally compliant.
+
+Q4 - Edgeless launched version 0.2 of the platform to the public for early adopters.
+0.2 version has successfully programmed state-channel technology allowing for fast smart - contract computation.
+
+2018
+Q1 - The launch of Edgeless 1.0. Full version platform with all necessary functionality and bugs nailed. Games: Black Jack and Dice. Purpose of 1.0 version is to attract masses of players providing best crypto gambling experience in the entire market. Secondly, the platform will allow bankroll staking which is also known as betting for the bank. Additionally it will have enabled bankroll staking.
+
 
 ENG
 
