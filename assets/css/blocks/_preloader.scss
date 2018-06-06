@@ -50,7 +50,8 @@
   right: 0;
   bottom: 0;
   z-index: 55555;
-  background-color: $color-white;
+  // background-color: $color-white;
+  background-color: transparent;
   will-change: transform;
 }
 .preloader {
