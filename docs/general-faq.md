@@ -1,5 +1,6 @@
 
-<h2 class="animateMe" data-anchor="general">General</h2>
+## General
+<h2 data-anchor="general">General</h2>
 
 - Can Loopring do cross-chain token trading?
 
@@ -40,3 +41,10 @@
 - When will Loopring launch its own mainnet?
            
 > Loopring is a protocol thus does not have a mainnet to launch. We have deployed Loopring on Ethereum and Qtum.
+
+## Token Listing
+<h2 data-anchor="tokenlisting">Token Listing</h2>
+
+- How can I get my token listed on Loopring's Exchanges?
+           
+> More information to come.
