@@ -1,5 +1,5 @@
 
-## General Questions
+<h2 class="animateMe" data-anchor="general">General</h2>
 
 - Can Loopring do cross-chain token trading?
 
