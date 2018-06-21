@@ -41,13 +41,29 @@
                         <h4>Table of contents</h4>
                         <ul class="accordeon animateMe anchor-list">
                             <li>
-                                <div class="title" data-anchor="Why?">Why?</div>
+                                <div class="title" data-anchor="AboutLoopring">Loopring</div>
                             </li>
                             <li>
-                                <div class="title" data-anchor="Ecosystem">Ecosystem</div>
+                                <div class="title" data-anchor="OurSolution">Our Solution</div>
                             </li>
                             <li>
-                                <div class="title" data-anchor="Overview">Overview</div>
+                                <div class="title" data-anchor="Challenges">Challenges</div>
+                            </li>
+                            <li>
+                                <div class="title" data-anchor="VsKyberNetwork">Loopring vs. Kyber Network</div>
+                            </li>
+                            <li>
+                                <div class="title" data-anchor="Vs0x">Loopring vs. 0x</div>
+                            </li>
+                            <li>
+                                <div class="title">How to Use Loopring</div>
+                                <div class="acc-holder">
+                                    <ul class="animateMe2">
+                                        <li><a data-anchor="DEX" href="#">Become a DEX or a Wallex</a></li>
+                                        <li><a data-anchor="Relayer" href="#">Become a Relayer</a></li>
+                                        <li><a data-anchor="Liquidity" href="#">Share Liquidity</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -57,9 +73,9 @@
                 <div class="developers content">
                     <h1>Developer Portal</h1>
                     <p>This developer portal provides technical information for software engineers and product managers to comprehend and adopt the solution. We welcome our community to send us feedback to enhance these documents.</p>
-                    <h2 data-anchor="AboutLoopring?">Loopring</h2>
+                    <h2 data-anchor="AboutLoopring">Loopring</h2>
                     <p>Loopring is a layer-2 protocol that consists of multiple smart contracts to verify tradable orders and perform per-trade settlement on-chain while keeping all order management off-chain. Loopring features a more generic design with matching-as-a-service, ring-matching, and dual-authoring technologies. We strongly encourage you to read our <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">new whitepaper</a> and previous <a target="_blank" href="http://medium.com/loopring-protocol">blog posts</a> as it is the best way to understand the protocol. If you have any questions, you can send us an <a href="mailto:foundation@loopring.org">email</a>, or post questions on <a href="https://stackoverflow.com/c/loopring" target="_blank">StackOverflow</a> or <a href="https://www.reddit.com/r/loopringorg/" target="_blank">Reddit</a>. You can also learn more about the Loopring Protocol <a href="protocol.html">here</a>.</p>
-                    <h2 data-anchor="Our Solution">Our Solution</h2>
+                    <h2 data-anchor="OurSolution">Our Solution</h2>
                     <p>There is a significant lack of security, transparency, and liquidity in centralized exchanges. Loopring invented a whole new trading experience built upon blockchain and smart contract technologies. Through our whitepaper and this developer portal, you will see that Loopring DEXs are non-custodial and perfectly secure; all trades are verified and recorded on the blockchain for absolute transparency, and every Loopring order can be shared with as many parties as possible with no trust needed, which also makes for higher liquidity and a better trade price.</p>
                     <p>The Loopring Foundation provides open-sourced, ready-to-deploy solutions for our community to develop the DEX frontend with apps (a.k.a wallets), the DEX backend (a.k.a relayers or match-engines), along with liquidity sharing middleware. We also provide free-of-charge consulting and technical support.</p>
                     <p>
@@ -93,13 +109,10 @@
                         <li>Loopring offers a lot more open-sourced software for its partners to quickly build a DEX at a smaller cost, including a JavaScript library, two web-based wallet/DEX's, an embeddable HTML5 component for mobile apps, an iOS wallet application, a distributed relay cluster with ring-matching capability, and a liquidity sharing middleware based on pub-sub messaging;</li>
                         <li>Loopring will continue to focus on ERC-20 and will not support ERC-721 (non-fungible) tokens; whereas 0x aims to become the protocol for trading everything. We believe a protocol needs to be simple, elegant, easy to understand, and extensible.</li>
                     </ul>
-                    <h2 data-anchor="HowToUse">How to use Loopring?</h2>
+                    <h1>How to use Loopring?</h1>
                     <p>Unlike the rigid business model of centralized exchanges, Loopring's technology offers you the ability to become part of the decentralized exchange ecosystem. Let's take a look at the Loopring DEX ecosystem illustrated by the image below:</p>
-
                     <img class="animateMe2" src="images/developers/ecosystem.png" alt="Loopring Ecosystem">
-
-
-                    <h3 data-anchor="DEX">Become a DEX or a Wallex</h3>
+                    <h2 data-anchor="DEX">Become a DEX or a Wallex</h2>
                     <p>Loopring can turn any application or web page into a DEX. A DEX retrieves and displays orders and trades and may show submit-order and cancel-order forms for users to manage their trading data. In our model, a DEX does not have access to users' private keys. If it does, we then call it a Wallex (Wallet + DEX). Orders generated by a DEX must be signed from within a wallet app such as Ledger Nano before being sent to a relayer.</p>
                     <p>
                         The Loopring team provides an open-sourced DEX named Circulr and an open-sourced Wallex named Loopr. You can clone one of these projects to launch a web frontend easily for accessing Loopring's default relayer system. If you want to start from scratch, we also offer a JavaScript library called loopring.js for you to access any compatible backend relayer system.
@@ -112,14 +125,14 @@
                         Connecting and broadcasting users' orders to multiple relayers and the liquidity-sharing networks increase the likelihood of orders being fulfilled. The network topologies and business relations between frontends, relayers, and the liquidity-sharing networks are entirely up to each entity in the ecosystem; the Loopring Foundation doesn't impose any rules. For more information regarding DEX and Wallex, check out the <a href="frontends.html">Frontends</a> page.</p>
                     <p>
                         If you are not happy with only 20% profit sharing, you can also run your relayer cluster.</p>
-                    <h3 data-anchor="Relayer">Become a Relayer</h3>
+                    <h2 data-anchor="Relayer">Become a Relayer</h2>
                     <p>
                         Relayers manage orders and trades, and offer the non-custodial order-matching services as options. Relayers can receive orders from as many frontends as possible without trusting any of them. This opens the door to build an even bigger liquidity pool than any centralized exchange.</p>
                     <p>
                         Relayers get 80% of matching fees, but it doesn't come for free - Relayers have to pay Ether as gas for ring-settlement transactions on Ethereum and pay fiat money for cloud service.</p>
                     <p>
                         For more information about Relayers, check out the <a href="relayers.html">Relayers</a> page.</p>
-                    <h3 data-anchor="Liqudity">Sharing Liqudity</h3>
+                    <h2 data-anchor="Liquidity">Sharing Liquidity</h2>
                     <p>Relayers can share liquidity with each other by joining the same liquidity sharing network. The Loopring Foundation provides a pub-sub based implementation of such a network, but ecosystem partners can build their liquidity sharing network with their technology stack of choice - the Loopring Protocol does not have a standard for liquidity sharing.</p>
                     <p>
                         Each liquidity-sharing network may have their own internal economic model to incentivize order producers and charge orderers, which is not part of the Loopring Protocol.</p>
