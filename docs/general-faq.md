@@ -1,6 +1,7 @@
 
 ## General Questions
 - Can Loopring do cross-chain token trading?
+
 > Loopring is blockchain agnostic, meaning it can facilitate the trading of tokens on any smart contract capable public blockchains. But Loopring is not a cross-chain protocol. In order to perform cross-chain trading, tokenization services have to get involved to help issue asset-backed tokens on the target blockchain.
 
 - Loopring has issued LRC, LRN, and will probably issue LRQ. Will you issue a lot more LRx protocol tokens and will that dilute the value and lower the price of LRC?
