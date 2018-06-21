@@ -18,7 +18,16 @@
         <meta property="og:image" content="images/logo.JPG" />
         <meta name="twitter:image" content="images/logo.JPG" />
         <meta name="twitter:card" content="summary" />
-        <title>Wallets | Loopring</title>
+        <title>Loopring FAQ</title>
+        <meta name="description" content="Loopring foundation is determined to reward a considerable portion of LRC tokens to developers, partners, and community contributors; the circulating supply will increase over time.">
+        <meta property="og:title" content="Loopring - decentralized token exchange protocol"
+        />
+        <meta property="og:description" content="Loopring foundation is determined to reward a considerable portion of LRC tokens to developers, partners, and community contributors; the circulating supply will increase over time."
+        />
+        <meta name="twitter:title" content="Loopring (LRC) ERC20 Token Tracker"
+        />
+        <meta name="twitter:description" content="Loopring foundation is determined to reward a considerable portion of LRC tokens to developers, partners, and community contributors; the circulating supply will increase over time."
+        />
     </head>
     
     <body>
@@ -92,7 +101,7 @@
         <!--end header section-->
         <div class="page-wrap">
             <div class="right-container small">
-                <!--start nav-->
+                <!--start add nav-->
                 <nav class="add-navigation">
                     <ul>
                         <li><a href="developers.html">Overview</a>
@@ -101,7 +110,7 @@
                         </li>
                         <li><a href="relayers.html">Relayers</a>
                         </li>
-                        <li class="active"><a href="wallets.html">Wallets</a>
+                        <li><a href="frontends.html">Frontends</a>
                         </li>
                         <li><a href="tokens.html">Tokens</a>
                         </li>
@@ -109,14 +118,63 @@
                         </li>
                         <li><a href="bootstrap.html">Bootstrap</a>
                         </li>
-                        <!-- <li><a href="tokenization.html">Tokenization</a></li> -->
                         <li><a href="dev-resources.html">Resources</a>
+                        </li>
+                        <li class="active"><a href="faq.html">FAQ</a>
                         </li>
                     </ul>
                 </nav>
                 <!--end add nav-->
+                <!--start aside-->
+                <aside class="sidebar">
+                    <div class="sidebar-box dev-nav">
+                        <div class="wrap">
+                            <img src="images/ico-brand-guidelines.svg" alt="ico">
+                             <h4>Table of contents</h4>
+
+                            <ul class="accordeon animateMe2 anchor-list">
+                                <li>
+                                    <div class="title" data-anchor="general">General</div>
+                                </li>
+                                <li>
+                                    <div class="title" data-anchor="tokens">Token Listing Related</div>
+                                </li>
+                                <li>
+                                    <div class="title" data-anchor="wallet">Wallet Related</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wrap">
+                            <img src="images/ico-brand-guidelines.svg" alt="ico">
+                             <h4>External FAQ Resources</h4>
+
+                            <p>We have held several AMA sessions on Reddit, you can check out the previous
+                                questions following the link below:</p>
+                            <p><a href="https://www.reddit.com/r/loopringorg/comments/8fkade/loopring_founder_daniel_wang_ama_on_may_11th_2018/"
+                                target="_blank">AMA of May 11, 2018</a>
+                            </p>
+                            <p><a href="https://medium.com/loopring-chinese/%E8%B7%AF%E5%8D%B0%E5%88%9B%E5%A7%8B%E4%BA%BA%E7%8E%8B%E4%B8%9Creddit%E4%B8%8Aama%E9%97%AE%E7%AD%94-2018-05-11-633e32c812f1"
+                                target="_blank">AMA of May 11, 2018 (Chinese)</a>
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+                <!--end aside-->
+                <!-- end aside-->
                 <!--start developers portal-->
-                <div id="content" class="developers content"></div>
+                <div class="developers content">
+                     <h1>Frequently Asked Questions</h1>
+
+                     <h2 data-anchor="general">General</h2>
+
+                    <div id="general-faq"></div>
+                     <h2 data-anchor="tokens">Token Listing</h2>
+
+                    <div id="tokens-faq"></div>
+                     <h2 data-anchor="wallet">Wallet</h2>
+
+                    <div id="wallet-faq"></div>
+                </div>
                 <!--end developers portal-->
             </div>
         </div>
@@ -157,7 +215,7 @@
         <script src="js/global.min.js"></script>
         <script>
             $.ajax({
-                url: "resources/wallets.md",
+                url: "//raw.githubusercontent.com/Loopring/loopring.org/master/docs/general-faq.md",
                 context: document.body,
                 beforeSend: function(xhr) {
                     xhr.overrideMimeType("text/plain; charset=x-user-defined");
@@ -166,7 +224,36 @@
                     //where text will be the text returned by the ajax call
                     var converter = new showdown.Converter();
                     var htmlText = converter.makeHtml(mdText);
-                    $("#content").append(htmlText); //append this to a div with class outputDiv
+                    $("#general-faq").append(htmlText); //append this to a div with class outputDiv
+                }
+            });
+        
+        
+            $.ajax({
+                url: "//raw.githubusercontent.com/Loopring/loopring.org/master/docs/tokens-faq.md",
+                context: document.body,
+                beforeSend: function(xhr) {
+                    xhr.overrideMimeType("text/plain; charset=x-user-defined");
+                },
+                success: function(mdText) {
+                    //where text will be the text returned by the ajax call
+                    var converter = new showdown.Converter();
+                    var htmlText = converter.makeHtml(mdText);
+                    $("#tokens-faq").append(htmlText); //append this to a div with class outputDiv
+                }
+            });
+        
+            $.ajax({
+                url: "//raw.githubusercontent.com/Loopring/loopring.org/master/docs/wallet-faq.md",
+                context: document.body,
+                beforeSend: function(xhr) {
+                    xhr.overrideMimeType("text/plain; charset=x-user-defined");
+                },
+                success: function(mdText) {
+                    //where text will be the text returned by the ajax call
+                    var converter = new showdown.Converter();
+                    var htmlText = converter.makeHtml(mdText);
+                    $("#wallet-faq").append(htmlText); //append this to a div with class outputDiv
                 }
             });
         </script>

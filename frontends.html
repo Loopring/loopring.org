@@ -18,7 +18,7 @@
         <meta property="og:image" content="images/logo.JPG" />
         <meta name="twitter:image" content="images/logo.JPG" />
         <meta name="twitter:card" content="summary" />
-        <title>Relayers | Loopring</title>
+        <title>Wallets | Loopring</title>
     </head>
     
     <body>
@@ -92,44 +92,31 @@
         <!--end header section-->
         <div class="page-wrap">
             <div class="right-container small">
-                <!--start add nav-->
+                <!--start nav-->
                 <nav class="add-navigation">
                     <ul>
                         <li><a href="developers.html">Overview</a>
                         </li>
                         <li><a href="protocol.html">Protocol</a>
                         </li>
+                        <li><a href="relayers.html">Relayers</a>
+                        </li>
+                        <li class="active"><a href="frontends.html">Frontends</a>
+                        </li>
                         <li><a href="tokens.html">Tokens</a>
                         </li>
-                        <li class="active"><a href="relayers.html">Relayers</a>
+                        <li><a href="liqudity.html">Liquidity</a>
                         </li>
-                        <li><a href="wallets.html">Wallets</a>
+                        <li><a href="bootstrap.html">Bootstrap</a>
                         </li>
-                        <!-- <li><a href="tokenization-services.html">Tokenization Services</a></li> -->
-                        <!-- <li><a href="contribution.html">Contribution</a></li> -->
+                        <!-- <li><a href="tokenization.html">Tokenization</a></li> -->
+                        <li><a href="dev-resources.html">Resources</a>
+                        </li>
+                        <li><a href="faq.html">FAQ</a>
+                        </li>
                     </ul>
                 </nav>
                 <!--end add nav-->
-                <!--start aside-->
-                <aside class="sidebar">
-                    <div class="sidebar-box dev-nav">
-                         <h4>Table of contents</h4>
-
-                        <ul class="accordeon animateMe2 anchor-list">
-                            <li>
-                                <div class="title"><a href="relayer-api.html">How to contribute</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title" data-anchor="Our Git Branching Model">Our Git Branching Model</div>
-                            </li>
-                            <li>
-                                <div class="title" data-anchor="Contributors">Contributors</div>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-                <!-- end aside-->
                 <!--start developers portal-->
                 <div id="content" class="developers content"></div>
                 <!--end developers portal-->
@@ -172,12 +159,12 @@
         <script src="js/global.min.js"></script>
         <script>
             $.ajax({
-                url: "//raw.githubusercontent.com/Loopring/relay-cluster/master/JSONRPC.md",
+                url: "resources/wallets.md",
                 context: document.body,
-                beforeSend: function( xhr ) {
-                    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+                beforeSend: function(xhr) {
+                    xhr.overrideMimeType("text/plain; charset=x-user-defined");
                 },
-                success: function(mdText){
+                success: function(mdText) {
                     //where text will be the text returned by the ajax call
                     var converter = new showdown.Converter();
                     var htmlText = converter.makeHtml(mdText);
