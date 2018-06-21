@@ -1,7 +1,3 @@
-
-## General
-<h2 data-anchor="general">General</h2>
-
 - Can Loopring do cross-chain token trading?
 
 > Loopring is blockchain agnostic, meaning it can facilitate the trading of tokens on any smart contract capable public blockchains. But Loopring is not a cross-chain protocol. In order to perform cross-chain trading, tokenization services have to get involved to help issue asset-backed tokens on the target blockchain.
@@ -41,10 +37,3 @@
 - When will Loopring launch its own mainnet?
            
 > Loopring is a protocol thus does not have a mainnet to launch. We have deployed Loopring on Ethereum and Qtum.
-
-## Token Listing
-<h2 data-anchor="tokenlisting">Token Listing</h2>
-
-- How can I get my token listed on Loopring's Exchanges?
-           
-> More information to come.
