@@ -62,7 +62,7 @@
                     <li class="@@team"><a href="team.html">Team</a>
 
                     </li>
-                    <li class="@@resources"><a href="resources.html">Resources</a>
+                    <li class="@@resources"><a href="resources.html">Documents</a>
 
                     </li>
                     <!-- <li class="current-menu-item"><a href="developers.html">Developer portal</a></li> -->
@@ -108,17 +108,11 @@
                         </li>
                         <li><a href="protocol.html">Protocol</a>
                         </li>
-                        <li><a href="relayers.html">Relayers</a>
+                        <li><a href="backend.html">Backend</a>
                         </li>
-                        <li><a href="frontends.html">Frontends</a>
+                        <li><a href="frontend.html">Frontend</a>
                         </li>
-                        <li><a href="tokens.html">Tokens</a>
-                        </li>
-                        <li><a href="liquidity.html">Liquidity</a>
-                        </li>
-                        <li><a href="bootstrap.html">Bootstrap</a>
-                        </li>
-                        <li><a href="dev-resources.html">Resources</a>
+                        <li><a href="documents.html">Documents</a>
                         </li>
                         <li class="active"><a href="faq.html">FAQ</a>
                         </li>
@@ -130,23 +124,23 @@
                     <div class="sidebar-box dev-nav">
                         <div class="wrap">
                             <img src="images/ico-brand-guidelines.svg" alt="ico">
-                             <h4>Table of contents</h4>
+                             <h4>FAQ</h4>
 
                             <ul class="accordeon animateMe2 anchor-list">
                                 <li>
                                     <div class="title" data-anchor="general">General</div>
                                 </li>
                                 <li>
-                                    <div class="title" data-anchor="tokens">Token Listing Related</div>
+                                    <div class="title" data-anchor="tokens">Token Listing</div>
                                 </li>
                                 <li>
-                                    <div class="title" data-anchor="wallet">Wallet Related</div>
+                                    <div class="title" data-anchor="relayers">Relayer Related</div>
                                 </li>
                             </ul>
                         </div>
                         <div class="wrap">
                             <img src="images/ico-brand-guidelines.svg" alt="ico">
-                             <h4>External FAQ Resources</h4>
+                             <h4>External FAQ</h4>
 
                             <p>We have held several AMA sessions on Reddit, you can check out the previous
                                 questions following the link below:</p>
@@ -171,9 +165,9 @@
                      <h2 data-anchor="tokens">Token Listing</h2>
 
                     <div id="tokens-faq"></div>
-                     <h2 data-anchor="wallet">Wallet</h2>
+                     <h2 data-anchor="relayers">Relayer Related</h2>
 
-                    <div id="wallet-faq"></div>
+                    <div id="relayers-faq"></div>
                 </div>
                 <!--end developers portal-->
             </div>
@@ -215,7 +209,7 @@
         <script src="js/global.min.js"></script>
         <script>
             $.ajax({
-                url: "//raw.githubusercontent.com/Loopring/loopring.org/master/docs/general-faq.md",
+                url: "//raw.githubusercontent.com/Loopring/docs/master/docs/faq/general.md",
                 context: document.body,
                 beforeSend: function(xhr) {
                     xhr.overrideMimeType("text/plain; charset=x-user-defined");
@@ -230,7 +224,7 @@
         
         
             $.ajax({
-                url: "//raw.githubusercontent.com/Loopring/loopring.org/master/docs/tokens-faq.md",
+                url: "//raw.githubusercontent.com/Loopring/docs/master/docs/faq/token-listing.md",
                 context: document.body,
                 beforeSend: function(xhr) {
                     xhr.overrideMimeType("text/plain; charset=x-user-defined");
@@ -244,7 +238,7 @@
             });
         
             $.ajax({
-                url: "//raw.githubusercontent.com/Loopring/loopring.org/master/docs/wallet-faq.md",
+                url: "//raw.githubusercontent.com/Loopring/docs/master/docs/faq/relayers.md",
                 context: document.body,
                 beforeSend: function(xhr) {
                     xhr.overrideMimeType("text/plain; charset=x-user-defined");
@@ -253,7 +247,7 @@
                     //where text will be the text returned by the ajax call
                     var converter = new showdown.Converter();
                     var htmlText = converter.makeHtml(mdText);
-                    $("#wallet-faq").append(htmlText); //append this to a div with class outputDiv
+                    $("#relayers-faq").append(htmlText); //append this to a div with class outputDiv
                 }
             });
         </script>
