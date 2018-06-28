@@ -56,7 +56,9 @@
                     <li class="@@resources"><a href="resources.html">Resources</a>
 
                     </li>
-                    <!-- <li class="current-menu-item"><a href="developers.html">Developer portal</a></li> -->
+                    <li class="current-menu-item"><a href="developers.html">Developer Portal</a>
+
+                    </li>
                     <li class="@@news"><a href="news.html">News &amp; updates</a>
 
                     </li>
@@ -99,10 +101,8 @@
                         </li>
                         <li class="active"><a href="protocol.html">Protocol</a>
                         </li>
-                        <li><a href="backend.html">Backend</a>
-                        </li>
-                        <li><a href="frontend.html">Frontend</a>
-                        </li>
+                        <!-- <li><a href="backend.html">Backend</a></li> -->
+                        <!-- <li><a href="frontend.html">Frontend</a></li> -->
                         <li><a href="documents.html">Documents</a>
                         </li>
                         <li><a href="faq.html">FAQ</a>
@@ -289,7 +289,7 @@
                                     values using the order's hash as an identifier. This data is publicly accessible
                                     and OrderCancelled / OrderFilledevents are emitted when it changes.</p>
                                 <p
-                                class="animateMe2">This tracking is useful for the LSC during the <a target="_blank" href="https://docs.loopring.org/English/projects/protocol/#ring-settlement">settlement</a>ring
+                                class="animateMe2">This tracking is useful for the LSC during the <a target="_blank" href="https://docs.loopring.org/English/projects/protocol/#ring-settlement">settlement</a> ring
                                     step.</p>
                                      <h2 class="animateMe2">Verification of Miner Supplied Data</h2>
 
@@ -434,43 +434,49 @@
                                                                             by the LSC. These events exist to allow the relayers/order browsers and
                                                                             other elements that need an update of their orderbooks to get the information
                                                                             as quickly as possible.</p>
-                                                                        <p class="animateMe2">A list of the emitted events: * OrderCancelled * OrderFilled * RingMined</p>
-                                                                        <h2
-                                                                        class="animateMe2">Fraud and Attack Protections</h2>
-                                                                             <h2 class="animateMe2" data-anchor="Ring Filch">Ring Filch</h2>
-
-                                                                            <p class="animateMe2">An attacker could monitor all unconﬁrmed Rings and broadcast the same
-                                                                                rings with their own digital signature. We call this Ring Filch. In order
-                                                                                to prevent Ring Filch, Loopring allows miners to use two steps in order
-                                                                                to submit their Rings:</p>
-                                                                            <ul class="animateMe2">
-                                                                                <li>Submit the hash of the Ring and wait for confirmation</li>
-                                                                                <li>Submit the Ring itself</li>
+                                                                        <p class="animateMe2">A list of the emitted events:
+                                                                            <ul>
+                                                                                <li>OrderCancelled</li>
+                                                                                <li>OrderFilled</li>
+                                                                                <li>RingMined</li>
                                                                             </ul>
-                                                                            <p class="animateMe2">This protection is valid for a blocksToLive time specified in the LSC.
-                                                                                After that duration, if the ring has not been submitted, an other miner
-                                                                                can claim it.</p>
-                                                                             <h2 class="animateMe2" data-anchor="Denial of Service">Denial of Service</h2>
+                                                                        </p>
+                                                                         <h2 class="animateMe2">Fraud and Attack Protections</h2>
 
-                                                                            <p class="animateMe2">We allow nodes to selectively handle orders by setting their own criteria
-                                                                                and they may choose to hide or reveal them. Therefore we do not see denial
-                                                                                of service as a form of unethical behaviour.</p>
-                                                                             <h2 class="animateMe2"
-                                                                            data-anchor="Massive Tiny Order Attack">Massive Tiny Order Attack</h2>
+                                                                         <h2 class="animateMe2" data-anchor="Ring Filch">Ring Filch</h2>
 
-                                                                            <p class="animateMe2">A user could send a large amount of tiny orders to attack the Loopring
-                                                                                nodes. However, since we allow nodes to reject orders based on their own
-                                                                                criteria, most of these orders will be rejected because they do not yield
-                                                                                satisfying profit when matched. Thus, a massive tiny order attack is not
-                                                                                feasible.</p>
-                                                                             <h2 class="animateMe2" data-anchor="Insufficient Balance">Insufficient Balance</h2>
+                                                                        <p class="animateMe2">An attacker could monitor all unconﬁrmed Rings and broadcast the same
+                                                                            rings with their own digital signature. We call this Ring Filch. In order
+                                                                            to prevent Ring Filch, Loopring allows miners to use two steps in order
+                                                                            to submit their Rings:</p>
+                                                                        <ul class="animateMe2">
+                                                                            <li>Submit the hash of the Ring and wait for confirmation</li>
+                                                                            <li>Submit the Ring itself</li>
+                                                                        </ul>
+                                                                        <p class="animateMe2">This protection is valid for a blocksToLive time specified in the LSC.
+                                                                            After that duration, if the ring has not been submitted, an other miner
+                                                                            can claim it.</p>
+                                                                         <h2 class="animateMe2" data-anchor="Denial of Service">Denial of Service</h2>
 
-                                                                            <p class="animateMe2">Malicious users may sign and spread out orders whose value inside the
-                                                                                order is not zero but whose address actually has zero balance. Nodes could
-                                                                                monitor and notice that some orders actual balance is zero, update these
-                                                                                orders states accordingly and then discard them. Nodes do have to spend
-                                                                                time to update the status of an order, but can also choose to minimize
-                                                                                the effort by, for example, blacklisting addresses and drop related orders.</p>
+                                                                        <p class="animateMe2">We allow nodes to selectively handle orders by setting their own criteria
+                                                                            and they may choose to hide or reveal them. Therefore we do not see denial
+                                                                            of service as a form of unethical behaviour.</p>
+                                                                         <h2 class="animateMe2"
+                                                                        data-anchor="Massive Tiny Order Attack">Massive Tiny Order Attack</h2>
+
+                                                                        <p class="animateMe2">A user could send a large amount of tiny orders to attack the Loopring
+                                                                            nodes. However, since we allow nodes to reject orders based on their own
+                                                                            criteria, most of these orders will be rejected because they do not yield
+                                                                            satisfying profit when matched. Thus, a massive tiny order attack is not
+                                                                            feasible.</p>
+                                                                         <h2 class="animateMe2" data-anchor="Insufficient Balance">Insufficient Balance</h2>
+
+                                                                        <p class="animateMe2">Malicious users may sign and spread out orders whose value inside the
+                                                                            order is not zero but whose address actually has zero balance. Nodes could
+                                                                            monitor and notice that some orders actual balance is zero, update these
+                                                                            orders states accordingly and then discard them. Nodes do have to spend
+                                                                            time to update the status of an order, but can also choose to minimize
+                                                                            the effort by, for example, blacklisting addresses and drop related orders.</p>
                 </div>
                 <!--end developers portal-->
             </div>
