@@ -19,8 +19,8 @@
                     <ul>
                         <li><a href="developers.html">Overview</a></li>
                         <li class="active"><a href="protocol.html">Protocol</a></li>
-                        <li><a href="backend.html">Backend</a></li>
-                        <li><a href="frontend.html">Frontend</a></li>
+                        <!-- <li><a href="backend.html">Backend</a></li> -->
+                        <!-- <li><a href="frontend.html">Frontend</a></li> -->
                         <li><a href="documents.html">Documents</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
@@ -154,7 +154,7 @@
                     <p class="animateMe2">A user can partially or fully cancel an order by sending a special transaction to the LSC, containing the details about the order and the amounts to cancel. The LSC will take that into account, store the amounts to cancel and emit an OrderCancelled event to the network.</p>
                     <h2 class="animateMe2" data-anchor="Fill and Cancellation Tracking">Fill and Cancellation Tracking</h2>
                     <p class="animateMe2">The LSC keeps track of fill and cancellation amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and OrderCancelled / OrderFilledevents are emitted when it changes.</p>
-                    <p class="animateMe2">This tracking is useful for the LSC during the <a target="_blank" href="https://docs.loopring.org/English/projects/protocol/#ring-settlement">settlement</a>ring step.
+                    <p class="animateMe2">This tracking is useful for the LSC during the <a target="_blank" href="https://docs.loopring.org/English/projects/protocol/#ring-settlement">settlement</a> ring step.
                     </p>
                     <h2 class="animateMe2">Verification of Miner Supplied Data</h2>
                     <p class="animateMe2">This section will talk about what the LSC expect to receive from the miners and the steps taken to verify the data.</p>
@@ -215,7 +215,13 @@
                         <a target="_blank" href="#">LIPs</a> repository on github.</p>
                     <h2 class="animateMe2" data-anchor="Emitted Events">Emitted Events</h2>
                     <p class="animateMe2">In this page you should have come by a set of events that are emitted by the LSC. These events exist to allow the relayers/order browsers and other elements that need an update of their orderbooks to get the information as quickly as possible.</p>
-                    <p class="animateMe2">A list of the emitted events: * OrderCancelled * OrderFilled * RingMined</p>
+                    <p class="animateMe2">A list of the emitted events:
+                        <ul>
+                            <li>OrderCancelled</li>
+                            <li>OrderFilled</li>
+                            <li>RingMined</li>
+                        </ul>
+                    </p>
                     <h2 class="animateMe2">Fraud and Attack Protections</h2>
                     <h2 class="animateMe2" data-anchor="Ring Filch">Ring Filch</h2>
                     <p class="animateMe2">An attacker could monitor all unconﬁrmed Rings and broadcast the same rings with their own digital signature. We call this Ring Filch. In order to prevent Ring Filch, Loopring allows miners to use two steps in order to submit their Rings:</p>
