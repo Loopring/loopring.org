@@ -86,10 +86,10 @@
                 <!--start developers portal-->
                 <div class="developers content">
                     <h1 class="animateMe2">Loopring Smart <br>Contracts</h1>
-                    <p class="animateMe2">The loopring smart contracts are a set of ethereum contracts that implement the loopring protocol. This document describes the functionalities they provide and is structured as follows:</p>
-                    <p class="animateMe2">The code is open source and available on <a target="_blank" href="https://github.com/Loopring/protocol">Github</a>.
+                    <p class="animateMe2">The Loopring Smart Contracts are a set of Ethereum smart contracts that implement the Loopring Protocol. This document describes the functionalities they provide.</p>
+                    <p class="animateMe2">The code is open source and available on <a target="_blank" href="https://github.com/Loopring/protocol">GitHub</a>.
                     </p>
-                    <p class="animateMe2">The Loopring Smart Contracts will be referred to as LSC in this document. You can read more about the calculations and formulas used here in the <a target="_blank" href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">whitepaper</a> and supersymmetry {<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>}
+                    <p class="animateMe2">The Loopring Smart Contracts will be referred to as LSC in this document. You can read more about the calculations and formulas used here in the <a target="_blank" href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">whitepaper</a>  and supersymmetry's {<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>}
                         <a target="_blank" href="#">Remarks on Loopring</a> . Please note that in the current protocol implementation, the pricing model is the same as in our whitepaper and supersymmetry’s document, but the fee model is different.</p>
                     <h2 class="animateMe2">Management of Orders</h2>
                     <p class="animateMe2">To understand what the LSC does, we must first take a look at the definition of an order, the available actions for the user, and how the current order state is tracked.</p>
@@ -143,7 +143,7 @@
                             </tr>
                         </table>
                     </div>
-                    <p class="animateMe2">We called the above model
+                    <p class="animateMe2">We call the above model
                         <stron>Unidirectional Order Model</stron>
                         , or UDOM for short. To learn more about UDOM, check out our <a target="_blank" href="https://medium.com/loopring-protocol/looprings-uni-directional-order-model-510067377fe9">medium
                         post</a>.
@@ -153,11 +153,11 @@
                     <h2 class="animateMe2" data-anchor="Full or Partial Cancellation">Full or Partial Cancellation</h2>
                     <p class="animateMe2">A user can partially or fully cancel an order by sending a special transaction to the LSC, containing the details about the order and the amounts to cancel. The LSC will take that into account, store the amounts to cancel and emit an OrderCancelled event to the network.</p>
                     <h2 class="animateMe2" data-anchor="Fill and Cancellation Tracking">Fill and Cancellation Tracking</h2>
-                    <p class="animateMe2">The LSC keeps track of fill and cancellation amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and OrderCancelled / OrderFilledevents are emitted when it changes.</p>
+                    <p class="animateMe2">The LSC keeps track of fill and cancellation amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and OrderCancelled / OrderFilled events are emitted when it changes.</p>
                     <p class="animateMe2">This tracking is useful for the LSC during the <a target="_blank" href="https://docs.loopring.org/English/projects/protocol/#ring-settlement">settlement</a> ring step.
                     </p>
                     <h2 class="animateMe2">Verification of Miner Supplied Data</h2>
-                    <p class="animateMe2">This section will talk about what the LSC expect to receive from the miners and the steps taken to verify the data.</p>
+                    <p class="animateMe2">This section will talk about what the LSC expects to receive from the miners and the steps taken to verify the data.</p>
                     <h2 class="animateMe2" data-anchor="Order Ring">Order Ring</h2>
                     <p class="animateMe2">The LSC expect to receive order rings from the miners. An order ring is multiple orders linked together in a way that allows them to be all matched at their desired exchange rate or better. See the diagram below as an example.</p>
                     <img class="animateMe2" src="images/developer-3.png" alt="Developer 101 Fig 3.0">
@@ -169,7 +169,7 @@
                     <p class="animateMe2">The following section discusses mathematical validation of the order rings. We recommend you to check supersymmetry’s complementary document listed at the beginning of this page.</p>
                     <h2 class="animateMe2" data-anchor="Sub-Loop Checking">Sub-Loop Checking</h2>
                     <p class="animateMe2">This step prevents <a target="_blank" href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">covered
-                    interest arbitrage</a>. Once a valid ring is found by a miner, he could be tempted to add other orders to it to achieve a zero-risk covered interest arbitrage. This is considered unfair conduct from the miner in Loopring.</p>
+                    interest arbitrage</a>. Once a valid ring is found by a miner, he could be tempted to add other orders to it to achieve a zero-risk covered interest arbitrage, removing the price improvement possibility from users, and collecting it personally. This is considered unfair conduct from the miner in Loopring.</p>
                     <p class="animateMe2">The diagram below illustrates the previous valid ring where 2 orders were added.
                     </p>
                     <img class="animateMe2" src="images/developer-4.png" alt="Developer 101 Fig 4.0">
@@ -177,10 +177,10 @@
                     sub-loop</strong>. There is a very simple way to check this: a token cannot be twice in a buy or sell position. In the above diagram we can see that ARK is twice as a token to sell and twice as a token to buy.</p>
                     <h2 class="animateMe2" data-anchor="Fill Rate Checking">Fill Rate Checking</h2>
                     <p class="animateMe2">The rates calculation for the transactions in the ring are made by the miners for the reasons stated above in this page. Therefore the LSC have to verify that they are correct.</p>
-                    <p class="animateMe2">This first verifies that the sell rate the miner supplied for each order is at least equal or less than the original sell rate set by the user. Meaning that the user gets at least the exchange rate he asked for or better at the moment of the transaction.</p>
+                    <p class="animateMe2">This first verifies that the sell rate the miner supplied for each order is at least equal or greater than the original sell rate set by the user. Meaning that the user gets at least the exchange rate he asked for or better at the moment of the transaction.</p>
                     <p class="animateMe2">Once the exchange rates are confirmed, we make sure that all the margins (discounts) are at the same percentage for every order, to ensure fairness.</p>
                     <h2 class="animateMe2" data-anchor="Order Scaling">Order Scaling</h2>
-                    <p class="animateMe2">This is the part where the orders are scaled according to: - The history of filled and cancelled amounts - The current balance of the senders' accounts.</p>
+                    <p class="animateMe2">This is the part where the orders are scaled according to: 1) The history of filled and cancelled amounts, and 2) The current balance of the senders' accounts.</p>
                     <p class="animateMe2">The process finds the order with the smallest amount to be filled according to the above characteristics and uses it as a reference for scaling all the transactions in the ring.</p>
                     <p class="animateMe2 example">Example: If the smallest amount to be filled compared to the original order is 5%, all the transactions in the ring are scaled down to 5%. Once the transactions are completed, the order that was considered to have the smallest amount remaining to be filled should be completely filled.</p>
                     <h2 class="animateMe2">Ring Settlement</h2>
