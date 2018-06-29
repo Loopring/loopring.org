@@ -1,7 +1,7 @@
 ## Loopring.io Privacy Policy
 Last Updated: May 28, 2018
 
-LOOPRING.IO (Loopr2) is an open-sourced reference implementation of a web-based non-custodial Ethereum wallet that enable users to trade ERC20 tokens using the Loopring Protocol distributed by Loopring Project Ltd. This Privacy Policy (“Privacy Policy”) helps explain how we collect, use, store, and protect your information when you use our developer software, our website at https://loopring.io or https://loopr.io (collectively the “Services”). Please also read https://loopring.io Terms of Service (the “Terms”), which describe the terms under which you use the Services.
+LOOPRING.IO (Loopr) is an open-sourced reference implementation of a web-based non-custodial Ethereum wallet that enable users to trade ERC20 tokens using the Loopring Protocol distributed by Loopring Project Ltd. This Privacy Policy (“Privacy Policy”) helps explain how we collect, use, store, and protect your information when you use our developer software, our website at https://loopring.io or https://loopr.io (collectively the “Services”). Please also read https://loopring.io Terms of Service (the “Terms”), which describe the terms under which you use the Services.
 
 ### Overview
 Your privacy is important to us. We follow a few fundamental principles:
