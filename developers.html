@@ -168,10 +168,10 @@
                      <h2 data-anchor="AboutLoopring">Loopring</h2>
 
                     <p>Loopring is a layer-2 protocol that consists of multiple smart contracts
-                        to verify tradable orders and perform per-trade settlement on-chain while
-                        keeping all order management off-chain. Loopring features a more generic
-                        design with matching-as-a-service, ring-matching, and dual-authoring technologies.
-                        We strongly encourage you to read our <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">new whitepaper</a> and
+                        to verify tradable orders and perform trade settlement on-chain while keeping
+                        all order management off-chain. Loopring features a generic design with
+                        matching-as-a-service, ring-matching, and anti-front running (dual-authoring
+                        technology). We strongly encourage you to read our <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">new whitepaper</a> and
                         previous <a target="_blank" href="http://medium.com/loopring-protocol">blog posts</a> as
                         it is the best way to understand the protocol. If you have any questions,
                         you can send us an <a href="mailto:foundation@loopring.org">email</a>, or
@@ -181,16 +181,16 @@
                     <h2
                     data-anchor="OurSolution">Our Solution</h2>
                         <p>There is a significant lack of security, transparency, and liquidity in
-                            centralized exchanges. Loopring invented a whole new trading experience
-                            built upon blockchain and smart contract technologies. Through our whitepaper
+                            centralized exchanges. Loopring invented a new trading experience built
+                            upon blockchain and smart contract technologies. Through our whitepaper
                             and this developer portal, you will see that Loopring DEXs are non-custodial
-                            and perfectly secure; all trades are verified and recorded on the blockchain
-                            for absolute transparency, and every Loopring order can be shared with
-                            as many parties as possible with no trust needed, which also makes for
-                            higher liquidity and a better trade price.</p>
+                            and perfectly secure: all trades are verified and recorded on the blockchain
+                            for absolute transparency, and every Loopring order can be trustlessly
+                            shared with as many parties as possible, which allows for greater liquidity
+                            and trade price improvement.</p>
                         <p>The Loopring Foundation provides open-sourced, ready-to-deploy solutions
                             for our community to develop the DEX frontend with apps (a.k.a wallets),
-                            the DEX backend (a.k.a relayers or match-engines), along with liquidity
+                            the DEX backend (a.k.a relayers or matching engines), along with liquidity
                             sharing middleware. We also provide free-of-charge consulting and technical
                             support.</p>
                         <p>We have multiple patents in the US, the European Union, and China to protect
@@ -201,20 +201,21 @@
                             in writing.</p>
                          <h2 data-anchor="Challenges">Challenges</h2>
 
-                        <p>All DEX solutions suffer low TPS (transactions per second) and long block-time
-                            imposed by the underlying blockchains. Ethereum's current TPS is about
-                            15 and block-time is roughly 15 seconds. Without a higher TPS, Loopring's
-                            trading experience won't be a match for centralized exchanges; but once
-                            Ethereum's TPS scales to 1000 or above, we believe the overall DEX trading
-                            experience will even better than centralized exchanges.</p>
-                        <p>Loopring and all DEX protocols are not designed for high-frequency trading.
-                            This is not an issue at all, as we believe high-frequency trading is not
-                            fair for regular traders and has been dramatically misused for market manipulation
-                            of crypto prices.</p>
+                        <p>All DEX solutions suffer low TPS (transactions per second) and high latency
+                            imposed by the underlying blockchains' slow block-times. Ethereum's current
+                            TPS is about 15 and block-time is roughly 15 seconds. Without a higher
+                            TPS, Loopring's trading experience won't be a match for centralized exchanges;
+                            but once Ethereum's TPS scales to 1000 or above, we believe the overall
+                            DEX trading experience will be even better than centralized exchanges.</p>
+                        <p>Loopring and all DEX protocols are not designed for high-frequency trading
+                            (HFT). We do not view this as an issue, and seek to provide the best trading
+                            experience for regular traders and investors. Further, we believe HFT is
+                            not necessarily fair for regular traders, and has been dramatically misused
+                            for market manipulation of crypto prices.</p>
                          <h2 data-anchor="VsKyberNetwork">Loopring vs. Kyber Network</h2>
 
                         <p>Loopring and Kyber are designed for different use cases and are complementary
-                            to each other. Loopring features third-party matching-as-a-service (MAAS)
+                            to each other. Loopring features third-party matching-as-a-service (MAAS),
                             whereas Kyber is a market-making protocol where market-makers offer their
                             clients liquidity at promised prices within a given period. Kyber is more
                             comparable to the Bancor protocol.</p>
@@ -226,26 +227,26 @@
                             <li>Both protocols enable order-based trading of ERC-20 tokens;</li>
                             <li>Orders are managed off-chain, but settlement transactions are performed
                                 on-chain through smart contracts;</li>
-                            <li>Both protocols suffer low TPS and long block-time of the underlying Ethereum
+                            <li>Both protocols suffer low TPS and long block-times of the underlying Ethereum
                                 blockchain;</li>
                             <li>Both teams are very open and supportive.</li>
                         </ul>
                         <p>But we are also very different in many other ways:</p>
                         <ul>
-                            <li>Loopring's order model is much simpler and more generalized - one unidirectional
-                                model fits all; whereas 0x has maker orders and taker orders;</li>
-                            <li>Loopring features a ring-style matching that can put more than two orders
-                                in a ring for higher liquidity and a better price. Ring-matching is a more
-                                generalized trading scheme than the trading pair notation that is used
-                                by 0x;</li>
+                            <li>Loopring's order model is simpler and more generalized: our single unidirectional
+                                order model fits all, whereas 0x has maker orders and taker orders;</li>
+                            <li>Loopring features a ring-style matching that can place multiple orders
+                                in a ring for higher liquidity and price improvement. Ring-matching is
+                                a more generalized trading scheme than the trading pair notation that is
+                                used by 0x;</li>
                             <li>Loopring's Dual-Authoring technology prevents its orders and rings from
                                 being stolen by middlemen and Ethereum miners; it also adds another level
                                 of control for liquidity/order sharing;</li>
-                            <li>Loopring offers a lot more open-sourced software for its partners to quickly
-                                build a DEX at a smaller cost, including a JavaScript library, two web-based
-                                wallet/DEX's, an embeddable HTML5 component for mobile apps, an iOS wallet
-                                application, a distributed relay cluster with ring-matching capability,
-                                and a liquidity sharing middleware based on pub-sub messaging;</li>
+                            <li>Loopring offers significantly more open-sourced software for its partners
+                                to quickly build a DEX at a lesser cost, including a JavaScript library,
+                                two web-based wallet/DEXs, an embeddable HTML5 component for mobile apps,
+                                an iOS wallet application, a distributed relay cluster with ring-matching
+                                capability, and a liquidity sharing middleware based on pub-sub messaging;</li>
                             <li>Loopring will continue to focus on ERC-20 and will not support ERC-721
                                 (non-fungible) tokens; whereas 0x aims to become the protocol for trading
                                 everything. We believe a protocol needs to be simple, elegant, easy to
@@ -264,15 +265,15 @@
                         <p>Loopring can turn any application or web page into a DEX. A DEX retrieves
                             and displays orders and trades and may show submit-order and cancel-order
                             forms for users to manage their trading data. In our model, a DEX does
-                            not have access to users' private keys. If it does, we then call it a Wallex
-                            (Wallet + DEX). Orders generated by a DEX must be signed from within a
-                            wallet app such as Ledger Nano before being sent to a relayer.</p>
+                            not have access to users' private keys. If it does, we refer to it as a
+                            Wallex (Wallet + DEX). Orders generated by a DEX must be signed from within
+                            a wallet such as a Ledger or MetaMask before being sent to a relayer.</p>
                         <p>The Loopring team provides an open-sourced DEX named Circulr and an open-sourced
-                            Wallex named Loopr. You can clone one of these projects to launch a web
-                            frontend easily for accessing Loopring's default relayer system. If you
-                            want to start from scratch, we also offer a JavaScript library called loopring.js
+                            Wallex named Loopr. You can clone one of these projects to easily launch
+                            a web frontend accessing Loopring's default relayer system. If you want
+                            to start from scratch, we also offer a JavaScript library called loopring.js
                             for you to access any compatible backend relayer system.</p>
-                        <p>Loopring brings a new stream of income to DEX's and Wallex's- 20% of matching
+                        <p>Loopring brings a new stream of income to DEXs and Wallexs- 20% of matching
                             fees will be rewarded to a DEX that helps users generate their orders.
                             This portion of fees will be automatically transferred to each DEX and
                             Wallex's fee-collecting address by the Loopring Protocol after each trade
@@ -280,29 +281,30 @@
                         <p>Frontends have the option to connect to one or multiple relayers, given
                             that permission is granted. In the graph above, "Frontend 8" connects to
                             only one dedicated relayer. This is more like the centralized exchange
-                            mode where liquidity is not shared, and there is a single point of relayer
-                            failure; "Frontend 7" connects to one dedicated relayer while also shares
-                            large orders to "Relayer D" to speed up trading; "Frontend 5" always broadcasts
-                            orders to "Relay D" and "Relay C" to maximize trading speed and minimize
-                            price spread; and "Frontend 3" evenly shares liquidity across two liquidity-sharing
-                            networks through "Relay B"and "Relay C".</p>
+                            model where liquidity is not shared, and there is a single point of relayer
+                            failure (albeit still non-custodial). "Frontend 7" connects to one dedicated
+                            relayer while also sharing large orders to "Relayer D" to speed up trading;
+                            "Frontend 5" always broadcasts orders to "Relay D" and "Relay C" to maximize
+                            trading speed and minimize price spread; and "Frontend 3" evenly shares
+                            liquidity across two liquidity sharing networks through "Relay B"and "Relay
+                            C".</p>
                         <p>Connecting and broadcasting users' orders to multiple relayers and the
-                            liquidity-sharing networks increase the likelihood of orders being fulfilled.
+                            liquidity sharing networks increase the likelihood of orders being fulfilled.
                             The network topologies and business relations between frontends, relayers,
-                            and the liquidity-sharing networks are entirely up to each entity in the
+                            and the liquidity sharing networks are entirely up to each entity in the
                             ecosystem; the Loopring Foundation doesn't impose any rules. For more information
                             regarding DEX and Wallex, check out the <a href="frontends.html">Frontends</a> page.</p>
-                        <p>If you are not happy with only 20% profit sharing, you can also run your
-                            relayer cluster.</p>
+                        <p>If you are not happy with 20% profit sharing, you can also run your own
+                            relayer cluster to collect further order fees.</p>
                          <h2 data-anchor="Relayer">Become a Relayer</h2>
 
                         <p>Relayers manage orders and trades, and offer the non-custodial order-matching
                             services as options. Relayers can receive orders from as many frontends
                             as possible without trusting any of them. This opens the door to build
-                            an even bigger liquidity pool than any centralized exchange.</p>
-                        <p>Relayers get 80% of matching fees, but it doesn't come for free - Relayers
-                            have to pay Ether as gas for ring-settlement transactions on Ethereum and
-                            pay fiat money for cloud service.</p>
+                            a larger liquidity pool than any centralized exchange.</p>
+                        <p>Relayers receive 80% of matching fees, but it doesn't come for free: Relayers
+                            must pay Ether as gas for ring-settlement transactions on the Ethereum
+                            blockchain, and pay fiat money for cloud services.</p>
                         <p>For more information about Relayers, check out the <a href="relayers.html">Relayers</a> page.</p>
                         <h2
                         data-anchor="Liquidity">Sharing Liquidity</h2>
@@ -310,11 +312,11 @@
                                 relayers can also share liquidity with each other by joining the same liquidity
                                 sharing network. The Loopring Foundation provides a pub-sub based implementation
                                 of such a network, but ecosystem partners can build their liquidity sharing
-                                network with their technology stack of choice - the Loopring Protocol does
+                                network with their technology stack of choice. The Loopring Protocol does
                                 not have a standard for liquidity sharing.</p>
-                            <p>Each liquidity-sharing network may have their own internal economic model
-                                to incentivize order producers and charge orderers, which is not part of
-                                the Loopring Protocol.</p>
+                            <p>Each liquidity sharing network may have their own internal economic model
+                                to incentivize order sharing: rewarding order producers and charging order
+                                receivers. This is not explicitly part of the Loopring Protocol.</p>
                             <p>For more information about liquidity sharing, check out the <a href="liquidity.html">Liquidity</a> page.</p>
                 </div>
                 <!--end developers portal-->
