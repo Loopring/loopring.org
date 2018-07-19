@@ -61,3 +61,5 @@
  4.12     This Privacy Policy may be revised periodically and this will be reflected by the “Last update posted” date above. Please revisit this page to stay aware of any changes. Your continued use of the UpBlockchain Service constitutes your agreement to this Privacy Policy and any future revisions.
 
  4.13     Contact Information: [privacy@upblockchain.org](mailto:privacy@upblockchain.org)
+
+As for any issues not covered in this Policy, you shall comply with the announcements and relevant rules as updated by UpBlockChain from time to time.
