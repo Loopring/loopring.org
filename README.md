@@ -28,6 +28,29 @@ npm run prod && npm run deploy-gh-pages
 
 ```
 
+如果遇到这样的问题：
+
+```
+[00:15:48] TypeError: Cannot read property '0' of null
+    at Function.module.exports.Commit.actor (/Users/d/Projects/loopring/loopring.org/node_modules/gulp-gh-pages/node_modules/gift/lib/commit.js:145:56)
+    at Function.module.exports.Commit.parse_commits (/Users/d/Projects/loopring/loopring.org/node_modules/gulp-gh-pages/node_modules/gift/lib/commit.js:111:21)
+    at /Users/d/Projects/loopring/loopring.org/node_modules/gulp-gh-pages/node_modules/gift/lib/commit.js:55:39
+    at ChildProcess.exithandler (child_process.js:282:7)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:460:23)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:248:5)
+
+```
+
+可以用如下方式解决：
+```
+cd node_modules/gulp-gh-pages/
+npm install --save gift@0.10.2
+cd ../../
+gulp deploy
+```
+
 ## 常见命令问题
 
 问题1：
