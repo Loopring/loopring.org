@@ -185,7 +185,7 @@
                 list-style: none;
                 @include media('>=desktop') {
                     float: left;
-                    margin: 0 28px 0 0;
+                    margin: 0 18px 0 0;
                 }
                 @include media('>=large') {
                     margin-right: 33px;
